@@ -1,0 +1,31 @@
+#EXTM3U x-tvg-url="https://khaddartahar-commits.github.io/taharkhaddar/epg.xml"
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5f/Al_Jazeera_Logo.png" group-title="أخبار",Al Jazeera
+https://live-hls-web-aje.getaj.net/AJE/index.m3u8
+#EXTINF:-1 group-title="أخبار",France 24 عربي
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/france24_oori/smil:france24_oori.smil/playlist.m3u8
+#EXTINF:-1 group-title="أخبار",DW عربي
+https://dwamdstream104.akamaized.net/hls/live/2015535/dwamdstream104/index.m3u8
+#EXTINF:-1 group-title="أخبار",Sky News عربية
+https://stream.skynewsarabia.com/hls/sna.m3u8
+#EXTINF:-1 group-title="أخبار",Al Arabiya
+https://live.alarabiya.net/alarabiya/alarabiya.m3u8
+#EXTINF:-1 group-title="أخبار",Al Hadath
+https://live.alarabiya.net/alarabiya/alhadath.m3u8
+#EXTINF:-1 group-title="أخبار",BBC عربي
+https://vs-hls-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_arabic_tv/t=3840/v=p0f1v7c3/pc_hd_abr_v2.m3u8
+#EXTINF:-1 group-title="أخبار",Euronews عربي
+https://euronews-euronews-arabic-1-mx.samsung.wurl.com/manifest/playlist.m3u8
+#EXTINF:-1 group-title="أخبار",Al Jazeera Mubasher
+https://live-hls-web-ajm.getaj.net/AJM/index.m3u8
+#EXTINF:-1 group-title="أخبار",Al Jazeera Documentary
+https://live-hls-web-ajd.getaj.net/AJD/index.m3u8
+#EXTINF:-1 group-title="عام",NASA TV
+https://ntv1.akamaized.net/hls/live/201418/NASA-NTV1/master.m3u8
+#EXTINF:-1 group-title="أطفال",Spacetoon
+https://streams.spacetoon.com/live/streams/spacetoon.m3u8
+#EXTINF:-1 group-title="دينية",Quran TV Saudi
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/saudi-quran/smil:saudi-quran.smil/playlist.m3u8
+#EXTINF:-1 group-title="دينية",Sunnah TV Saudi
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/saudi-sunnah/smil:saudi-sunnah.smil/playlist.m3u8
+#EXTINF:-1 group-title="دينية",Iqraa TV
+https://iqraa.servers4arab.com:8080/hls/iqraa.m3u8
