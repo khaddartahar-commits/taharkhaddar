@@ -13,11 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install requests
-      - run: python check.py
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'تحديث تلقائي: قنوات عربية'
+
+      - name: تثبيت المكتبة
+        run: pip install requests
+
+      - name: تشغيل الروبوت
+        run: python check.py
+
+      - name: حفظ القنوات في GitHub
+        run: |
+          git config user.name "tahar-bot"
+          git config user.email "tahar-bot@github.com"
+          git add arabic.m3u
+          git diff --cached --quiet || git commit -m "تحديث تلقائي: قنوات عربية - $(date)"
+          git push
