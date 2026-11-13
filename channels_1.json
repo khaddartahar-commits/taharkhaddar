@@ -1,0 +1,17 @@
+[
+  {"name": "ENTV - الجزائر", "group": "عام", "country": "DZ", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/entv/smil:entv.smil/playlist.m3u8"},
+  {"name": "Canal Algérie", "group": "عام", "country": "DZ", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/canalalgerie/smil:canalalgerie.smil/playlist.m3u8"},
+  {"name": "A3 - الجزائر", "group": "عام", "country": "DZ", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/a3/smil:a3.smil/playlist.m3u8"},
+  {"name": "TV5 - الجزائر", "group": "عام", "country": "DZ", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/tv5/smil:tv5.smil/playlist.m3u8"},
+  {"name": "Al24 News", "group": "أخبار", "country": "DZ", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/al24/smil:al24.smil/playlist.m3u8"},
+  {"name": "2M Maroc", "group": "عام", "country": "MA", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/2m/smil:2m.smil/playlist.m3u8"},
+  {"name": "Al Aoula - المغرب", "group": "عام", "country": "MA", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/alaoula/smil:alaoula.smil/playlist.m3u8"},
+  {"name": "Arryadia - المغرب", "group": "رياضة", "country": "MA", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/arryadia/smil:arryadia.smil/playlist.m3u8"},
+  {"name": "Al Maghribia", "group": "عام", "country": "MA", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/maghribia/smil:maghribia.smil/playlist.m3u8"},
+  {"name": "Medi1 TV", "group": "أخبار", "country": "MA", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/medi1/smil:medi1.smil/playlist.m3u8"},
+  {"name": "Wataniya 1 - تونس", "group": "عام", "country": "TN", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/wataniya1/smil:wataniya1.smil/playlist.m3u8"},
+  {"name": "Wataniya 2 - تونس", "group": "عام", "country": "TN", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/wataniya2/smil:wataniya2.smil/playlist.m3u8"},
+  {"name": "Hannibal TV", "group": "عام", "country": "TN", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/hannibal/smil:hannibal.smil/playlist.m3u8"},
+  {"name": "Libya Alwatania", "group": "عام", "country": "LY", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/libya/smil:libya.smil/playlist.m3u8"},
+  {"name": "Mauritania TV", "group": "عام", "country": "MR", "url": "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/mauritania/smil:mauritania.smil/playlist.m3u8"}
+]
