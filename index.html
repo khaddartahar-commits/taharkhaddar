@@ -1,55 +1,41 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAHAR KHADDAR IPTV</title>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>قنوات عربية</title>
 <style>
-*{box-sizing:border-box;font-family:system-ui} body{margin:0;background:#0f0f0f;color:#fff}
-header{background:#111;padding:15px;text-align:center;border-bottom:2px solid #00c853}
-header h1{margin:0;color:#00c853} .container{max-width:1100px;margin:auto;padding:12px}
-.box{background:#1a1a1a;padding:15px;border-radius:12px;margin-bottom:12px}
-input,button{width:100%;padding:12px;margin:6px 0;border-radius:8px;border:1px solid #333;background:#222;color:#fff}
-button{background:#00c853;border:none;font-weight:bold;cursor:pointer;color:#000}
-button.sec{background:#333;color:#fff} video{width:100%;background:#000;border-radius:12px;max-height:480px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
-.ch{background:#1c1c1c;border-radius:10px;padding:12px;cursor:pointer;text-align:center;border:1px solid #2a2a2a}
-.ch:hover{border-color:#00c853} .catBtn{padding:8px 14px;border-radius:20px;background:#222;border:1px solid #333;color:#fff;cursor:pointer;white-space:nowrap}
-.catBtn.active{background:#00c853;color:#000} #cats{display:flex;gap:8px;overflow-x:auto;padding:5px 0}
-</style>
-</head>
+body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:20px}
+button{padding:10px 18px;border:0;border-radius:20px;margin:5px;cursor:pointer;background:#222;color:#fff}
+button.active{background:#22c55e;color:#000;font-weight:bold}
+.card{background:#1e1e1e;padding:12px;margin:8px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}
+a{color:#22c55e;text-decoration:none;font-weight:bold}
+input{width:90%;padding:10px;border-radius:10px;border:0;margin:10px 0}
+</style></head>
 <body>
-<header><h1>📺 TAHAR KHADDAR IPTV</h1><p>قنوات عربية شغالة - فحص كل ساعة</p></header>
-<div class="container">
-<div class="box"><div id="nowPlaying" style="text-align:center;font-weight:bold">اختر قناة</div><video id="video" controls playsinline></video><button class="sec" onclick="stopPlayer()">⏹ إيقاف</button></div>
-<div class="box"><input id="search" placeholder="🔍 ابحث على قناة..." oninput="render()"><div id="cats"></div><div id="count" style="font-size:12px;color:#aaa"></div><div class="grid" id="grid"></div><p style="font-size:12px;color:#888;text-align:center">رابط M3U:<br>https://khaddartahar-commits.github.io/taharkhaddar/arabic.m3u</p></div>
-</div>
+<h2>📺 قنوات عربية شغالة</h2>
+<p id="count">جاري التحميل...</p>
+<input id="search" placeholder="🔍 ابحث عن قناة..." oninput="render()">
+<div id="filters"></div>
+<div id="list"></div>
 <script>
-let channels=[], currentCat='الكل', hls=null;
-const M3U_URL='https://khaddartahar-commits.github.io/taharkhaddar/arabic.m3u';
-function parseM3U(text){
- let lines=text.split('\n'), list=[], cur={};
- lines.forEach(line=>{ line=line.trim();
-  if(line.startsWith('#EXTINF')){ let name=line.split(',').pop()||'قناة'; let group=(line.match(/group-title="([^"]*)"/)||[])[1]||'عام'; cur={name,group}; }
-  else if(line && !line.startsWith('#') && cur.name){ cur.url=line; list.push(cur); cur={}; }
- }); return list;
-}
-async function load(){
- try{ let r=await fetch(M3U_URL); let t=await r.text(); channels=parseM3U(t); render(); }
- catch(e){ document.getElementById('count').textContent='ما زال الروبوت ما ولدش arabic.m3u - شغل Actions واستنى دقيقة'; }
-}
+let all=[], groups=new Set(), cur='الكل';
+fetch('arabic.m3u').then(r=>r.text()).then(t=>{
+  let lines=t.split('\n'), ch=null;
+  for(let i=0;i<lines.length;i++){
+    if(lines[i].startsWith('#EXTINF')){
+      let g=(lines[i].match(/group-title="([^"]*)"/)||[])[1]||'عام';
+      let name=lines[i].split(',').pop();
+      ch={name:name,group:g};
+    } else if(lines[i].startsWith('http') && ch){ ch.url=lines[i].trim(); all.push(ch); groups.add(ch.group); ch=null; }
+  }
+  document.getElementById('count').innerText=`عدد القنوات الشغالة: ${all.length} / ${all.length} - آخر فحص كل ساعة`;
+  let f=document.getElementById('filters');
+  f.innerHTML=`<button class="active" onclick="setG('الكل',this)">الكل</button>`+[...groups].map(g=>`<button onclick="setG('${g}',this)">${g}</button>`).join('');
+  render();
+});
+function setG(g,btn){cur=g;document.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render();}
 function render(){
- let q=(document.getElementById('search').value||'').toLowerCase();
- let cats=['الكل', ...new Set(channels.map(c=>c.group))];
- document.getElementById('cats').innerHTML=cats.map(c=>`<button class="catBtn ${c===currentCat?'active':''}" onclick="currentCat='${c}';render()">${c}</button>`).join('');
- let list=channels.filter(c=>(currentCat==='الكل'||c.group===currentCat) && c.name.toLowerCase().includes(q));
- document.getElementById('count').textContent=`عدد القنوات الشغالة: ${list.length} / ${channels.length} - آخر فحص كل ساعة`;
- document.getElementById('grid').innerHTML=list.map((c,i)=>`<div class="ch" onclick="play(${channels.indexOf(c)})"><b>${c.name}</b><br><span style="color:#ffb300;font-size:12px">${c.group} ✅</span></div>`).join('')||'<p>لا توجد قنوات - شغل الروبوت من Actions</p>';
+  let q=document.getElementById('search').value.toLowerCase();
+  let list=all.filter(c=>(cur=='الكل'||c.group==cur)&&c.name.toLowerCase().includes(q));
+  document.getElementById('list').innerHTML=list.map(c=>`<div class="card"><span>${c.name}<br><small>✅ ${c.group}</small></span><a href="${c.url}" target="_blank">شاهد</a></div>`).join('');
 }
-function play(idx){ let ch=channels[idx]; document.getElementById('nowPlaying').textContent='▶ '+ch.name; let v=document.getElementById('video'); if(hls){hls.destroy();hls=null;} if(Hls.isSupported()){ hls=new Hls(); hls.loadSource(ch.url); hls.attachMedia(v); hls.on(Hls.Events.MANIFEST_PARSED,()=>v.play()); } else { v.src=ch.url; v.play(); } }
-function stopPlayer(){ let v=document.getElementById('video'); v.pause(); v.src=''; if(hls){hls.destroy();hls=null;} }
-load();
-</script>
-</body>
-</html>
+</script></body></html>
