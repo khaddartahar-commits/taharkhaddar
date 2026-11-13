@@ -1,10 +1,13 @@
 name: فحص القنوات كل ساعة
+
 on:
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -17,4 +20,4 @@ jobs:
       - run: python check.py
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'تحديث تلقائي كل ساعة: قنوات شغالة فقط'
+          commit_message: 'تحديث تلقائي: قنوات عربية'
