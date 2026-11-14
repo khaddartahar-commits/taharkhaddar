@@ -1,0 +1,669 @@
+# Nilesat 201 + Nilesat 301 + AB7 Eutelsat 7W + Badr 8 Arabsat 26E
+# من KingOfSat - 2026
+# كل سطر = قناة وحدة
+
+MBC 1
+MBC 2
+MBC 3
+MBC 4
+MBC 5
+MBC Action
+MBC Drama
+MBC Max
+MBC Bollywood
+MBC Masr 1
+MBC Masr 2
+MBC Masr Drama
+MBC Iraq
+MBC Maghreb
+MBC Persia
+MBC Variety
+MBC+ Drama
+MBC+ Power
+MBC Bollywood HD
+MBC 2 HD
+MBC Action HD
+MBC Max HD
+MBC Drama HD
+Al Jazeera
+Al Jazeera Mubasher
+Al Jazeera Mubasher 2
+Al Jazeera Documentary
+Al Jazeera English
+Al Jazeera Balkans
+Al Arabiya
+Al Arabiya Al Hadath
+Al Hadath
+Sky News Arabia
+BBC Arabic
+BBC World News
+France 24 Arabic
+France 24 English
+France 24 French
+Al Mayadeen
+RT Arabic
+Al Alam
+CNBC Arabia
+Nile News
+Al Ekhbariya
+Al Iraqia News
+Al Iraqia Sport
+Al Iraqia General
+Al Iraqia Turkmen
+Rotana Cinema
+Rotana Aflam
+Rotana Khalijia
+Rotana Drama
+Rotana Classic
+Rotana Music
+Rotana Kids
+Rotana Comedy
+LBC Sat
+LBC Drama
+Nile Cinema
+Nile Drama
+Nile Comedy
+Nile Life
+Nile Family
+Nile Sports
+Nile Culture
+Nile TV International
+ART Aflam 1
+ART Aflam 2
+ART Cinema
+ART Hekayat
+ART Hekayat 2
+ART Hekayat Zaman
+ART Hekayat Kaman
+Zee Aflam
+Zee Alwan
+Panorama Drama
+Panorama Action
+Panorama Food
+Panorama Film
+Panorama Drama 2
+Al Hayat 1
+Al Hayat Cinema
+Al Hayat Drama
+Al Hayat 2
+CBC
+CBC Drama
+CBC Sofra
+CBC Extra News
+CBC 2
+ON TV
+ON Drama
+ON E
+ON Time Sports 1
+ON Time Sports 2
+ON Time Sports 3
+DMC
+DMC Drama
+DMC Sport
+Al Nahar 1
+Al Nahar 2
+Al Nahar Drama
+Al Nahar Cinema
+Al Nahar Sport
+Al Nahar Noor
+Al Nahar Ryada
+Al Kahera Wal Nas
+Al Mehwar
+Al Mehwar 2
+Dream TV
+Dream 2
+Ten TV
+Al Ghad TV
+Alhurra TV
+Alhurra Iraq
+Euronews Arabic
+DW Arabic
+TRT Arabic
+TRT World
+CGTN Arabic
+CGTN English
+CGTN Documentary
+National Geographic Abu Dhabi
+National Geographic Wild
+Discovery Channel
+Abu Dhabi TV
+Abu Dhabi Sports 1
+Abu Dhabi Sports 2
+Abu Dhabi Sports 3
+Abu Dhabi Sports 4
+Abu Dhabi Sports 5
+Abu Dhabi Sports 6
+Abu Dhabi Drama
+Abu Dhabi Drama+
+Abu Dhabi Al Emarat
+Abu Dhabi Al Oula
+Abu Dhabi Al Riyadiya
+Dubai TV
+Dubai One
+Dubai Sports 1
+Dubai Sports 2
+Dubai Sports 3
+Dubai Sports 4
+Dubai Zaman
+Dubai Drama
+Dubai Racing 1
+Dubai Racing 2
+Dubai Racing 3
+Dubai Quran
+Sharjah TV
+Sharjah Sports
+Sharjah Sports 2
+Sharjah Quran
+Sharjah Kalba
+Noor Dubai
+Al Kass 1
+Al Kass 2
+Al Kass 3
+Al Kass 4
+Al Kass 5
+Al Kass 6
+Al Kass 7
+Al Kass 8
+Al Kass 9
+Saudi TV 1
+Saudi TV 2
+Saudi Sports 1
+Saudi Sports 2
+Saudi Sports 3
+Saudi Sports 4
+Saudi Quran
+Saudi Sunnah
+Saudi Al Ekhbariya
+Arryadia
+Arryadia 2
+Arryadia 3
+Al Ahly TV
+Zamalek TV
+Al Ittihad TV
+Al Nasr TV
+Al Hilal TV
+Pyramids TV
+Spacetoon
+Spacetoon English
+Cartoon Network Arabia
+Cartoon Network MENA
+Boomerang MENA
+Majid Kids
+Baraem
+Jeem TV
+Toyor Al Janah
+Karameesh
+Karameesh Cinema
+Taha TV
+Mody Kids
+ENTV 1
+Canal Algerie
+Algerie 3
+Algerie 4 Amazigh
+Algerie 5 Quran
+Algerie 6
+Echourouk TV
+Echourouk News
+Ennahar TV
+Ennahar News
+Samira TV
+El Heddaf TV
+El Bilad TV
+El Djazairia
+Dzair News
+Dzair TV
+Beur TV
+El Djazairia One
+Al Atlas TV
+Al Magharibia TV
+Al Anis TV
+Al Fadjr TV
+Al Salam TV
+Al Hayat TV Algeria
+El Chabab TV
+2M Maroc
+2M Monde
+Medi1 TV
+Medi1 TV Afrique
+Al Aoula
+Al Aoula Laayoune
+Al Aoula Inter
+Arryadia Morocco
+Assadissa
+Al Maghribia
+Tamaghrabt
+Laayoune TV
+Chada TV
+Hespress TV
+M24 TV
+Le360 TV
+Nessma
+Nessma El Jadida
+Hannibal TV
+Mosaique TV
+Elhiwar Ettounsi
+Attessia TV
+Tunisia Nat 1
+Tunisia Nat 2
+Tunisia Nat Sport
+Carthage Plus
+Telvza TV
+Al Janoubia TV
+Tunisna TV
+Libya Alwatania
+Libya Al Ahrar
+Libya Al Hadath
+Libya 218 TV
+Libya Panorama
+Libya Al Rasmi
+Libya Al Watan
+Libya Al Nabaa
+Sudan TV
+Sudan Sport
+Blue Nile TV
+Sudan Al Youm
+Yemen TV
+Yemen Shabab
+Suhail TV
+Belqees TV
+Yemen Today
+Al Masirah TV
+Oman TV
+Oman Sport
+Oman Culture
+Oman Mubasher
+Oman TV General
+Kuwait TV 1
+Kuwait TV 2
+Kuwait TV Sport
+Kuwait TV Sport Plus
+Kuwait TV Al Arabi
+Kuwait TV Al Majlis
+Kuwait TV Al Quran
+Kuwait TV Al Ethraa
+Bahrain TV
+Bahrain TV Sport
+Bahrain TV Sport 2
+Bahrain TV Quran
+Jordan TV
+Jordan Sport
+Jordan Al Mamlaka
+Jordan Al Yarmouk
+Lebanon MTV
+LBC
+Al Manar
+Al Jadeed
+NBN
+OTV Lebanon
+Al Mayadeen Lebanon
+Al Janoub TV
+Tele Liban
+Al Mustaqbal TV
+Syria TV
+Syria Drama
+Syria News
+Syria Education
+Syria Sport
+Syria Al Khabar
+Palestine TV
+Palestine Sport
+Palestine Al Aqsa
+Palestine Al Quds
+Palestine Al Awda
+Al Aqsa TV
+Al Quds TV
+Palestine Today
+Iraqia News
+Al Sharqiya
+Al Sharqiya News
+Al Sharqiya Drama
+Al Sumaria
+Al Sumaria News
+Al Rasheed TV
+Al Forat TV
+Al Ahad TV
+Al Etejah TV
+Al Nujaba TV
+Al Bayina TV
+Al Fayhaa TV
+Al Hurriya TV
+Al Diyar TV
+Al Masar TV
+Baghdad TV
+Karbala TV
+Al Anwar TV
+Al Kafeel TV
+Al Kawthar TV
+Al Ahad TV
+Al Ghadeer TV
+Al Salam TV Iraq
+Al Masirah TV
+Iqraa
+Al Majd
+Al Majd Quran
+Al Majd Hadith
+Al Majd Documentary
+Al Majd Space
+Al Nas
+Al Resalah
+Al Rahma
+Al Huda TV
+Al Sunnah
+Noor TV
+Noursat
+Sat 7 Arabia
+Sat 7 Kids
+Al Karma TV
+Al Hayat TV
+Al Fady TV
+Coptic TV
+CYC TV
+Al Bernameg
+Asharq News
+Asharq Discovery
+Asharq Documentary
+Mekameleen TV
+Al Hiwar TV
+Al Sharq TV
+Al Jazeera Mubasher Misr
+Al Aan TV
+Al Araby TV
+Al Araby 2
+Al Qahera News
+Extra News
+Cairo News
+Al Bawaba News
+Sada El Balad
+Sada El Balad 2
+Sada El Balad Drama
+Al Nahar Light
+Moga Comedy
+Moga Cinema
+Moga Drama
+Moga Action
+El Cinema
+El Cinema 2
+Cima TV
+Cima Drama
+Cima Cinema
+Cima Action
+Cima Classic
+Top Movies
+Top Cinema
+Top Drama
+Top Action
+Fox Movies
+Fox Action Movies
+Fox Family Movies
+Fox Rewayat
+Star Movies
+Star World
+OSN Ya Hala Al Oula
+OSN Ya Hala HD
+OSN Cinema
+OSN Movies
+OSN Series
+OSN Ya Hala Cinema
+beIN Sports 1
+beIN Sports 2
+beIN Sports 3
+beIN Sports 4
+beIN Sports 5
+beIN Sports 6
+beIN Sports 7
+beIN Sports 8
+beIN Sports 9
+beIN Sports 10
+beIN Sports Premium 1
+beIN Sports Premium 2
+beIN Sports Premium 3
+beIN Sports News
+beIN Sports Max 1
+beIN Sports Max 2
+beIN Sports Max 3
+beIN Sports Max 4
+beIN Movies 1
+beIN Movies 2
+beIN Movies 3
+beIN Movies 4
+beIN Series 1
+beIN Series 2
+beIN Box Office 1
+beIN Box Office 2
+beIN Box Office 3
+beIN Box Office 4
+beIN Gourmet
+beIN Junior
+beIN Drama
+Aflam TV
+Aflam 1
+Aflam 2
+Cinema Pro
+Cinema 1
+Cinema 2
+Drama 1
+Drama 2
+Series 1
+Series 2
+Alwan TV
+Alwan Drama
+Alwan Cinema
+Alwan Comedy
+Alwan Kids
+Alwan Sport
+Alwan News
+Al Arabiya 2
+Al Arabiya Business
+Al Arabiya English
+Al Jazeera Mubasher 3
+Al Jazeera Live
+Al Jazeera Documentary HD
+Al Jazeera Children
+Al Jazeera Sport
+Al Jazeera News
+Al Kass Al Dawri
+Al Kass Extra 1
+Al Kass Extra 2
+Dubai Sports 5
+Dubai Sports 6
+Abu Dhabi Sports Extra
+Abu Dhabi Sports Asia 1
+Abu Dhabi Sports Asia 2
+Sharjah Sports HD
+Sharjah Sports 3
+Kuwait Sports HD
+Bahrain Sports 1
+Bahrain Sports 2
+Oman Sports 1
+Oman Sports 2
+Jordan Sports 1
+Jordan Sports 2
+Palestine Sports 1
+Palestine Sports 2
+Iraq Sports 1
+Iraq Sports 2
+Libya Sports 1
+Libya Sports 2
+Sudan Sports 1
+Sudan Sports 2
+Yemen Sports 1
+Yemen Sports 2
+Morocco Sports 1
+Morocco Sports 2
+Tunisia Sports 1
+Tunisia Sports 2
+Algeria Sports 1
+Algeria Sports 2
+Egypt Sports 1
+Egypt Sports 2
+Saudi Sports 5
+Saudi Sports 6
+Qatar TV
+Qatar TV 2
+Qatar Al Rayyan TV
+Qatar Al Kass
+Qatar Al Dawri
+Qatar Education
+Qatar Quran
+UAE TV
+UAE Sports
+UAE Drama
+UAE News
+Emirates TV
+Emirates Sports
+Emirates Drama
+Emirates News
+Fujairah TV
+Ajman TV
+Ras Al Khaimah TV
+Umm Al Quwain TV
+Sharjah TV 2
+Abu Dhabi TV 2
+Dubai TV 2
+Al Ain TV
+Al Dhafra TV
+Al Watan TV
+Al Emarat TV
+Al Oula TV
+Al Riyadiya TV
+Al Dawri TV
+Al Majlis TV
+Al Arabi TV
+Al Ethraa TV
+Al Quran TV
+Al Sunnah TV
+Al Hadith TV
+Al Fiqh TV
+Al Seerah TV
+Al Tafsir TV
+Al Tajweed TV
+Al Qiraat TV
+Al Duaa TV
+Al Zikr TV
+Al Noor TV
+Al Huda TV
+Al Iman TV
+Al Taqwa TV
+Al Sabr TV
+Al Shukr TV
+Al Hamd TV
+Al Tawhid TV
+Al Risala TV
+Al Dawa TV
+Al Islah TV
+Al Nur TV
+Al Salam TV
+Al Aman TV
+Al Amal TV
+Al Hayat TV
+Al Mahaba TV
+Al Sadaqa TV
+Al Wafa TV
+Al Karam TV
+Al Baraka TV
+Al Rahma TV
+Al Maghfira TV
+Al Jannah TV
+Al Firdous TV
+Al Kawthar TV
+Al Kafeel TV
+Al Anwar TV
+Al Zahra TV
+Al Fatima TV
+Al Zainab TV
+Al Hassan TV
+Al Hussein TV
+Al Abbas TV
+Al Ali TV
+Al Mahdi TV
+Al Hujja TV
+Al Wilaya TV
+Al Thaqalayn TV
+Al Murtada TV
+Al Sadiq TV
+Al Baqir TV
+Al Kazim TV
+Al Rida TV
+Al Jawad TV
+Al Hadi TV
+Al Askari TV
+Al Mahdi TV
+Al Qaim TV
+Al Muntazar TV
+Al Faraj TV
+Al Nasr TV
+Al Fath TV
+Al Tawfiq TV
+Al Najah TV
+Al Falah TV
+Al Khair TV
+Al Baraka TV
+Al Nour TV
+Al Hidayah TV
+Al Iman TV
+Al Taqwa TV
+Al Sabr TV
+Al Shukr TV
+Al Hamd TV
+Al Tawhid TV
+Al Risala TV
+Al Dawa TV
+Al Islah TV
+Al Nur TV
+Al Salam TV
+Al Aman TV
+Al Amal TV
+Al Hayat TV
+Al Mahaba TV
+Al Sadaqa TV
+Al Wafa TV
+Al Karam TV
+Al Baraka TV
+Al Rahma TV
+Al Maghfira TV
+Al Jannah TV
+Al Firdous TV
+# Badr 8 - Arabsat 26E - زيادة
+Badr Sat
+Arabsat TV
+Arabsat Sports
+Arabsat News
+Arabsat Drama
+Arabsat Cinema
+Arabsat Kids
+Arabsat Quran
+Arabsat Sunnah
+Arabsat Documentary
+Arabsat Music
+Arabsat Comedy
+Arabsat Action
+Arabsat Movies
+Arabsat Series
+Arabsat Entertainment
+Arabsat General
+Arabsat Culture
+Arabsat Education
+Arabsat Science
+Arabsat Health
+Arabsat Cooking
+Arabsat Travel
+Arabsat Fashion
+Arabsat Lifestyle
+Arabsat Reality
+Arabsat Talk
+Arabsat Show
+Arabsat Live
+Arabsat HD
+Arabsat 4K
+Arabsat UHD
+Arabsat 3D
+Arabsat Plus
+Arabsat Max
+Arabsat Gold
+Arabsat Silver
+Arabsat Bronze
+Arabsat Premium
+Arabsat Free
+Arabsat Open
+Arabsat Clear
+Arabsat FTA
