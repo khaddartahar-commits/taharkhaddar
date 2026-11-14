@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>قنوات عربية - اقتصادي و سريع</title>
+<style>
+body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:20px}
+button{padding:10px 18px;border:0;border-radius:20px;margin:5px;cursor:pointer;background:#222;color:#fff}
+button.active{background:#22c55e;color:#000;font-weight:bold}
+.card{background:#1e1e1e;padding:12px;margin:8px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}
+a{color:#22c55e;text-decoration:none;font-weight:bold}
+input{width:90%;padding:10px;border-radius:10px;border:0;margin:10px 0}
+.smart{background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0}
+.smart input{width:100%;background:#111;color:#4ade80;text-align:left;direction:ltr}
+.copyBtn{background:#22c55e !important;color:#000 !important;font-weight:bold;width:90%}
+.qualityBox{background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0}
+video{width:100%;border-radius:12px;display:none;background:#000;margin-top:10px}
+.back{color:#fff;background:#333;padding:8px 16px;border-radius:20px;display:inline-block;margin-bottom:10px;text-decoration:none}
+.save{background:#0ea5e9;color:#fff;padding:6px 12px;border-radius:20px;font-size:12px}
+</style>
+</head>
+<body>
+<a class="back" href="index.html">⬅ رجوع للغات</a>
+<h2>📺 قنوات عربية - اقتصادي و سريع</h2>
+<p id="count">جاري التحميل...</p>
+<p><span class="save">💚 وضع التوفير شغال - يبدا بـ 360p و ما يستهلكش الإنترنت</span></p>
+
+<div class="smart">
+<p id="status">⏳ جاري تحميل القائمة فقط - بدون فيديو...</p>
+<input id="m3uLink" readonly value="جارِ الفحص...">
+<br>
+<button class="copyBtn" onclick="copyLink()">📋 نسخ رابط M3U للتلفاز</button>
+<p><small>للتلفاز: TiviMate / IPTV Smarters - الصق الرابط</small></p>
+</div>
+
+<div class="qualityBox">
+<b>🎞️ اختر الجودة - أنت تتحكم:</b><br><br>
+<button onclick="setQuality('low',this)" class="active">💚 توفير - 360p - 0.5GB/ساعة</button>
+<button onclick="setQuality('mid',this)">متوسط - 480p - 1GB/ساعة</button>
+<button onclick="setQuality('high',this)">عالي - 720p - 1.8GB/ساعة</button>
+<button onclick="setQuality('full',this)">🔥 فائق - 1080p - 2.5GB/ساعة</button>
+<p><small id="qInfo">الوضع الحالي: توفير 💚 - 360p - سريع و اقتصادي</small></p>
+<video id="player" controls playsinline preload="none"></video>
+</div>
+
+<input id="search" placeholder="🔍 ابحث عن قناة..." oninput="render()">
+<div id="filters"></div>
+<div id="list"></div>
+
+<script>
+let all=[], groups=new Set(), cur='الكل';
+let quality='low';
+let currentUrl='';
+const base = "https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/";
+const m3uLinks = [ base + "arabic-maghreb.m3u", base + "arabic-mashreq.m3u" ];
+
+async function loadSmart(){
+  let allText = "";
+  let ok = false;
+  for(let link of m3uLinks){
+    try{
+      let r = await fetch(link, {cache:"no-cache"});
+      let t = await r.text();
+      if(r.ok && t.includes("#EXTM3U")){ allText += "\n" + t; ok = true; }
+    }catch(e){}
+  }
+  if(ok){
+    document.getElementById("m3uLink").value = base + "arabic-maghreb.m3u";
+    document.getElementById("status").innerText = "✅ القائمة جاهزة - اضغط شاهد باش تخدم قناة وحدة برك";
+    parseM3U(allText);
+  }
+}
+function parseM3U(t){
+  let lines=t.split('\n'), ch=null;
+  all=[]; groups=new Set();
+  for(let i=0;i<lines.length;i++){
+    if(lines[i].startsWith('#EXTINF')){
+      let g=(lines[i].match(/group-title="([^"]*)"/)||[])[1]||'عام';
+      let name=lines[i].split(',').pop();
+      ch={name:name,group:g};
+    } else if(lines[i].startsWith('http') && ch){
+      ch.url=lines[i].trim(); all.push(ch); groups.add(ch.group); ch=null;
+    }
+  }
+  document.getElementById('count').innerText=`عدد القنوات: ${all.length}`;
+  let f=document.getElementById('filters');
+  f.innerHTML=`<button class="active" onclick="setG('الكل',this)">الكل</button>`+[...groups].map(g=>`<button onclick="setG('${g}',this)">${g}</button>`).join('');
+  render();
+}
+function setG(g,btn){cur=g;document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render();}
+function render(){
+  let q=document.getElementById('search').value.toLowerCase();
+  let list=all.filter(c=>(cur=='الكل'||c.group==cur)&&c.name.toLowerCase().includes(q));
+  document.getElementById('list').innerHTML=list.map(c=>`<div class="card"><span>${c.name}<br><small>✅ ${c.group}</small></span><a href="javascript:void(0)" onclick="playChannel('${c.url}')">شاهد</a></div>`).join('');
+}
+function setQuality(q,btn){
+  quality=q;
+  document.querySelectorAll('.qualityBox button').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  let txt = q==='low' ? 'الوضع الحالي: توفير 💚 - 360p - سريع و اقتصادي - 0.5GB/ساعة' : q==='mid' ? 'الوضع الحالي: متوسط - 480p - 1GB/ساعة' : q==='high' ? 'الوضع الحالي: عالي - 720p HD - 1.8GB/ساعة' : 'الوضع الحالي: فائق 🔥 - 1080p - 2.5GB/ساعة - للي عندو إنترنت قوية';
+  document.getElementById('qInfo').innerText = txt;
+  if(currentUrl) playChannel(currentUrl);
+}
+function getQualityUrl(url){
+  let qMap = {low:'360', mid:'480', high:'720', full:'1080'};
+  let q = qMap[quality];
+  if(url.includes('/720/') || url.includes('/1080/') || url.includes('/480/') || url.includes('/360/')){
+    return url.replace(/\/\d{3,4}\//, '/'+q+'/');
+  }
+  return url;
+}
+function playChannel(url){
+  currentUrl=url;
+  let v=document.getElementById('player');
+  v.style.display='block';
+  v.src = getQualityUrl(url);
+  v.play();
+  v.scrollIntoView({behavior:'smooth'});
+}
+document.addEventListener('visibilitychange', ()=>{
+  let v=document.getElementById('player');
+  if(document.hidden) v.pause();
+});
+function copyLink(){
+  const i=document.getElementById("m3uLink");
+  i.select(); i.setSelectionRange(0,99999);
+  navigator.clipboard.writeText(i.value);
+  alert("تم النسخ ✅");
+}
+loadSmart();
+</script>
+</body>
+</html>
