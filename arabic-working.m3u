@@ -941,8 +941,6 @@ Edessa TV (1080p)
 ('#EXTINF:-1 tvg-id="EdessaTV.tr@SD" tvg-logo="https://i.imgur.com/rhU6j9I.png" group-title="Entertainment",Edessa TV (1080p)', 'https://canli.edessatv.com/hls/stream.m3u8')
 EET TV (1080p) [Not 24/7]
 ('#EXTINF:-1 tvg-id="EETTV.ca@SD" tvg-logo="https://i.imgur.com/rntSEDZ.png" group-title="Culture",EET TV (1080p) [Not 24/7]', 'https://eu.streamjo.com/eetlive/eettv.m3u8')
-Egnatia TV (576p)
-('#EXTINF:-1 tvg-id="EgnatiaTV.gr@SD" tvg-logo="https://i.imgur.com/zuyYIca.png" group-title="News",Egnatia TV (576p)', 'https://video.streams.ovh:1936/egnatiatv/egnatiatv/index.m3u8')
 Ekamra Bharat Odia (400p)
 ('#EXTINF:-1 tvg-id="EkamraBharatOdia.in@SD" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Bharat_Odia.png" group-title="News",Ekamra Bharat Odia (400p)', 'https://live.ekamraott.com/bharat/bharat/index.m3u8')
 El 3 de Conce (1080p)
@@ -1579,6 +1577,8 @@ Lifetime Latin America (1080p)
 ('#EXTINF:-1 tvg-id="LifetimeLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png" group-title="Entertainment",Lifetime Latin America (1080p)', 'http://138.121.15.230:9002/LIFETIME/index.m3u8')
 Light Channel (Germany) (576p) [Not 24/7]
 ('#EXTINF:-1 tvg-id="LightChannel.de@SD" tvg-logo="https://i.imgur.com/0OmBlfE.png" group-title="Religious",Light Channel (Germany) (576p) [Not 24/7]', 'http://streamer1.streamhost.org:1935/salive/lctvde/playlist.m3u8')
+Limon TV (1080p) [Not 24/7]
+('#EXTINF:-1 tvg-id="LimonTV.cr@SD" tvg-logo="https://i.ibb.co/rdpcv7C/1689421727166.jpg" group-title="General",Limon TV (1080p) [Not 24/7]', 'http://k4.usastreams.com/limontv1/limontv1/playlist.m3u8')
 Living Asia Channel (1080p)
 ('#EXTINF:-1 tvg-id="LivingAsiaChannel.ph@HD" tvg-logo="https://i.imgur.com/q3UToRM.png" group-title="Travel",Living Asia Channel (1080p)', 'https://cdn.vegasplus.us/vegas/lac/playlist.m3u8')
 LLBN TV Arabic (480p)
@@ -1857,8 +1857,6 @@ Musavision (1080p)
 ('#EXTINF:-1 tvg-id="Musavision.do@SD" tvg-logo="https://i.imgur.com/wMse6cT.png" group-title="General",Musavision (1080p)', 'https://cnn.hostlagarto.com/musavisiontv/tracks-v1a1/mono.m3u8')
 MUTV (720p)
 ('#EXTINF:-1 tvg-id="MUTV.uk@SD" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1834.png" group-title="Sports",MUTV (720p)', 'https://fastly.live.brightcove.com/6374054671112/eu-west-1/6058004203001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiYXplMnp5LmVncmVzcy55ODN1ZWIiLCJhY2NvdW50X2lkIjoiNjA1ODAwNDIwMzAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU4MDA0MjAzMDAxIl0sImp0aSI6IjYzNzQwNTQ2NzExMTIifQ.3FmuTna3DAmY7xlhK5fk6LMrosrtrR5VsU2QOgYO5y4/playlist-hls.m3u8')
-My TV (Bangladesh) (480p)
-('#EXTINF:-1 tvg-id="MyTV.bd@SD" tvg-logo="https://i.imgur.com/475qK5T.png" group-title="General",My TV (Bangladesh) (480p)', 'https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8')
 Mythbusters (1080p)
 ('#EXTINF:-1 tvg-id="Mythbusters.us@UK" tvg-logo="https://i.imgur.com/wzzjvcH.png" group-title="Series",Mythbusters (1080p)', 'https://d2bog959vw5xq.cloudfront.net/playlist/amg00627-banijayfast-mythbusters-samsungau/playlist.m3u8')
 MyTime Movie Network (Brazil) (720p)
@@ -1947,6 +1945,8 @@ NEW K.MOVIES (1080p)
 ('#EXTINF:-1 tvg-id="NEWKMOVIES.us@SD" tvg-logo="https://i.imgur.com/wCgirjc.png" group-title="Movies",NEW K.MOVIES (1080p)', 'https://ads.its-newid.net/api/manifest.m3u8?ads.service_id=GB1700007PK&channel_id=newid_343&tp=samsung_tvplus')
 News12+ Connecticut (1080p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="News12PlusConnecticut.us@HD" tvg-logo="https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg" group-title="News",News12+ Connecticut (1080p) [Geo-blocked]', 'https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8')
+News12+ Hudson Valley (1080p) [Geo-blocked]
+('#EXTINF:-1 tvg-id="News12PlusHudsonValley.us@HD" tvg-logo="https://i.ibb.co/cKkdC203/news12plus-HV.jpg" group-title="News",News12+ Hudson Valley (1080p) [Geo-blocked]', 'https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_WC_A1/index_new.m3u8')
 News12+ Long Island (1080p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="News12PlusLongIsland.us@HD" tvg-logo="https://i.ibb.co/p6FPNcCk/news12plus-LI.jpg" group-title="News",News12+ Long Island (1080p) [Geo-blocked]', 'https://mdc4.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/index_new.m3u8')
 News12+ New Jersey (1080p) [Geo-blocked]
@@ -1963,6 +1963,8 @@ News12 Hudson Valley (1080p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="News12HudsonValley.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" group-title="News",News12 Hudson Valley (1080p) [Geo-blocked]', 'https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/index_new.m3u8?omap=https')
 News12 Long Island (1080p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="News12LongIsland.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" group-title="News",News12 Long Island (1080p) [Geo-blocked]', 'https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/index_new.m3u8?omap=https')
+News12 New Jersey (1080p) [Geo-blocked]
+('#EXTINF:-1 tvg-id="News12NewJersey.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" group-title="News",News12 New Jersey (1080p) [Geo-blocked]', 'https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12JH_CENT_A1/index_new.m3u8?omap=https')
 News12 Westchester (1080p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="News12Westchester.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" group-title="News",News12 Westchester (1080p) [Geo-blocked]', 'https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/index_new.m3u8?omap=https')
 News18 Assam North-East (1080p)
@@ -2175,8 +2177,6 @@ Palestine Today (480p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="PalestineToday.ps@SD" tvg-logo="https://i.imgur.com/BS8XXug.png" group-title="News",Palestine Today (480p) [Geo-blocked]', 'https://live.paltodaytv.com/paltv/live/playlist.m3u8')
 Palestinetv
 ('#EXTINF:-1 tvg-id="Palestinetv.ir@SD" tvg-logo="https://i.ibb.co/svrZNZTX/Palestine.png" group-title="General",Palestinetv', 'https://ncdn.telewebion.ir/palestine/live/playlist.m3u8')
-Panche Television
-('#EXTINF:-1 tvg-id="PancheTelevision.co@SD" tvg-logo="https://i.imgur.com/BJVlOVA.jpeg" group-title="General",Panche Television', 'https://vs20.live.opencaster.com/panche_3c70d368/index.m3u8')
 Pankh (360p)
 ('#EXTINF:-1 tvg-id="Pankh.in@SD" tvg-logo="https://papaji.freetvindia.com/media/pankh.png" group-title="Music",Pankh (360p)', 'https://samitaorigin.tangotv.in/PANKH/SAMITAORIGIN/index.m3u8')
 Panorama FM (1080p)
@@ -2419,8 +2419,6 @@ Quantica TV
 ('#EXTINF:-1 tvg-id="QuanticaTV.ar@SD" tvg-logo="https://i.imgur.com/6f8EYC2.jpeg" group-title="News",Quantica TV', 'https://videostream.shockmedia.com.ar:19360/quanticatv/quanticatv.m3u8')
 Quarto Canale Flegreo (720p)
 ('#EXTINF:-1 tvg-id="QuartoCanaleFlegreo.it@SD" tvg-logo="https://i.imgur.com/XfNSWp0.png" group-title="General",Quarto Canale Flegreo (720p)', 'https://live.mariatvcdn.com/dialogos/171e41deedf405f10c7dd6311387fb43.sdp/playlist.m3u8')
-Quiero Musica en mi Idioma (1080p)
-('#EXTINF:-1 tvg-id="QuieroMusicaenmiIdioma.ar@SD" tvg-logo="https://i.imgur.com/RO9Dz3X.png" group-title="Music",Quiero Musica en mi Idioma (1080p)', 'http://158.172.155.130:8000/play/a00a/index.m3u8')
 QVC (United States) (720p)
 ('#EXTINF:-1 tvg-id="QVC.us@SD" tvg-logo="https://play-lh.googleusercontent.com/58IEgCECrId5YdLMZWL9ohHzyZCY1lNduLVxK9QF1P5EZuSIJScTWEMaw2efd88zMkc" group-title="Shop",QVC (United States) (720p)', 'https://qvc-amd-live.akamaized.net/hls/live/2034113/lsqvc1us/master.m3u8')
 Qwest TV Jazz & Beyond (1080p)
@@ -3067,6 +3065,8 @@ Tele Chiara (720p)
 ('#EXTINF:-1 tvg-id="TeleChiara.it@SD" tvg-logo="https://i.imgur.com/LpXeY4v.png" group-title="General",Tele Chiara (720p)', 'http://fms.tvavicenza.it:1935/telechiara/diretta/playlist.m3u8')
 Tele Peyi (720p)
 ('#EXTINF:-1 tvg-id="TelePeyi.gf@SD" tvg-logo="https://i.imgur.com/LJ9sXaB.png" group-title="General",Tele Peyi (720p)', 'https://edge20.vedge.infomaniak.com/livecast/ik:33dm06/manifest.m3u8')
+Tele Regency TV (576p)
+('#EXTINF:-1 tvg-id="TeleRegencyTV.ng@SD" tvg-logo="https://teleregency.tv/logo-white.png" group-title="General",Tele Regency TV (576p)', 'https://streams.playtv.com.ng/Tele-Regency_TRTV/index.m3u8')
 Tele Safor (720p) [Not 24/7]
 ('#EXTINF:-1 tvg-id="TeleSafor.es@SD" tvg-logo="https://i.imgur.com/EowJfr0.png" group-title="Undefined",Tele Safor (720p) [Not 24/7]', 'https://video.telesafor.com/hls/video.m3u8')
 Tele Sahel (1080p)
@@ -3671,10 +3671,6 @@ VR Canal 21 Nasca (720p)
 ('#EXTINF:-1 tvg-id="VRCanal21Nasca.pe@SD" tvg-logo="https://i.imgur.com/rxzz6kD.jpeg" group-title="General",VR Canal 21 Nasca (720p)', 'https://live-evg10.tv360.bitel.com.pe/bitel/nasca/playlist.m3u8')
 VR Live (720p)
 ('#EXTINF:-1 tvg-id="VRLive.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/VRLive.png" group-title="News",VR Live (720p)', 'https://channel.vrlivegujarat.com/hls/vrchannel.m3u8')
-VTV5 Tay Nam Bo HD (1080p)
-('#EXTINF:-1 tvg-id="VTV5TayNamBo.vn@HD" tvg-logo="https://i.imgur.com/xiuHjEQ.png" group-title="Undefined",VTV5 Tay Nam Bo HD (1080p)', 'https://dethich.pw/vtv5tnb/index.m3u8')
-VTV5 Tay Nguyen HD (1080p)
-('#EXTINF:-1 tvg-id="VTV5TayNguyen.vn@HD" tvg-logo="https://i.imgur.com/Hlcnqqt.png" group-title="Undefined",VTV5 Tay Nguyen HD (1080p)', 'http://dethich.pw/vtv5tn/index.m3u8')
 VTV News (1080p)
 ('#EXTINF:-1 tvg-id="VTVNews.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_VTV_GUJARATI/images/LOGO_HD/image.png" group-title="News",VTV News (1080p)', 'https://d2lk5u59tns74c.cloudfront.net/out/v1/bbbd0954bad143e783c4bd3ab6ed05bc/index.m3u8')
 Wairarapa TV (1080p) [Not 24/7]
@@ -3813,6 +3809,8 @@ Newsmax Balkans (1080p)
 ('#EXTINF:-1 tvg-id="NewsmaxBalkans.ba@SD" tvg-logo="https://i.imgur.com/BXFPz8c.png" group-title="Bosnia and Herzegovina",Newsmax Balkans (1080p)', 'https://newsmaxadria.mts-si.tv/newsmaxadria/index.m3u8')
 RTRS plus (576p) [Not 24/7]
 ('#EXTINF:-1 tvg-id="RTRSplus.ba@SD" tvg-logo="https://i.imgur.com/k06WvYl.png" group-title="Bosnia and Herzegovina",RTRS plus (576p) [Not 24/7]', 'https://pluslive.rtrs.tv/plus/plus/playlist.m3u8')
+RTRS TV (576p) [Not 24/7]
+('#EXTINF:-1 tvg-id="RTRSTV.ba@SD" tvg-logo="https://i.imgur.com/2Sgs5gM.png" group-title="Bosnia and Herzegovina",RTRS TV (576p) [Not 24/7]', 'https://uzivo.rtrs.tv/tv/live/index.m3u8')
 RTV HB (576p) [Not 24/7]
 ('#EXTINF:-1 tvg-id="RTVHB.ba@SD" tvg-logo="https://i.imgur.com/6FNL8Iv.png" group-title="Bosnia and Herzegovina",RTV HB (576p) [Not 24/7]', 'https://prd-hometv-live-open.spectar.tv/ERO_1_083/playlist.m3u8')
 Televizija 5 (576p)
@@ -3947,6 +3945,8 @@ One TV (720p) [Not 24/7]
 ('#EXTINF:-1 tvg-id="OneTV.lb@SD" tvg-logo="https://i.imgur.com/O4DuR9G.png" group-title="Lebanon",One TV (720p) [Not 24/7]', 'https://hms.pfs.gdn/v1/broadcast/one/playlist.m3u8')
 Senses TV (1080p)
 ('#EXTINF:-1 tvg-id="SensesTV.lb@SD" tvg-logo="https://i.imgur.com/hnTx8eK.png" group-title="Lebanon",Senses TV (1080p)', 'http://31.14.41.69:8080/hls/sensesonline/index.m3u8')
+Taha TV (576p)
+('#EXTINF:-1 tvg-id="TahaTV.lb@SD" tvg-logo="https://i.imgur.com/hdsrxvX.png" group-title="Lebanon",Taha TV (576p)', 'https://stream.starmenajo.com/hls/app/live/ts:fhd.m3u8')
 TV Niksic (720p)
 ('#EXTINF:-1 tvg-id="TVNiksic.me@SD" tvg-logo="https://i.imgur.com/51fGwzn.png" group-title="Montenegro",TV Niksic (720p)', 'https://tv.rtv-niksic.me/hls/stream.m3u8')
 TV Teuta
@@ -4143,6 +4143,8 @@ Kapital TV (576i)
 ('#EXTINF:-1 tvg-id="KapitalTV.ro@SD" tvg-logo="https://i.imgur.com/Q1PYwkZ.png" group-title="Romania",Kapital TV (576i)', 'https://hls02ns.antenaplay.ro/hls/kapital-tv-sd/index.m3u8')
 Kiss TV (1080p)
 ('#EXTINF:-1 tvg-id="KissTV.ro@SD" tvg-logo="https://i.imgur.com/NKfVymH.png" group-title="Romania",Kiss TV (1080p)', 'https://tv.broadcasting.ro/kisstv/a629c031-2170-4ee9-a36d-87a891aa3131.m3u8')
+LiraTV (720p)
+('#EXTINF:-1 tvg-id="LiraTV.es@SD" tvg-logo="https://i.imgur.com/hBswXYZ.png" group-title="Romania",LiraTV (720p)', 'https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8')
 Love Nature 4K (2160p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="LoveNature.ca@4K" tvg-logo="https://tv.lovenature.com/wp-content/uploads/2024/10/LoveNature2024_Logo_full_colour-copy.png" group-title="Romania",Love Nature 4K (2160p) [Geo-blocked]', 'https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8')
 MediCOOL TV
@@ -4535,8 +4537,6 @@ Logos TV (United States) (1080p) [Not 24/7]
 ('#EXTINF:-1 tvg-id="LogosTV.us@SD" tvg-logo="https://i.imgur.com/h8DioXU.png" group-title="Arabic",Logos TV (United States) (1080p) [Not 24/7]', 'https://5a8308add0b31.streamlock.net/logoschannel.com/logostv.smil/playlist.m3u8')
 MahdawiounTV (1080p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="MahdawiounTV.iq@HD" tvg-logo="https://mahdawioun.tv/wp-content/uploads/2024/03/New-Logo-Color.png" group-title="Arabic",MahdawiounTV (1080p) [Geo-blocked]', 'https://live.mahdawioun.tv/stream/mahdawioun/playlist.m3u8')
-Makan 33 (1080p)
-('#EXTINF:-1 tvg-id="Makan33.il@SD" tvg-logo="https://i.imgur.com/RVtQTed.png" group-title="Arabic",Makan 33 (1080p)', 'https://kancdn.medonecdn.net/livehls/oil/kancdn-live/live/makan/live.livx/playlist.m3u8')
 Miracle Channel (1080p)
 ('#EXTINF:-1 tvg-id="MiracleChannel.se@SD" tvg-logo="https://i.imgur.com/yrt7Rw9.png" group-title="Arabic",Miracle Channel (1080p)', 'https://live.miracleonline.org/hls/miracle1.m3u8')
 Mission Asia (1080p)
@@ -4959,6 +4959,8 @@ Mega News
 ('#EXTINF:-1 tvg-name="Mega News" tvg-logo="https://i.imgur.com/Z3k7iA0.png" tvg-id="MegaChannel.gr" tvg-chno="22" tvg-country="GR" group-title="Greece",Mega News', 'https://c98db5952cb54b358365984178fb898a.msvdn.net/live/S99841657/NU0xOarAMJ5X/playlist.m3u8')
 Blue Sky
 ('#EXTINF:-1 tvg-name="Blue Sky" tvg-logo="https://i.imgur.com/rzuQslM.png" tvg-id="BlueSky.gr" tvg-chno="34" tvg-country="GR" group-title="Greece",Blue Sky', 'https://www.youtube.com/channel/UCBuEruzW_f-Qpj_sABmuYSg/live')
+Egnatia
+('#EXTINF:-1 tvg-name="Egnatia" tvg-logo="https://i.imgur.com/zuyYIca.png" tvg-id="egnatiatv.gr" tvg-chno="53" tvg-country="GR" group-title="Greece",Egnatia', 'https://video.streams.ovh:1936/egnatiatv/egnatiatv/index.m3u')
 Pella
 ('#EXTINF:-1 tvg-name="Pella" tvg-logo="https://i.imgur.com/pwUkkGL.jpeg" tvg-id="pellatv.gr" tvg-chno="55" tvg-country="GR" group-title="Greece",Pella', 'https://video.streams.ovh:1936/pellatv/pellatv/playlist.m3u8')
 Thessalia
