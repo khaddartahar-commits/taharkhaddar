@@ -32,7 +32,7 @@ jobs:
             python compare.py
             git config user.name "tahar-bot"
             git config user.email "tahar-bot@github.com"
-            git add arabic.m3u channels.m3u all.m3u nilesat.m3u arabsat.m3u compare_nilesat_arabsat.md
+            git add arabic.m3u channels.m3u all.m3u 1111111111111122.m3u nilesat.m3u arabsat.m3u compare_nilesat_arabsat.md
             git diff --cached --quiet || git commit -m "تحديث شغالة فقط - $(date)"
             git push || echo "ماكاش جديد"
           }
