@@ -2,7 +2,7 @@ name: فحص القنوات العربية الشغالة فقط
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
@@ -11,47 +11,30 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 1620
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: تثبيت المكتبة
         run: pip install requests
+
       - name: تشغيل الروبوت - شغالة فقط
         run: |
-          PHASE1_MINUTES=180
-          INTERVAL_6MIN=360
+          python check.py
+          python compare.py || echo "ماكاش compare"
 
-          run_once() {
-            echo "===== $(date) ====="
-            python check.py
-            python compare.py
-            git config user.name "tahar-bot"
-            git config user.email "tahar-bot@github.com"
-            git add arabic.m3u channels.m3u all.m3u 1111111111111122.m3u nilesat.m3u arabsat.m3u compare_nilesat_arabsat.md
-            git diff --cached --quiet || git commit -m "تحديث شغالة فقط - $(date)"
-            git push || echo "ماكاش جديد"
-          }
+          git config user.name "tahar-bot"
+          git config user.email "tahar-bot@github.com"
 
-          echo "🚀 ===== المرحلة 1: كل 6 دقائق لمدة 3 ساعات ====="
-          TOTAL_6MIN=$((PHASE1_MINUTES / 6))
-          for i in $(seq 1 $TOTAL_6MIN); do
-            echo "--- المرة $i / $TOTAL_6MIN ---"
-            run_once
-            if [ $i -lt $TOTAL_6MIN ]; then
-              echo "⏳ نستنى 6 دقائق..."
-              sleep $INTERVAL_6MIN
-            fi
-          done
-          echo "✅ كملت المرحلة 1"
+          git add arabic-maghreb.m3u arabic-mashreq.m3u arabic.html index.html compare_nilesat_arabsat.md || true
+          git diff --cached --quiet || git commit -m "تحديث شغالة فقط - $(date)"
+          git push || echo "ماكاش جديد"
 
-          echo "😴 ===== نستنى 24 ساعة ====="
-          sleep 86400
-
-          echo "🚀 ===== تحديث بعد 24 ساعة ====="
-          run_once
-          echo "🎉 كملنا كلش"
+      - name: خلاص
+        run: echo "✅ كملنا - مرة وحدة برك، سريع و اقتصادي"
