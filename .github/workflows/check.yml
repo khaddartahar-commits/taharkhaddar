@@ -1,9 +1,10 @@
-name: فحص القنوات العربية الشغالة فقط
+name: Check Arabic Channels
 
 on:
-  schedule:
-    - cron: '0 2 * * *'
+  push:
   workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
 
 permissions:
   contents: write
@@ -11,30 +12,16 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: تثبيت المكتبة
-        run: pip install requests
-
-      - name: تشغيل الروبوت - شغالة فقط
-        run: |
-          python check.py
-          python compare.py || echo "ماكاش compare"
-
-          git config user.name "tahar-bot"
-          git config user.email "tahar-bot@github.com"
-
-          git add arabic-maghreb.m3u arabic-mashreq.m3u arabic.html index.html compare_nilesat_arabsat.md || true
-          git diff --cached --quiet || git commit -m "تحديث شغالة فقط - $(date)"
-          git push || echo "ماكاش جديد"
-
-      - name: خلاص
-        run: echo "✅ كملنا - مرة وحدة برك، سريع و اقتصادي"
+      - run: pip install requests
+      - run: python check.py
+      - run: |
+          git config user.name "bot"
+          git config user.email "bot@bot.com"
+          git add arabic-working.m3u arabic-maghreb.m3u arabic-mashreq.m3u
+          git commit -m "تحديث القنوات العربية الشغالة" || echo "ماكاش جديد"
+          git push
