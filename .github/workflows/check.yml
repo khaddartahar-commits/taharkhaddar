@@ -20,6 +20,6 @@ jobs:
       - run: |
           git config user.name "bot"
           git config user.email "bot@bot.com"
-          git add arabic-working.m3u arabic-maghreb.m3u arabic-mashreq.m3u France.m3u french-working.m3u Italie.m3u italie.m3u Espagne.m3u espagne.m3u Allemagne.m3u allemagne.m3u Angleterre.m3u angleterre.m3u
+          git add arabic-working.m3u arabic-maghreb.m3u arabic-mashreq.m3u France.m3u french-working.m3u Italie.m3u italie.m3u Espagne.m3u espagne.m3u Allemagne.m3u allemagne.m3u Angleterre.m3u angleterre.m3u Portugal.m3u portugal.m3u Hollande.m3u hollande.m3u
           git commit -m "تحديث كل الدول" || echo "ماكاش جديد"
           git push
