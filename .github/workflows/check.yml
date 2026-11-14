@@ -1,4 +1,4 @@
-name: فحص القنوات - مرحلتين
+name: فحص القنوات العربية الشغالة فقط
 
 on:
   schedule:
@@ -21,7 +21,7 @@ jobs:
           python-version: '3.11'
       - name: تثبيت المكتبة
         run: pip install requests
-      - name: تشغيل الروبوت - مرحلتين
+      - name: تشغيل الروبوت - شغالة فقط
         run: |
           PHASE1_MINUTES=180
           INTERVAL_6MIN=360
@@ -32,26 +32,26 @@ jobs:
             python compare.py
             git config user.name "tahar-bot"
             git config user.email "tahar-bot@github.com"
-            git add arabic.m3u channels.m3u nilesat.m3u arabsat.m3u all.m3u compare_nilesat_arabsat.md
-            git diff --cached --quiet || git commit -m "تحديث - $(date)"
+            git add arabic.m3u channels.m3u all.m3u nilesat.m3u arabsat.m3u compare_nilesat_arabsat.md
+            git diff --cached --quiet || git commit -m "تحديث شغالة فقط - $(date)"
             git push || echo "ماكاش جديد"
           }
 
-          echo "🚀 ===== المرحلة 1: كل 6 دقائق لمدة $PHASE1_MINUTES دقيقة ====="
+          echo "🚀 ===== المرحلة 1: كل 6 دقائق لمدة 3 ساعات ====="
           TOTAL_6MIN=$((PHASE1_MINUTES / 6))
           for i in $(seq 1 $TOTAL_6MIN); do
-            echo "--- المرحلة 1: المرة $i / $TOTAL_6MIN ---"
+            echo "--- المرة $i / $TOTAL_6MIN ---"
             run_once
             if [ $i -lt $TOTAL_6MIN ]; then
               echo "⏳ نستنى 6 دقائق..."
               sleep $INTERVAL_6MIN
             fi
           done
-          echo "✅ كملت المرحلة 1 - 3 ساعات"
+          echo "✅ كملت المرحلة 1"
 
-          echo "😴 ===== المرحلة 2: نستنى 24 ساعة ====="
+          echo "😴 ===== نستنى 24 ساعة ====="
           sleep 86400
 
-          echo "🚀 ===== المرحلة 2: تحديث بعد 24 ساعة ====="
+          echo "🚀 ===== تحديث بعد 24 ساعة ====="
           run_once
-          echo "🎉 كملنا كلش - 3 ساعات كل 6 دقائق + مرة بعد 24 ساعة"
+          echo "🎉 كملنا كلش"
