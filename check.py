@@ -23,7 +23,6 @@ def add(inf, url):
         return
     channels[url] = inf.strip()
 
-# --- كل الدول العربية ---
 countries = ['dz','ma','tn','eg','sa','ae','qa','kw','jo','lb','iq','ye','ps','sy','ly','sd','mr','bh','om']
 
 for code in countries:
@@ -33,14 +32,12 @@ for code in countries:
         if lines[i].startswith('#EXTINF') and i+1 < len(lines) and lines[i+1].strip().startswith('http'):
             add(lines[i], lines[i+1])
 
-# --- كل القنوات اللي لغتها عربية ---
 print("نجيبو اللغة العربية...")
 lines = get_lines('https://iptv-org.github.io/iptv/languages/ara.m3u')
 for i in range(len(lines)):
     if lines[i].startswith('#EXTINF') and i+1 < len(lines) and lines[i+1].strip().startswith('http'):
         add(lines[i], lines[i+1])
 
-# --- كل منطقة الشرق الأوسط وشمال إفريقيا ---
 print("نجيبو MENA...")
 lines = get_lines('https://iptv-org.github.io/iptv/regions/mena.m3u')
 for i in range(len(lines)):
@@ -49,8 +46,6 @@ for i in range(len(lines)):
 
 print(f"✅ المجموع: {len(channels)} قناة عربية")
 
-# --- الحفظ ---
-# رابط واحد برك، فيه غير القنوات
 with open('arabic.m3u','w',encoding='utf-8') as f:
     f.write("#EXTM3U\n")
     for url, inf in channels.items():
