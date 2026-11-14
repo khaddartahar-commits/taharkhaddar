@@ -25,7 +25,7 @@ def is_radio(inf, url):
 
 # ================= 1. نجمعو القنوات العربية برك =================
 print("1. نجمعو القنوات العربية...")
-arabic = {}  # url -> inf
+arabic = {}
 
 def add(inf, url):
     url = url.strip()
@@ -35,7 +35,6 @@ def add(inf, url):
         return
     if is_radio(inf, url):
         return
-    # نجبر المجموعة تولي القنوات العربية
     inf = re.sub(r'group-title="[^"]*"', 'group-title="🇩🇿 القنوات العربية"', inf)
     if 'group-title=' not in inf:
         inf = inf.replace('#EXTINF:-1', '#EXTINF:-1 group-title="🇩🇿 القنوات العربية"')
@@ -54,7 +53,7 @@ for i in range(len(lines)):
 
 print(f"📥 لقينا: {len(arabic)} قناة عربية قبل الفحص")
 
-# ================= 2. قنوات الإنترنت فقط - مضمونة =================
+# ================= 2. قنوات الإنترنت فقط =================
 print("🌐 نزيدو قنوات الإنترنت...")
 internet_only = [
     ("🌐 الجديد - Al Jadeed [Internet]", "https://livestreaming.itworkscdn.net/aljadeedlive/aljadeedlive.smil/playlist.m3u8"),
@@ -73,28 +72,23 @@ for name, url in internet_only:
 print(f"📥 المجموع قبل الفحص: {len(arabic)}")
 
 # ================= 3. نفحصو كل قناة - الشغالة برك =================
-print("🔍 نفحصو كل قناة... هذا يأخذ 3-5 دقائق، اصبر")
+print("🔍 نفحصو كل قناة... هذا يأخذ 3-5 دقائق")
 
 def is_working(url):
     try:
-        # نجربو HEAD أولا - سريع
         r = requests.head(url, timeout=6, headers=headers, allow_redirects=True)
         if r.status_code == 200:
             return True
         if r.status_code in [403, 405, 301, 302]:
-            # بعض السيرفرات يرفضو HEAD، نجربو GET
             pass
         else:
-            # نجربو GET صغير
             r2 = requests.get(url, timeout=8, headers=headers, stream=True)
             if r2.status_code == 200:
-                # نقراو شوية برك باش نتأكدو
                 chunk = next(r2.iter_content(1024), b'')
                 r2.close()
                 if len(chunk) > 0:
                     return True
             return False
-        # إذا HEAD رفض، نجربو GET
         r2 = requests.get(url, timeout=8, headers=headers, stream=True)
         if r2.status_code == 200:
             chunk = next(r2.iter_content(1024), b'')
@@ -108,7 +102,6 @@ def is_working(url):
 urls = list(arabic.keys())
 working = {}
 
-# نفحصو 50 قناة في نفس الوقت باش نكملو بسرعة
 with ThreadPoolExecutor(max_workers=50) as ex:
     results = list(ex.map(is_working, urls))
 
@@ -119,7 +112,7 @@ for url, ok in zip(urls, results):
 print(f"✅ الشغالة فقط: {len(working)} من {len(arabic)}")
 print(f"❌ حذفنا الميتة: {len(arabic) - len(working)}")
 
-# ================= 4. الحفظ - رابط واحد =================
+# ================= 4. الحفظ - رابط واحد + كود =================
 def save(filename, store):
     with open(filename,'w',encoding='utf-8') as f:
         f.write("#EXTM3U\n")
@@ -129,10 +122,11 @@ def save(filename, store):
 save('arabic.m3u', working)
 save('channels.m3u', working)
 save('all.m3u', working)
-# نخليو الملفات القديمة فارغة باش ما يخلطوش
+save('1111111111111122.m3u', working)
 save('nilesat.m3u', {})
 save('arabsat.m3u', {})
 
 print("🎉 كملنا - غير القنوات العربية الشغالة")
-print(f"arabic.m3u = {len(working)} قناة شغالة")
-print(f"all.m3u = {len(working)} قناة شغالة")
+print(f"arabic.m3u = {len(working)}")
+print(f"all.m3u = {len(working)}")
+print(f"1111111111111122.m3u = {len(working)} - الكود")
