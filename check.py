@@ -9,7 +9,7 @@ for fname in ['servers-all.txt','servers-backup.txt']:
                 if l.startswith('http'): urls.append(l)
     except: pass
 
-arabic={}; french={}; italian={}; spanish={}; german={}; english={}
+arabic={}; french={}; italian={}; spanish={}; german={}; english={}; portuguese={}; dutch={}
 
 def is_arabic(info,url):
     low=(info+" "+url).lower()
@@ -29,6 +29,12 @@ def is_german(info,url):
 def is_english(info,url):
     low=(info+" "+url).lower()
     return any(w in low for w in ['uk','england','british','bbc','itv','channel 4','channel 5','sky sports','sky uk','sky news','dazn uk','bt sport','tnt sports uk','eurosport uk'])
+def is_portuguese(info,url):
+    low=(info+" "+url).lower()
+    return any(w in low for w in ['por','portugal','pt,','rtp','sic','tvi','sport tv','benfica tv','porto canal','cnn portugal'])
+def is_dutch(info,url):
+    low=(info+" "+url).lower()
+    return any(w in low for w in ['nld','netherlands','holland','nl,','npo 1','npo 2','npo 3','rtl 4','rtl 5','rtl 7','ziggo','sbs 6','veronica','espn nl'])
 
 for surl in urls:
     try:
@@ -47,6 +53,8 @@ for surl in urls:
             if is_spanish(info,stream) and name not in spanish: spanish[name]=(info,stream)
             if is_german(info,stream) and name not in german: german[name]=(info,stream)
             if is_english(info,stream) and name not in english: english[name]=(info,stream)
+            if is_portuguese(info,stream) and name not in portuguese: portuguese[name]=(info,stream)
+            if is_dutch(info,stream) and name not in dutch: dutch[name]=(info,stream)
     except Exception as e: print(f"فشل {surl}: {e}")
 
 def is_working(item):
@@ -66,8 +74,8 @@ def check_all(d):
             if res: out.append(res)
     return out
 
-aw=check_all(arabic); fw=check_all(french); iw=check_all(italian); sw=check_all(spanish); gw=check_all(german); ew=check_all(english)
-print(f"عربي {len(aw)} فرنسي {len(fw)} إيطالي {len(iw)} إسباني {len(sw)} ألماني {len(gw)} إنجليزي {len(ew)}")
+aw=check_all(arabic); fw=check_all(french); iw=check_all(italian); sw=check_all(spanish); gw=check_all(german); ew=check_all(english); pw=check_all(portuguese); dw=check_all(dutch)
+print(f"عربي {len(aw)} فرنسي {len(fw)} إيطالي {len(iw)} إسباني {len(sw)} ألماني {len(gw)} إنجليزي {len(ew)} برتغالي {len(pw)} هولندي {len(dw)}")
 
 def write_m3u(fname,lst):
     with open(fname,'w',encoding='utf-8') as f:
@@ -86,4 +94,6 @@ write_m3u('Italie.m3u',iw); write_m3u('italie.m3u',iw)
 write_m3u('Espagne.m3u',sw); write_m3u('espagne.m3u',sw)
 write_m3u('Allemagne.m3u',gw); write_m3u('allemagne.m3u',gw)
 write_m3u('Angleterre.m3u',ew); write_m3u('angleterre.m3u',ew)
+write_m3u('Portugal.m3u',pw); write_m3u('portugal.m3u',pw)
+write_m3u('Hollande.m3u',dw); write_m3u('hollande.m3u',dw)
 print("تم كلش")
