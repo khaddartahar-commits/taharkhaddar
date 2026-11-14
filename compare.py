@@ -21,6 +21,7 @@ def exists(n):
 with open('compare_nilesat_arabsat.md','w',encoding='utf-8') as f:
     f.write("# ✅ القنوات العربية الشغالة فقط\n\n")
     f.write(f"عدد القنوات الشغالة: **{len(our)}**\n\n")
+    f.write(f"الكود: **1111111111111122**\n\n")
     f.write("| القناة | الحالة |\n")
     f.write("| --- | --- |\n")
     for name in checks:
