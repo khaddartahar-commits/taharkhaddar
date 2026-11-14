@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>قنوات عربية - اقتصادي و سريع</title>
+<title>قنوات عربية - CDN سريع</title>
 <style>
 body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:20px}
 button{padding:10px 18px;border:0;border-radius:20px;margin:5px;cursor:pointer;background:#222;color:#fff}
@@ -22,54 +22,64 @@ video{width:100%;border-radius:12px;display:none;background:#000;margin-top:10px
 </head>
 <body>
 <a class="back" href="index.html">⬅ رجوع للغات</a>
-<h2>📺 قنوات عربية - اقتصادي و سريع</h2>
+<h2>📺 قنوات عربية - CDN سريع</h2>
 <p id="count">جاري التحميل...</p>
-<p><span class="save">💚 وضع التوفير شغال - يبدا بـ 360p و ما يستهلكش الإنترنت</span></p>
-
+<p><span class="save">⚡ CDN عالمي - يجرب 5 سيرفرات و يخير الأسرع وحدو</span></p>
 <div class="smart">
-<p id="status">⏳ جاري تحميل القائمة فقط - بدون فيديو...</p>
+<p id="status">⏳ جاري الفحص من 5 CDN...</p>
 <input id="m3uLink" readonly value="جارِ الفحص...">
 <br>
-<button class="copyBtn" onclick="copyLink()">📋 نسخ رابط M3U للتلفاز</button>
+<button class="copyBtn" onclick="copyLink()">📋 نسخ رابط M3U الشغال للتلفاز</button>
 <p><small>للتلفاز: TiviMate / IPTV Smarters - الصق الرابط</small></p>
 </div>
-
 <div class="qualityBox">
-<b>🎞️ اختر الجودة - أنت تتحكم:</b><br><br>
+<b>🎞️ اختر الجودة:</b><br><br>
 <button onclick="setQuality('low',this)" class="active">💚 توفير - 360p - 0.5GB/ساعة</button>
-<button onclick="setQuality('mid',this)">متوسط - 480p - 1GB/ساعة</button>
-<button onclick="setQuality('high',this)">عالي - 720p - 1.8GB/ساعة</button>
-<button onclick="setQuality('full',this)">🔥 فائق - 1080p - 2.5GB/ساعة</button>
-<p><small id="qInfo">الوضع الحالي: توفير 💚 - 360p - سريع و اقتصادي</small></p>
+<button onclick="setQuality('mid',this)">متوسط - 480p</button>
+<button onclick="setQuality('high',this)">عالي - 720p</button>
+<button onclick="setQuality('full',this)">🔥 فائق - 1080p</button>
+<p><small id="qInfo">الوضع الحالي: توفير 💚 - 360p</small></p>
 <video id="player" controls playsinline preload="none"></video>
 </div>
-
 <input id="search" placeholder="🔍 ابحث عن قناة..." oninput="render()">
 <div id="filters"></div>
 <div id="list"></div>
-
 <script>
 let all=[], groups=new Set(), cur='الكل';
 let quality='low';
 let currentUrl='';
-const base = "https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/";
-const m3uLinks = [ base + "arabic-maghreb.m3u", base + "arabic-mashreq.m3u" ];
-
+// 5 CDN - يجربهم بالترتيب، الأسرع يربح
+const cdns = [
+  "https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/",
+  "https://fastly.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/",
+  "https://gcore.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/",
+  "https://cdn.statically.io/gh/khaddartahar-commits/taharkhaddar/main/",
+  "https://khaddartahar-commits.github.io/taharkhaddar/"
+];
+async function fetchOne(url){
+  try{
+    let r = await fetch(url, {cache:"no-cache"});
+    let t = await r.text();
+    if(r.ok && t.includes("#EXTM3U")) return t;
+  }catch(e){}
+  return "";
+}
 async function loadSmart(){
   let allText = "";
-  let ok = false;
-  for(let link of m3uLinks){
-    try{
-      let r = await fetch(link, {cache:"no-cache"});
-      let t = await r.text();
-      if(r.ok && t.includes("#EXTM3U")){ allText += "\n" + t; ok = true; }
-    }catch(e){}
+  let bestLink = "";
+  for(let base of cdns){
+    let t1 = await fetchOne(base + "arabic-maghreb.m3u");
+    let t2 = await fetchOne(base + "arabic-mashreq.m3u");
+    if(t1 || t2){
+      allText = t1 + "\n" + t2;
+      bestLink = base + "arabic-maghreb.m3u";
+      document.getElementById("m3uLink").value = bestLink;
+      document.getElementById("status").innerText = "✅ شغال من CDN: " + base;
+      parseM3U(allText);
+      return;
+    }
   }
-  if(ok){
-    document.getElementById("m3uLink").value = base + "arabic-maghreb.m3u";
-    document.getElementById("status").innerText = "✅ القائمة جاهزة - اضغط شاهد باش تخدم قناة وحدة برك";
-    parseM3U(allText);
-  }
+  document.getElementById("status").innerText = "❌ كل CDN طايحة - عاود بعد دقيقة";
 }
 function parseM3U(t){
   let lines=t.split('\n'), ch=null;
@@ -98,8 +108,7 @@ function setQuality(q,btn){
   quality=q;
   document.querySelectorAll('.qualityBox button').forEach(b=>b.classList.remove('active'));
   if(btn) btn.classList.add('active');
-  let txt = q==='low' ? 'الوضع الحالي: توفير 💚 - 360p - سريع و اقتصادي - 0.5GB/ساعة' : q==='mid' ? 'الوضع الحالي: متوسط - 480p - 1GB/ساعة' : q==='high' ? 'الوضع الحالي: عالي - 720p HD - 1.8GB/ساعة' : 'الوضع الحالي: فائق 🔥 - 1080p - 2.5GB/ساعة - للي عندو إنترنت قوية';
-  document.getElementById('qInfo').innerText = txt;
+  document.getElementById('qInfo').innerText = 'الوضع الحالي: ' + q;
   if(currentUrl) playChannel(currentUrl);
 }
 function getQualityUrl(url){
