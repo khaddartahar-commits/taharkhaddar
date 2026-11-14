@@ -1,0 +1,4 @@
+https://fastly.jsdelivr.net/gh/iptv-org/iptv@master/index.m3u
+https://gcore.jsdelivr.net/gh/iptv-org/iptv@master/index.m3u
+https://cdn.statically.io/gh/iptv-org/iptv/main/index.m3u
+https://cdn.jsdelivr.net/gh/Free-TV/IPTV@master/playlist.m3u8
