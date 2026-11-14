@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>قنوات عربية</title>
 <style>
 body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:20px}
@@ -9,33 +11,93 @@ button.active{background:#22c55e;color:#000;font-weight:bold}
 .card{background:#1e1e1e;padding:12px;margin:8px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}
 a{color:#22c55e;text-decoration:none;font-weight:bold}
 input{width:90%;padding:10px;border-radius:10px;border:0;margin:10px 0}
-</style></head>
+.smart{background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0;text-align:center}
+.smart input{width:100%;background:#111;color:#4ade80;text-align:left;direction:ltr}
+.copyBtn{background:#22c55e !important;color:#000 !important;font-weight:bold;width:90%}
+</style>
+</head>
 <body>
 <h2>📺 قنوات عربية شغالة</h2>
 <p id="count">جاري التحميل...</p>
+
+<div class="smart">
+<p id="status">⏳ جاري فحص الروابط... نختارلك الرابط الشغال أوتوماتيك</p>
+<input id="m3uLink" readonly value="جارِ الفحص...">
+<br>
+<button class="copyBtn" onclick="copyLink()">📋 نسخ رابط M3U الشغال للتلفاز / الرسيفر</button>
+<p><small>الصقو في: TiviMate / IPTV Smarters / IRIS -> Add Playlist -> M3U URL</small></p>
+</div>
+
 <input id="search" placeholder="🔍 ابحث عن قناة..." oninput="render()">
 <div id="filters"></div>
 <div id="list"></div>
+
 <script>
 let all=[], groups=new Set(), cur='الكل';
-fetch('arabic.m3u').then(r=>r.text()).then(t=>{
+
+// === كل الروابط اللي تخدم مع مليون مشاهد - نفس الملف ===
+const m3uLinks = [
+  "https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/arabic.m3u",
+  "https://fastly.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/arabic.m3u",
+  "https://gcore.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/arabic.m3u",
+  "https://cdn.statically.io/gh/khaddartahar-commits/taharkhaddar/main/arabic.m3u",
+  "https://rawcdn.githack.com/khaddartahar-commits/taharkhaddar/main/arabic.m3u",
+  "https://khaddartahar-commits.github.io/taharkhaddar/arabic.m3u",
+  "https://raw.githubusercontent.com/khaddartahar-commits/taharkhaddar/main/arabic.m3u",
+  // احتياط: اذا arabic.m3u ما كاش، نجربو all.m3u
+  "https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/all.m3u",
+  "https://raw.githubusercontent.com/khaddartahar-commits/taharkhaddar/main/all.m3u"
+];
+
+async function loadSmart(){
+  for(let i=0;i<m3uLinks.length;i++){
+    try{
+      let r = await fetch(m3uLinks[i], {cache:"no-cache"});
+      let t = await r.text();
+      if(r.ok && t.includes("#EXTM3U")){
+        document.getElementById("m3uLink").value = m3uLinks[i];
+        document.getElementById("status").innerText = "✅ الرابط الشغال رقم " + (i+1) + " - انسخو للتلفاز";
+        parseM3U(t);
+        return;
+      }
+    }catch(e){}
+  }
+  document.getElementById("status").innerText = "نستعملو الرابط الأساسي:";
+  document.getElementById("m3uLink").value = m3uLinks[0];
+}
+
+function parseM3U(t){
   let lines=t.split('\n'), ch=null;
+  all=[]; groups=new Set();
   for(let i=0;i<lines.length;i++){
     if(lines[i].startsWith('#EXTINF')){
       let g=(lines[i].match(/group-title="([^"]*)"/)||[])[1]||'عام';
       let name=lines[i].split(',').pop();
       ch={name:name,group:g};
-    } else if(lines[i].startsWith('http') && ch){ ch.url=lines[i].trim(); all.push(ch); groups.add(ch.group); ch=null; }
+    } else if(lines[i].startsWith('http') && ch){
+      ch.url=lines[i].trim(); all.push(ch); groups.add(ch.group); ch=null;
+    }
   }
   document.getElementById('count').innerText=`عدد القنوات الشغالة: ${all.length} / ${all.length} - آخر فحص كل ساعة`;
   let f=document.getElementById('filters');
   f.innerHTML=`<button class="active" onclick="setG('الكل',this)">الكل</button>`+[...groups].map(g=>`<button onclick="setG('${g}',this)">${g}</button>`).join('');
   render();
-});
-function setG(g,btn){cur=g;document.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render();}
+}
+
+function setG(g,btn){cur=g;document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render();}
 function render(){
   let q=document.getElementById('search').value.toLowerCase();
   let list=all.filter(c=>(cur=='الكل'||c.group==cur)&&c.name.toLowerCase().includes(q));
   document.getElementById('list').innerHTML=list.map(c=>`<div class="card"><span>${c.name}<br><small>✅ ${c.group}</small></span><a href="${c.url}" target="_blank">شاهد</a></div>`).join('');
 }
-</script></body></html>
+function copyLink(){
+  const i=document.getElementById("m3uLink");
+  i.select(); i.setSelectionRange(0,99999);
+  navigator.clipboard.writeText(i.value);
+  alert("تم النسخ ✅ الصقو في التلفاز / الرسيفر");
+}
+
+loadSmart();
+</script>
+</body>
+</html>
