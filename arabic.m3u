@@ -619,7 +619,7 @@ https://5c7b683162943.streamlock.net/live/ngrp:bahraininternational_all/playlist
 https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_arabic_tv/pc_hd_abr_v2.mpd
 #EXTINF:-1 tvg-id="beINSports1.qa@MENA" tvg-logo="https://i.imgur.com/Vtk2cGI.png" group-title="Sports",beIN Sports 1
 https://vg162.adcdsd123321.shop/7.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkArabic.ae@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cartoon_Network_Arabic_logo.png/960px-Cartoon_Network_Arabic_logo.png" group-title="🎨 أفلام كرتون",Cartoon Network Arabic
+#EXTINF:-1 tvg-id="CartoonNetworkArabic.ae@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cartoon_Network_Arabic_logo.png/960px-Cartoon_Network_Arabic_logo.png" group-title="🎨 أفلام كرتون - عربي",Cartoon Network Arabic
 http://149.100.11.252:8000/play/a056/index.m3u8
 #EXTINF:-1 tvg-id="CGTNArabic.cn@SD" tvg-logo="https://i.imgur.com/AkFFrS7.png" group-title="News",CGTN Arabic
 https://dash3.antik.sk/live/test_cgtn_arb_tizen/playlist.m3u8
@@ -665,7 +665,7 @@ https://platform-iuoamc.uk/iptv/mca-tv/index.m3u8
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-1/15cf99af5de54063fdabfefe66adc075/index.m3u8
 #EXTINF:-1 tvg-id="MBC1USA.us@SD" tvg-logo="https://i.imgur.com/CiA3plN.png" group-title="General",MBC 1 USA (1080p) [Geo-blocked]
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-1-usa/fdac3a4fc0473f1f56e07ec1d63a4b7b/index.m3u8
-#EXTINF:-1 tvg-id="MBC3USA.us@SD" tvg-logo="https://i.imgur.com/PVt8OPN.png" group-title="Kids",MBC 3 USA (1080p) [Geo-blocked]
+#EXTINF:-1 tvg-id="MBC3USA.us@SD" tvg-logo="https://i.imgur.com/PVt8OPN.png" group-title="🎨 أفلام كرتون - عربي",MBC 3 USA (1080p) [Geo-blocked]
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-3-usa/5d58265a862a476dc7f97694addb5ded/index.m3u8
 #EXTINF:-1 tvg-id="MBC4.ae@SD" tvg-logo="https://i.imgur.com/BcXASJp.png" group-title="Entertainment",MBC 4 (1080p)
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-4/24f134f1cd63db9346439e96b86ca6ed/index.m3u8
@@ -735,119 +735,3 @@ http://176.65.153.26:6004/play/a02s/index.m3u8
 https://nl.livekadeh.com/hls2/vilayet.m3u8
 #EXTINF:-1 tvg-id="ZarinTV.us@SD" tvg-logo="" group-title="General",Zarin TV (1080p)
 https://fl1002.bozztv.com/gf-zarintv/index.m3u8
-#EXTINF:-1 tvg-id="AnimeVision.es@SD" tvg-logo="https://i.imgur.com/pUpKznl.png" group-title="🎨 أفلام كرتون",Anime Vision (1080p)
-https://d1ujfw1zyymzyd.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-a6fukwkbxmex8/live/fast-channel-animevision-64527ec0/fast-channel-animevision-64527ec0.m3u8
-#EXTINF:-1 tvg-id="AnimeVisionClassics.es@SD" tvg-logo="https://i.imgur.com/mTaiEE1.png" group-title="🎨 أفلام كرتون",Anime Vision Classics (1080p)
-https://d82pyvmcw2kdc.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-swfivzrzwamaq/live/fast-channel-animevisionclassics-efc8dc6d/fast-channel-animevisionclassics-efc8dc6d.m3u8
-#EXTINF:-1 tvg-id="AnimexHIDIVE.us@SD" tvg-logo="https://i.imgur.com/v0BlxCa.png" group-title="🎨 أفلام كرتون",Anime x HIDIVE
-https://jmp2.uk/plu-6793eaa4bc03978b9bc63db1.m3u8
-#EXTINF:-1 tvg-id="CartoonClassics.pl@FAST" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/3227c06e-333b-4b1b-b657-3e3ab99ebd06-width200-quality90.jpeg" group-title="🎨 أفلام كرتون",Cartoon Classics (Poland)
-https://daiconnect.com/live/hls/tvup/rk-cartoonclassics/578f4b7eb725168349ec0af81b21d388/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.pk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network (Pakistan)
-https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network (Turkiye)
-http://176.65.153.40:6002/play/a013/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network (United States) [Not 24/7;Geo-blocked]
-https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.us@West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network (United States) West (1080p) [Geo-blocked]
-http://212.5.144.156:8080/cartoon/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkAsia.sg@Thailand" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network Asia Thailand
-http://103.253.74.210:7070/stream/118/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkCEE.uk@Hungary" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network CEE
-http://193.33.39.108:9007/play/a00l
-#EXTINF:-1 tvg-id="CartoonNetworkCEE.uk@Bulgary" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network CEE Bulgary
-http://213.91.179.28:8000/play/a08g
-#EXTINF:-1 tvg-id="CartoonNetworkCEE.uk@CzechRepublic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network CEE Czech Republic
-http://88.212.7.14/live/test_cartoon_network_tizen/playlist.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkCEE.uk@Poland" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network CEE Poland
-http://92.114.85.87:8007/play/a009
-#EXTINF:-1 tvg-id="CartoonNetworkCEE.uk@Ukraine" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network CEE Ukraine (576p)
-http://45.132.87.69:8080/cartoon_network/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkHDPlus.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CARTOON_NETWORK_HDSYMPLUS/images/LOGO_HD/image.png" group-title="🎨 أفلام كرتون",Cartoon Network HD+ (1080p)
-http://103.135.253.32:8080/CN-NETWORK/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network Latin America Brazil (720p) [Geo-blocked]
-http://15.204.246.24:8080/CartoonNetworkHD/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkLatinAmerica.us@NorthAtlantic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network Latin America North Atlantic (1080p)
-http://45.173.12.70:8000/play/a0fj
-#EXTINF:-1 tvg-id="CartoonNetworkLatinAmerica.us@SouthAtlantic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network Latin America South Atlantic (1080p)
-http://158.172.217.18:8000/play/a03a/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkLatinAmerica.us@SouthPacific" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🎨 أفلام كرتون",Cartoon Network Latin America South Pacific (576p)
-http://45.167.1.138:8000/play/a00w
-#EXTINF:-1 tvg-id="Cartoonito.it@HD" tvg-logo="https://i.imgur.com/6vYWCD0.png" group-title="🎨 أفلام كرتون",Cartoonito HD (720p)
-https://boing.akamaized.net/6380673432112/eu-central-1/6284318116001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0Ijoib3dwbnN1LmVncmVzcy5haGc3NmwiLCJhY2NvdW50X2lkIjoiNjI4NDMxODExNjAwMSIsImVobiI6ImJvaW5nLmFrYW1haXplZC5uZXQiLCJpc3MiOiJibGl2ZS1wbGF5YmFjay1zb3VyY2UtYXBpIiwic3ViIjoicGF0aG1hcHRva2VuIiwiYXVkIjpbIjYyODQzMTgxMTYwMDEiXSwianRpIjoiNjM4MDY3MzQzMjExMiJ9.WACYETOZxZYmZHRpxwRrATxVZQBdSoeaWdfhtLKx1kI/playlist-hls.m3u8
-#EXTINF:-1 tvg-id="CartoonitoLatinAmerica.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cartoonito_-_Logo_2021.svg/960px-Cartoonito_-_Logo_2021.svg.png" group-title="🎨 أفلام كرتون",Cartoonito Latin America (1080p)
-http://45.173.12.70:8000/play/a0hh
-#EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel Latin America (1080p)
-http://15.204.246.24:8080/DisneyHD/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@Center" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel Latin America Center (1080p)
-http://181.78.8.199:8000/play/a0dn/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@Mexico" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel Latin America Mexico (720p)
-http://45.166.93.156:9999/play/a0f3/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@North" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel Latin America North (576p)
-http://138.121.15.230:9002/DISNEY-CHANNEL/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@PanregionalHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel Latin America Panregional HD (1080p)
-http://45.134.141.161:2200/ARG/Disney_Channel/index.m3u8
-#EXTINF:-1 tvg-id="DisneyJr.tr@SD" tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png" group-title="🎨 أفلام كرتون",Disney Jr. (Turkiye) (1080p) [Geo-blocked]
-https://saran-live.ercdn.net/disneyjunior/index.m3u8
-#EXTINF:-1 tvg-id="DisneyJrLatinAmerica.ar@North" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="🎨 أفلام كرتون",Disney Jr. Latin America (1080p)
-http://190.14.10.19:16000/play/a02d/index.m3u8
-#EXTINF:-1 tvg-id="DisneyJrLatinAmerica.ar@NorthHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="🎨 أفلام كرتون",Disney Jr. Latin America North HD (1080p)
-http://181.78.14.26:4000/play/a073/index.m3u8
-#EXTINF:-1 tvg-id="DisneyJrLatinAmerica.ar@South" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="🎨 أفلام كرتون",Disney Jr. Latin America South (1080p)
-http://45.185.163.75:8000/play/a016/index.m3u8
-#EXTINF:-1 tvg-id="DisneyJrLatinAmerica.ar@SouthHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="🎨 أفلام كرتون",Disney Jr. Latin America South HD (1080p)
-http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/disney_jr.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="GoldenEagleCartoon.cn@SD" tvg-logo="https://i.imgur.com/xfVHrKQ.png" group-title="🎨 أفلام كرتون",Golden Eagle Cartoon (576p)
-http://223.110.245.145/ott.js.chinamobile.com/PLTV/3/224/3221226303/index.m3u8
-#EXTINF:-1 tvg-id="MAXAnime.ve@SD" tvg-logo="https://i.imgur.com/Oj3hEBh.jpg" group-title="🎨 أفلام كرتون",MAX Anime (1080p)
-https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8
-#EXTINF:-1 tvg-id="PlutoTVAnime.us@US" tvg-logo="https://images.pluto.tv/channels/5f12136385bccc00070142ed/colorLogoPNG_1777595293242.png" group-title="🎨 أفلام كرتون",Pluto TV Anime
-https://jmp2.uk/plu-5812b7d3249444e05d09cc49.m3u8
-#EXTINF:-1 tvg-id="PlutoTVAnime.us@BR" tvg-logo="https://images.pluto.tv/channels/5f12136385bccc00070142ed/colorLogoPNG_1777595293242.png" group-title="🎨 أفلام كرتون",Pluto TV Anime BR
-https://jmp2.uk/plu-5f12136385bccc00070142ed.m3u8
-#EXTINF:-1 tvg-id="PlutoTVAnime.us@CA" tvg-logo="https://images.pluto.tv/channels/5f12136385bccc00070142ed/colorLogoPNG_1777595293242.png" group-title="🎨 أفلام كرتون",Pluto TV Anime CA
-https://jmp2.uk/plu-68d25b620a0f3829b116bb6f.m3u8
-#EXTINF:-1 tvg-id="PlutoTVAnime.us@LatAm" tvg-logo="https://images.pluto.tv/channels/5f12136385bccc00070142ed/colorLogoPNG_1777595293242.png" group-title="🎨 أفلام كرتون",Pluto TV Anime LatAm
-https://jmp2.uk/plu-5dcde17bf6591d0009839e02.m3u8
-#EXTINF:-1 tvg-id="PlutoTVAnimeAcao.us@BR" tvg-logo="https://images.pluto.tv/channels/604b79c558393100078faeef/colorLogoPNG.png" group-title="🎨 أفلام كرتون",Pluto TV Anime Acao
-https://jmp2.uk/plu-604b79c558393100078faeef.m3u8
-#EXTINF:-1 tvg-id="PlutoTVAnimeMovies.us@SD" tvg-logo="https://images.pluto.tv/channels/67ed8f7e443f0671bc2b2368/colorLogoPNG.png" group-title="🎨 أفلام كرتون",Pluto TV Anime Movies
-https://jmp2.uk/plu-67ed8f7e443f0671bc2b2368.m3u8
-#EXTINF:-1 tvg-id="YouManCartoonChannel.cn@SD" tvg-logo="https://i.imgur.com/GZInf2W.png" group-title="🎨 أفلام كرتون",You Man Cartoon Channel (576p)
-http://183.207.249.15/PLTV/4/224/3221225933/index.m3u8
-#EXTINF:-1 tvg-id="CartoonClassics.ru@SD" tvg-logo="https://sales.planbkino.tv//b/c/471.png" group-title="🎨 أفلام كرتون",Cartoon Classics (Russia)
-http://88.218.242.237:8001/Cartoon_Classics
-#EXTINF:-1 tvg-id="CartoonitoCEE.uk@SD" tvg-logo="https://i.imgur.com/9MrzLb1.png" group-title="🎨 أفلام كرتون",Cartoonito CEE
-http://193.33.39.108:9019/play/a00t
-#EXTINF:-1 tvg-id="CartoonitoCEE.uk@Bulgary" tvg-logo="https://i.imgur.com/9MrzLb1.png" group-title="🎨 أفلام كرتون",Cartoonito CEE Bulgary
-http://213.91.179.28:8000/play/a0c7
-#EXTINF:-1 tvg-id="CartoonitoCEE.uk@Czechia" tvg-logo="https://i.imgur.com/9MrzLb1.png" group-title="🎨 أفلام كرتون",Cartoonito CEE Czechia
-http://88.212.7.14/live/test_boomerang_tizen/playlist.m3u8
-#EXTINF:-1 tvg-id="CartoonitoCEE.uk@Poland" tvg-logo="https://i.imgur.com/9MrzLb1.png" group-title="🎨 أفلام كرتون",Cartoonito CEE Poland (1080p)
-http://92.114.85.87:8007/play/a008
-#EXTINF:-1 tvg-id="DisneyChannel.bg@SD" tvg-logo="https://i.imgur.com/UxrAiAe.png" group-title="🎨 أفلام كرتون",Disney Channel (Bulgaria) (576i)
-http://87.120.179.187:8000/play/a010
-#EXTINF:-1 tvg-id="DisneyChannel.cz@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel (Czech Republic)
-http://88.212.15.50/live/test_disney/playlist.m3u8
-#EXTINF:-1 tvg-id="DisneyChannel.de@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel (Germany) (576p)
-https://s6.hopslan.com/disneyX/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannel.de@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel (Germany) HD
-http://109.85.181.77:9981/stream/channelid/652495718?profile=pass
-#EXTINF:-1 tvg-id="DisneyChannel.pl@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel (Poland) HD (1080p)
-http://185.227.34.179:8080/disney-channel-hd/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannel.pt@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg" group-title="🎨 أفلام كرتون",Disney Channel (Portugal) (1080p)
-http://151.80.18.177:86/Disney_Channel_HD/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannel.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/2024_Disney_Channel_text_logo.svg/960px-2024_Disney_Channel_text_logo.svg.png" group-title="🎨 أفلام كرتون",Disney Channel (United States) (720p)
-http://4.30.180.36:8420/disneychannel/index.m3u8?token=test
-#EXTINF:-1 tvg-id="DisneyJr.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="🎨 أفلام كرتون",Disney Jr. (France) (1080p)
-http://151.80.18.177:86/Disney_Junior_HD/index.m3u8
-#EXTINF:-1 tvg-id="DisneyJunior.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="🎨 أفلام كرتون",Disney Junior (Poland) (576p)
-http://111.88.7.92:8000/play/a00o/index.m3u8
-#EXTINF:-1 tvg-id="DisneyJunior.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2024_Disney_Jr._Logo.svg/960px-2024_Disney_Jr._Logo.svg.png" group-title="🎨 أفلام كرتون",Disney Junior (United States) (480p)
-http://tvsen5.aynascope.net/disney/index.m3u8
-#EXTINF:-1 tvg-id="DisneyXD.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a8/2015_Disney_XD_logo.svg" group-title="🎨 أفلام كرتون",Disney XD (Poland) (576p)
-http://185.227.34.179:8080/disney-xd/index.m3u8
-#EXTINF:-1 tvg-id="DisneyXD.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/2015_Disney_XD_logo.svg/960px-2015_Disney_XD_logo.svg.png" group-title="🎨 أفلام كرتون",Disney XD (United States) (720p)
-http://89.187.179.148:826/1368/gXwiagaXda/1672
-#EXTINF:-1 tvg-id="ZBCartoon.in@HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png" group-title="🎨 أفلام كرتون",ZB Cartoon (1080p)
-https://server.zillarbarta.com/zbcatun/video.m3u8
