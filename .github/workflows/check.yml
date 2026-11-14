@@ -1,8 +1,8 @@
-name: فحص القنوات كل ساعة
+name: فحص القنوات - مرحلتين
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -11,6 +11,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 1620
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,14 +21,37 @@ jobs:
           python-version: '3.11'
       - name: تثبيت المكتبة
         run: pip install requests
-      - name: تشغيل الروبوت
-        run: python check.py
-      - name: مقارنة Nilesat و Arabsat
-        run: python compare.py
-      - name: حفظ في GitHub
+      - name: تشغيل الروبوت - مرحلتين
         run: |
-          git config user.name "tahar-bot"
-          git config user.email "tahar-bot@github.com"
-          git add arabic.m3u channels.m3u compare_nilesat_arabsat.md
-          git diff --cached --quiet || git commit -m "تحديث قنوات + مقارنة - $(date)"
-          git push
+          PHASE1_MINUTES=180
+          INTERVAL_6MIN=360
+
+          run_once() {
+            echo "===== $(date) ====="
+            python check.py
+            python compare.py
+            git config user.name "tahar-bot"
+            git config user.email "tahar-bot@github.com"
+            git add arabic.m3u channels.m3u nilesat.m3u arabsat.m3u compare_nilesat_arabsat.md
+            git diff --cached --quiet || git commit -m "تحديث - $(date)"
+            git push || echo "ماكاش جديد"
+          }
+
+          echo "🚀 ===== المرحلة 1: كل 6 دقائق لمدة $PHASE1_MINUTES دقيقة ====="
+          TOTAL_6MIN=$((PHASE1_MINUTES / 6))
+          for i in $(seq 1 $TOTAL_6MIN); do
+            echo "--- المرحلة 1: المرة $i / $TOTAL_6MIN ---"
+            run_once
+            if [ $i -lt $TOTAL_6MIN ]; then
+              echo "⏳ نستنى 6 دقائق..."
+              sleep $INTERVAL_6MIN
+            fi
+          done
+          echo "✅ كملت المرحلة 1 - 3 ساعات"
+
+          echo "😴 ===== المرحلة 2: نستنى 24 ساعة ====="
+          sleep 86400
+
+          echo "🚀 ===== المرحلة 2: تحديث بعد 24 ساعة ====="
+          run_once
+          echo "🎉 كملنا كلش - 3 ساعات كل 6 دقائق + مرة بعد 24 ساعة"
