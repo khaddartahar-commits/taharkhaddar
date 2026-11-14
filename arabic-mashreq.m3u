@@ -1,0 +1,142 @@
+#EXTM3U x-tvg-url="https://iptv-org.github.io/epg.xml"
+
+#EXTINF:-1 group-title="AR - السعودية",MBC 1
+https://shls-mbc1-prod-dub.shahid.net/out/v1/84ab37e99b1643a6b9c8a43425d8e5c3/index.m3u8
+#EXTINF:-1 group-title="AR - السعودية",MBC 2
+https://shls-mbc2-prod-dub.shahid.net/out/v1/9a2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c/index.m3u8
+#EXTINF:-1 group-title="AR - السعودية",MBC 3
+https://shls-mbc3-prod-dub.shahid.net/out/v1/8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e/index.m3u8
+#EXTINF:-1 group-title="AR - السعودية",MBC Action
+https://shls-mbcaction-prod-dub.shahid.net/out/v1/1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d/index.m3u8
+#EXTINF:-1 group-title="AR - السعودية",MBC Drama
+https://shls-mbcdrama-prod-dub.shahid.net/out/v1/2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e/index.m3u8
+#EXTINF:-1 group-title="AR - السعودية",MBC Max
+https://shls-mbcmax-prod-dub.shahid.net/out/v1/3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f/index.m3u8
+#EXTINF:-1 group-title="AR - السعودية",السعودية TV
+https://live.saudia.tv/hls/saudia.m3u8
+#EXTINF:-1 group-title="AR - السعودية",السعودية القرآن
+https://live.saudia.tv/hls/quran.m3u8
+#EXTINF:-1 group-title="AR - السعودية",السعودية السنة
+https://live.saudia.tv/hls/sunnah.m3u8
+#EXTINF:-1 group-title="AR - السعودية",SSC 1
+https://live.ssc.tv/hls/ssc1.m3u8
+#EXTINF:-1 group-title="AR - السعودية",Rotana Cinema
+https://live.rotana.tv/hls/rotanacinema.m3u8
+#EXTINF:-1 group-title="AR - السعودية",Rotana Khalijia
+https://live.rotana.tv/hls/rotanakhalijia.m3u8
+#EXTINF:-1 group-title="AR - السعودية",Rotana Drama
+https://live.rotana.tv/hls/rotanadrama.m3u8
+#EXTINF:-1 group-title="AR - السعودية",Rotana Classic
+https://live.rotana.tv/hls/rotanaclassic.m3u8
+
+#EXTINF:-1 group-title="AR - الإمارات",أبوظبي TV
+https://cdn1.logichost.in/abudhabitv/live/playlist.m3u8
+#EXTINF:-1 group-title="AR - الإمارات",أبوظبي دراما
+https://cdn1.logichost.in/abudhabidrama/live/playlist.m3u8
+#EXTINF:-1 group-title="AR - الإمارات",دبي TV
+https://cdn1.logichost.in/dubaitv/live/playlist.m3u8
+#EXTINF:-1 group-title="AR - الإمارات",دبي وان
+https://cdn1.logichost.in/dubai1/live/playlist.m3u8
+#EXTINF:-1 group-title="AR - الإمارات",الشارقة TV
+https://cdn1.logichost.in/sharjahtv/live/playlist.m3u8
+#EXTINF:-1 group-title="AR - الإمارات",نور دبي
+https://dmiffthvll.cdn.mangomolo.com/noordubaitv/smil:noordubaitv.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الإمارات",سما دبي
+https://cdn1.logichost.in/samadubai/live/playlist.m3u8
+
+#EXTINF:-1 group-title="AR - قطر",الجزيرة
+https://live-hls-web-aja.getaj.net/AJA/index.m3u8
+#EXTINF:-1 group-title="AR - قطر",الجزيرة مباشر
+https://live-hls-web-ajm.getaj.net/AJM/index.m3u8
+#EXTINF:-1 group-title="AR - قطر",الجزيرة الوثائقية
+https://live-hls-web-ajd.getaj.net/AJD/index.m3u8
+#EXTINF:-1 group-title="AR - قطر",الكأس 1
+https://live.alkass.tv/hls/alkass1.m3u8
+#EXTINF:-1 group-title="AR - قطر",الكأس 2
+https://live.alkass.tv/hls/alkass2.m3u8
+#EXTINF:-1 group-title="AR - قطر",قطر TV
+https://live.qatartv.qa/hls/qatar.m3u8
+#EXTINF:-1 group-title="AR - قطر",beIN Sports News
+https://live.beinsports.tv/hls/beinnews.m3u8
+
+#EXTINF:-1 group-title="AR - الكويت",الكويت TV
+https://live.kuwaittv.kw/hls/kuwait.m3u8
+#EXTINF:-1 group-title="AR - الكويت",الكويت 2
+https://live.kuwaittv.kw/hls/kuwait2.m3u8
+#EXTINF:-1 group-title="AR - الكويت",الكويت دراما
+https://live.kuwaittv.kw/hls/kuwaitdrama.m3u8
+
+#EXTINF:-1 group-title="AR - البحرين",البحرين TV
+https://live.bahraintv.bh/hls/bahrain.m3u8
+#EXTINF:-1 group-title="AR - البحرين",البحرين دراما
+https://live.bahraintv.bh/hls/bahraindrama.m3u8
+
+#EXTINF:-1 group-title="AR - عمان",عمان TV
+https://live.omantv.om/hls/oman.m3u8
+#EXTINF:-1 group-title="AR - عمان",عمان دراما
+https://live.omantv.om/hls/omandrama.m3u8
+
+#EXTINF:-1 group-title="AR - اليمن",اليمن TV
+https://live.yementv.ye/hls/yemen.m3u8
+#EXTINF:-1 group-title="AR - اليمن",سهيل TV
+https://live.suhail.tv/hls/suhail.m3u8
+
+#EXTINF:-1 group-title="AR - لبنان",LBC
+https://live.lbci.tv/hls/lbci.m3u8
+#EXTINF:-1 group-title="AR - لبنان",MTV لبنان
+https://live.mtv.com.lb/hls/mtv.m3u8
+#EXTINF:-1 group-title="AR - لبنان",الجديد
+https://live.aljadeed.tv/hls/aljadeed.m3u8
+#EXTINF:-1 group-title="AR - لبنان",OTV
+https://live.otv.com.lb/hls/otv.m3u8
+#EXTINF:-1 group-title="AR - لبنان",المنار
+https://live.almanar.tv/hls/almanar.m3u8
+#EXTINF:-1 group-title="AR - لبنان",NBN
+https://live.nbn.tv/hls/nbn.m3u8
+
+#EXTINF:-1 group-title="AR - الأردن",رؤيا TV
+https://live.royatv.tv/hls/roya.m3u8
+#EXTINF:-1 group-title="AR - الأردن",التلفزيون الأردني
+https://live.jordantv.jo/hls/jordan.m3u8
+#EXTINF:-1 group-title="AR - الأردن",المملكة TV
+https://live.almamlaka.tv/hls/almamlaka.m3u8
+
+#EXTINF:-1 group-title="AR - العراق",العراقية
+https://imn-live.esite-lab.com/hls/iraqia-general.m3u8
+#EXTINF:-1 group-title="AR - العراق",الشرقية
+https://live.alsharqiya.com/hls/sharqiya.m3u8
+#EXTINF:-1 group-title="AR - العراق",الشرقية نيوز
+https://live.alsharqiya.com/hls/sharqiyanews.m3u8
+#EXTINF:-1 group-title="AR - العراق",السومرية
+https://live.alsumaria.tv/hls/alsumaria.m3u8
+#EXTINF:-1 group-title="AR - العراق",دجلة
+https://live.dijlah.tv/hls/dijlah.m3u8
+
+#EXTINF:-1 group-title="AR - سوريا",سوريا TV
+https://live.syriatv.sy/hls/syria.m3u8
+#EXTINF:-1 group-title="AR - سوريا",الإخبارية السورية
+https://live.syria.tv/hls/syrianews.m3u8
+
+#EXTINF:-1 group-title="AR - فلسطين",فلسطين TV
+https://live.palestinetv.ps/hls/palestine.m3u8
+#EXTINF:-1 group-title="AR - فلسطين",الأقصى
+https://live.alaqsa.ps/hls/aqsa.m3u8
+#EXTINF:-1 group-title="AR - فلسطين",معا TV
+https://live.maan.tv/hls/maan.m3u8
+
+#EXTINF:-1 group-title="AR - أخبار",العربية
+https://live.alarabiya.net/alarabiya/live.m3u8
+#EXTINF:-1 group-title="AR - أخبار",الحدث
+https://live.alhadath.net/alhadath/live.m3u8
+#EXTINF:-1 group-title="AR - أخبار",Sky News عربية
+https://stream.skynewsarabia.com/hls/SkyNewsArabia.m3u8
+#EXTINF:-1 group-title="AR - أخبار",العربي
+https://live.alaraby.tv/hls/alaraby.m3u8
+#EXTINF:-1 group-title="AR - أخبار",France 24 عربي
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/france24ar/smil:france24ar.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - أخبار",BBC عربي
+https://live.bbcarabic.com/hls/bbcarabic.m3u8
+#EXTINF:-1 group-title="AR - أخبار",TRT عربي
+https://live.trtarabi.tv/hls/trtarabi.m3u8
+#EXTINF:-1 group-title="AR - أخبار",الشرق للأخبار
+https://live.asharq.tv/hls/asharq.m3u8
