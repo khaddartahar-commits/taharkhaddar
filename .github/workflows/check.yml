@@ -1,14 +1,12 @@
-name: Check Arabic Channels
+name: Check All
 
 on:
   push:
   workflow_dispatch:
   schedule:
     - cron: '0 */6 * * *'
-
 permissions:
   contents: write
-
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -22,6 +20,6 @@ jobs:
       - run: |
           git config user.name "bot"
           git config user.email "bot@bot.com"
-          git add arabic-working.m3u arabic-maghreb.m3u arabic-mashreq.m3u
-          git commit -m "تحديث القنوات العربية الشغالة" || echo "ماكاش جديد"
+          git add arabic-working.m3u arabic-maghreb.m3u arabic-mashreq.m3u France.m3u french-working.m3u Italie.m3u italie.m3u Espagne.m3u espagne.m3u
+          git commit -m "تحديث كل الدول" || echo "ماكاش جديد"
           git push
