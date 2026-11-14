@@ -1,12 +1,36 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TV مجاني</title><style>body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:20px}h1{font-size:28px}a{display:block;background:#222;border:1px solid #444;color:#fff;text-decoration:none;padding:18px;margin:12px;border-radius:15px;font-size:20px;font-weight:bold}.red{background:#ED2939}</style></head>
-<body><h1>📺 TV مجاني - شغالة</h1>
-<a href="sports.html" class="red">⚽ رياضة - كل الدول</a>
-<a href="arabic.html">🇩🇿 العربية</a>
-<a href="france.html">🇫🇷 فرنسا</a>
-<a href="italie.html">🇮🇹 إيطاليا</a>
-<a href="espagne.html">🇪🇸 إسبانيا</a>
-<a href="allemagne.html">🇩🇪 ألمانيا</a>
-<a href="angleterre.html">🇬🇧 إنجلترا</a>
-<a href="portugal.html">🇵🇹 البرتغال - جديد</a>
-<a href="hollande.html">🇳🇱 هولندا - جديد</a>
-</body></html>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TA TV - كل القنوات</title><script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style>body{background:#0f0f0f;color:#fff;font-family:Arial;margin:0;text-align:center}header{background:#111;padding:15px;position:sticky;top:0;z-index:10}h1{margin:5px;font-size:24px}.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:10px}button{border:none;padding:10px 14px;border-radius:20px;cursor:pointer;font-weight:bold;background:#222;color:#fff}button.active{background:#FFD700;color:#000}input{width:90%;max-width:500px;padding:12px;border-radius:20px;border:none;margin:10px;text-align:center}video{width:100%;max-height:380px;background:#000}#now{padding:8px;font-weight:bold}#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:15px}.card{background:#1e1e1e;padding:10px;border-radius:12px;cursor:pointer}.card img{width:70px;height:70px;object-fit:contain;background:#fff;border-radius:8px}.card b{display:block;margin-top:8px;font-size:13px}.links{padding:10px}a{color:#FFD700;text-decoration:none;margin:5px;display:inline-block}</style>
+</head><body>
+<header><h1>📺 TA TV - كل الدول</h1><p id="status">جاري التحميل...</p>
+<div class="btns">
+<button class="active" onclick="loadFile('ta.m3u','الكل',this)">🌍 الكل - ta</button>
+<button onclick="loadFile('arabic-working.m3u','عربي',this)">🇩🇿 عربي</button>
+<button onclick="loadFile('arabic-maghreb.m3u','مغرب',this)">🇩🇿 مغرب</button>
+<button onclick="loadFile('France.m3u','فرنسا',this)">🇫🇷 فرنسا</button>
+<button onclick="loadFile('Italie.m3u','إيطاليا',this)">🇮🇹 إيطاليا</button>
+<button onclick="loadFile('Espagne.m3u','إسبانيا',this)">🇪🇸 إسبانيا</button>
+<button onclick="loadFile('Allemagne.m3u','ألمانيا',this)">🇩🇪 ألمانيا</button>
+<button onclick="loadFile('Angleterre.m3u','إنجلترا',this)">🇬🇧 إنجلترا</button>
+<button onclick="loadFile('Portugal.m3u','برتغال',this)">🇵🇹 برتغال</button>
+<button onclick="loadFile('Hollande.m3u','هولندا',this)">🇳🇱 هولندا</button>
+</div>
+</header>
+<video id="video" controls playsinline></video><div id="now">اختر قناة ▶</div>
+<input id="search" placeholder="🔍 ابحث Bein, Rai, TF1, BBC...">
+<div id="grid"></div>
+<div class="links">
+<b>رابط Televizo - انسخو:</b><br>
+<a href="https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/ta.m3u">ta.m3u - CDN</a>
+</div>
+<script>
+let all=[];
+async function loadFile(file,label,btn){
+document.querySelectorAll('.btns button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');
+document.getElementById('status').textContent='جاري تحميل '+label+'...';
+try{let r=await fetch(file);let t=await r.text();all=[];let lines=t.split('\n');let info='';for(let l of lines){l=l.trim();if(l.startsWith('#EXTINF'))info=l;else if(l.startsWith('http')){let name=(info.split(',')[1]||'Ch').trim();let logo=(info.match(/tvg-logo="([^"]+)"/)||[])[1]||'';all.push({name,logo,url:l});info='';}}
+document.getElementById('status').textContent='✅ '+label+' - '+all.length+' قناة';render();}catch(e){document.getElementById('status').textContent='❌ دير Run workflow';}
+}
+function render(){let q=document.getElementById('search').value.toLowerCase();let f=all.filter(c=>c.name.toLowerCase().includes(q));document.getElementById('grid').innerHTML=f.slice(0,500).map(c=>`<div class="card" onclick="playByUrl('${c.url.replace(/'/g,'')}','${c.name.replace(/'/g,'')}')"><img src="${c.logo||'https://via.placeholder.com/70?text=TA'}" onerror="this.src='https://via.placeholder.com/70?text=TA'"><b>${c.name}</b></div>`).join('');}
+function playByUrl(url,name){let v=document.getElementById('video');document.getElementById('now').textContent='▶ '+name;if(Hls.isSupported()&&url.includes('.m3u8')){let h=new Hls();h.loadSource(url);h.attachMedia(v);h.on(Hls.Events.MANIFEST_PARSED,()=>v.play());}else{v.src=url;v.play();}window.scrollTo({top:0,behavior:'smooth'});}
+document.getElementById('search').addEventListener('input',render);loadFile('ta.m3u','الكل',document.querySelector('.btns button'));
+</script></body></html>
