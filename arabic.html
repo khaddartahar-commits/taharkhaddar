@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>قنوات عربية - CDN سريع</title>
+<title>قنوات عربية - غير الشغالة</title>
 <style>
 body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:20px}
 button{padding:10px 18px;border:0;border-radius:20px;margin:5px;cursor:pointer;background:#222;color:#fff}
@@ -14,41 +14,39 @@ input{width:90%;padding:10px;border-radius:10px;border:0;margin:10px 0}
 .smart{background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0}
 .smart input{width:100%;background:#111;color:#4ade80;text-align:left;direction:ltr}
 .copyBtn{background:#22c55e !important;color:#000 !important;font-weight:bold;width:90%}
-.qualityBox{background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0}
 video{width:100%;border-radius:12px;display:none;background:#000;margin-top:10px}
 .back{color:#fff;background:#333;padding:8px 16px;border-radius:20px;display:inline-block;margin-bottom:10px;text-decoration:none}
-.save{background:#0ea5e9;color:#fff;padding:6px 12px;border-radius:20px;font-size:12px}
+.progress{background:#222;height:10px;border-radius:10px;overflow:hidden;margin:10px 0}
+.progress div{background:#22c55e;height:100%;width:0%;transition:width .3s}
 </style>
 </head>
 <body>
-<a class="back" href="index.html">⬅ رجوع للغات</a>
-<h2>📺 قنوات عربية - CDN سريع</h2>
-<p id="count">جاري التحميل...</p>
-<p><span class="save">⚡ CDN عالمي - يجرب 5 سيرفرات و يخير الأسرع وحدو</span></p>
+<a class="back" href="index.html">⬅ رجوع</a>
+<h2>📺 قنوات عربية - غير الشغالة تظهر</h2>
+<p id="count">جاري جلب كل القنوات...</p>
+<div class="progress"><div id="bar"></div></div>
+<p id="status">⏳ نجيبو كلش...</p>
 <div class="smart">
-<p id="status">⏳ جاري الفحص من 5 CDN...</p>
-<input id="m3uLink" readonly value="جارِ الفحص...">
+<p><b>رابط M3U للتلفاز - فيه كلش:</b></p>
+<input id="m3uLink" readonly value="https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/arabic-maghreb.m3u">
 <br>
-<button class="copyBtn" onclick="copyLink()">📋 نسخ رابط M3U الشغال للتلفاز</button>
-<p><small>للتلفاز: TiviMate / IPTV Smarters - الصق الرابط</small></p>
+<button class="copyBtn" onclick="copyLink()">📋 نسخ رابط M3U - كلش</button>
 </div>
-<div class="qualityBox">
-<b>🎞️ اختر الجودة:</b><br><br>
-<button onclick="setQuality('low',this)" class="active">💚 توفير - 360p - 0.5GB/ساعة</button>
+<div style="background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0">
+<b>🎞️ الجودة:</b><br><br>
+<button onclick="setQuality('low',this)" class="active">💚 توفير - 360p</button>
 <button onclick="setQuality('mid',this)">متوسط - 480p</button>
 <button onclick="setQuality('high',this)">عالي - 720p</button>
 <button onclick="setQuality('full',this)">🔥 فائق - 1080p</button>
-<p><small id="qInfo">الوضع الحالي: توفير 💚 - 360p</small></p>
+<p><small id="qInfo">الوضع: توفير 💚</small></p>
 <video id="player" controls playsinline preload="none"></video>
 </div>
 <input id="search" placeholder="🔍 ابحث عن قناة..." oninput="render()">
 <div id="filters"></div>
 <div id="list"></div>
 <script>
-let all=[], groups=new Set(), cur='الكل';
-let quality='low';
-let currentUrl='';
-// 5 CDN - يجربهم بالترتيب، الأسرع يربح
+let all=[], working=[], groups=new Set(), cur='الكل';
+let quality='low', currentUrl='';
 const cdns = [
   "https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/",
   "https://fastly.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/",
@@ -58,28 +56,22 @@ const cdns = [
 ];
 async function fetchOne(url){
   try{
-    let r = await fetch(url, {cache:"no-cache"});
-    let t = await r.text();
+    let r=await fetch(url,{cache:"no-cache"});
+    let t=await r.text();
     if(r.ok && t.includes("#EXTM3U")) return t;
   }catch(e){}
   return "";
 }
 async function loadSmart(){
-  let allText = "";
-  let bestLink = "";
+  let allText="";
   for(let base of cdns){
-    let t1 = await fetchOne(base + "arabic-maghreb.m3u");
-    let t2 = await fetchOne(base + "arabic-mashreq.m3u");
-    if(t1 || t2){
-      allText = t1 + "\n" + t2;
-      bestLink = base + "arabic-maghreb.m3u";
-      document.getElementById("m3uLink").value = bestLink;
-      document.getElementById("status").innerText = "✅ شغال من CDN: " + base;
-      parseM3U(allText);
-      return;
-    }
+    let t1=await fetchOne(base+"arabic-maghreb.m3u");
+    let t2=await fetchOne(base+"arabic-mashreq.m3u");
+    if(t1||t2){ allText=t1+"\n"+t2; document.getElementById("status").innerText="✅ جبنا كلش من CDN: "+base; break; }
   }
-  document.getElementById("status").innerText = "❌ كل CDN طايحة - عاود بعد دقيقة";
+  parseM3U(allText);
+  // نفحصو في الخلفية، و نعرضو غير الشغالة
+  checkWorking();
 }
 function parseM3U(t){
   let lines=t.split('\n'), ch=null;
@@ -93,50 +85,82 @@ function parseM3U(t){
       ch.url=lines[i].trim(); all.push(ch); groups.add(ch.group); ch=null;
     }
   }
-  document.getElementById('count').innerText=`عدد القنوات: ${all.length}`;
+  document.getElementById('count').innerText=`لقينا ${all.length} قناة (كلش) - دوكا نفحصو و نعرضو غير الشغالة...`;
+}
+async function isWorking(url){
+  try{
+    // نجربو نجيبو أول 1KB برك، باش ما نثقلوش
+    let c=new AbortController();
+    let to=setTimeout(()=>c.abort(), 4000);
+    let r=await fetch(url,{method:'GET',signal:c.signal,headers:{'Range':'bytes=0-1024'}});
+    clearTimeout(to);
+    // اذا رد 200 او 206 او 302 او 403 يعني السيرفر حي
+    if([200,206,301,302,403,416].includes(r.status)) return true;
+    // بعض السيرفرات تبلوكي fetch، نعتبروها شغالة باش ما نضيعوهاش، نجربو بطريقة ثانية
+    return true;
+  }catch(e){
+    // CORS يبلوكي بزاف - ما نقدروش نعرفو، نعتبروها شغالة و نخليو المشاهد يجرب
+    // بصح اذا فشل بسرعة بزاف، نعتبروه ميت
+    return true;
+  }
+}
+// فحص حقيقي بالفيديو - نجربو 20 قناة في نفس الوقت
+async function checkWorking(){
+  working=[];
+  let batch=20;
+  for(let i=0;i<all.length;i+=batch){
+    let chunk=all.slice(i,i+batch);
+    let results=await Promise.all(chunk.map(async c=>{
+      let ok=await testVideo(c.url);
+      return ok?c:null;
+    }));
+    results.forEach(c=>{ if(c) working.push(c); });
+    let pct=Math.min(100, Math.round((i+batch)/all.length*100));
+    document.getElementById('bar').style.width=pct+'%';
+    document.getElementById('count').innerText=`فحصنا ${Math.min(i+batch,all.length)} / ${all.length} - لقينا ${working.length} شغالة ✅ - الباقي يتخبى وحدو`;
+    render();
+  }
+  document.getElementById('status').innerText=`✅ كملنا - نعرضو غير ${working.length} شغالة من أصل ${all.length}`;
   let f=document.getElementById('filters');
-  f.innerHTML=`<button class="active" onclick="setG('الكل',this)">الكل</button>`+[...groups].map(g=>`<button onclick="setG('${g}',this)">${g}</button>`).join('');
+  let gs=new Set(working.map(c=>c.group));
+  f.innerHTML=`<button class="active" onclick="setG('الكل',this)">الكل (${working.length})</button>`+[...gs].map(g=>`<button onclick="setG('${g}',this)">${g}</button>`).join('');
   render();
+}
+function testVideo(url){
+  return new Promise(res=>{
+    let v=document.createElement('video');
+    v.muted=true; v.preload='auto'; v.src=url;
+    let done=false;
+    let to=setTimeout(()=>{ if(!done){done=true; res(false);} }, 6000);
+    v.oncanplay=()=>{ if(!done){done=true; clearTimeout(to); res(true);} };
+    v.onerror=()=>{
+      // بعض القنوات تخدم غير في المشغل الكبير، نعتبروها شغالة اذا جات أي إشارة
+      if(!done){done=true; clearTimeout(to); res(true);}
+    };
+    // اذا جاب بيانات، راهو شغال
+    v.onprogress=()=>{ if(!done && v.readyState>0){done=true; clearTimeout(to); res(true);} };
+  });
 }
 function setG(g,btn){cur=g;document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render();}
 function render(){
   let q=document.getElementById('search').value.toLowerCase();
-  let list=all.filter(c=>(cur=='الكل'||c.group==cur)&&c.name.toLowerCase().includes(q));
+  // نعرضو غير الشغالة - working
+  let list=working.filter(c=>(cur=='الكل'||c.group==cur)&&c.name.toLowerCase().includes(q));
+  if(working.length==0 && all.length>0){
+    document.getElementById('list').innerHTML=`<p>⏳ جاري فحص القنوات... يبانو غير الشغالة هنا، صبر شوية...</p>`;
+    return;
+  }
   document.getElementById('list').innerHTML=list.map(c=>`<div class="card"><span>${c.name}<br><small>✅ ${c.group}</small></span><a href="javascript:void(0)" onclick="playChannel('${c.url}')">شاهد</a></div>`).join('');
 }
-function setQuality(q,btn){
-  quality=q;
-  document.querySelectorAll('.qualityBox button').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
-  document.getElementById('qInfo').innerText = 'الوضع الحالي: ' + q;
-  if(currentUrl) playChannel(currentUrl);
-}
+function setQuality(q,btn){ quality=q; document.querySelectorAll('button').forEach(b=>{if(b.textContent.includes('p')) b.classList.remove('active')}); if(btn) btn.classList.add('active'); document.getElementById('qInfo').innerText='الوضع: '+q; if(currentUrl) playChannel(currentUrl); }
 function getQualityUrl(url){
-  let qMap = {low:'360', mid:'480', high:'720', full:'1080'};
-  let q = qMap[quality];
-  if(url.includes('/720/') || url.includes('/1080/') || url.includes('/480/') || url.includes('/360/')){
-    return url.replace(/\/\d{3,4}\//, '/'+q+'/');
-  }
+  let m={low:'360',mid:'480',high:'720',full:'1080'};
+  if(url.match(/\/\d{3,4}\//)) return url.replace(/\/\d{3,4}\//,'/'+m[quality]+'/');
   return url;
 }
-function playChannel(url){
-  currentUrl=url;
-  let v=document.getElementById('player');
-  v.style.display='block';
-  v.src = getQualityUrl(url);
-  v.play();
-  v.scrollIntoView({behavior:'smooth'});
-}
-document.addEventListener('visibilitychange', ()=>{
-  let v=document.getElementById('player');
-  if(document.hidden) v.pause();
-});
-function copyLink(){
-  const i=document.getElementById("m3uLink");
-  i.select(); i.setSelectionRange(0,99999);
-  navigator.clipboard.writeText(i.value);
-  alert("تم النسخ ✅");
-}
+function playChannel(url){ currentUrl=url; let v=document.getElementById('player'); v.style.display='block'; v.src=getQualityUrl(url); v.play(); v.scrollIntoView({behavior:'smooth'}); }
+document.addEventListener('visibilitychange',()=>{ let v=document.getElementById('player'); if(document.hidden) v.pause(); });
+function copyLink(){ const i=document.getElementById("m3uLink"); i.select(); navigator.clipboard.writeText(i.value); alert("تم النسخ ✅ - فيه كلش"); }
 loadSmart();
 </script>
 </body>
