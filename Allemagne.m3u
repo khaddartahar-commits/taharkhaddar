@@ -463,6 +463,8 @@ La 2 (1080p)
 ('#EXTINF:-1 tvg-id="La2.es@SD" tvg-logo="https://i.ibb.co/rfsr9PSh/La-2.png" group-title="General;Public",La 2 (1080p)', 'https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/la2.m3u8')
 La Sexta (1080p)
 ('#EXTINF:-1 tvg-id="LaSexta.es@SD" tvg-logo="https://i.imgur.com/aKV5voq.png" group-title="Entertainment",La Sexta (1080p)', 'https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/la6.mpd')
+labor14 (720p)
+('#EXTINF:-1 tvg-id="labor14.de@HD" tvg-logo="https://www.tlm.de/assets/uploads/general/Sonstiges/LogoExt/_500xAUTO_crop_center-center_none/21labor14.jpg" group-title="Undefined",labor14 (720p)', 'https://5acade5fc0c29.streamlock.net/OKGera/tmbz_live_high.stream/playlist.m3u8')
 Lang Son TV (720p) [Geo-blocked]
 ('#EXTINF:-1 tvg-id="LangSonTV.vn@SD" tvg-logo="https://i.imgur.com/Sj7EjYT.png" group-title="General",Lang Son TV (720p) [Geo-blocked]', 'https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/playlist.m3u8')
 Lansingerland TV (720p)

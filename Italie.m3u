@@ -85,6 +85,8 @@ Chintpurni Live (720p)
 ('#EXTINF:-1 tvg-id="ChintpurniLive.in@SD" tvg-logo="https://papaji.freetvindia.com/media/Chintpurni_Live.png" group-title="Religious",Chintpurni Live (720p)', 'https://samitaorigin.tangotv.in/CHINTPURNILIVE/SAMITAORIGIN/index.m3u8')
 Ciftci TV (720p) [Not 24/7]
 ('#EXTINF:-1 tvg-id="CiftciTV.tr@SD" tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="Culture;Education",Ciftci TV (720p) [Not 24/7]', 'https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8')
+City Eden TeleNovella [Not 24/7]
+('#EXTINF:-1 tvg-id="CityEdenTeleNovella.ru@HD" tvg-logo="https://i.imgur.com/mT5liTh.png" group-title="Series",City Eden TeleNovella [Not 24/7]', 'https://cityeden.catcast.tv/content/46209/index.m3u8')
 CKNO-FM (616p)
 ('#EXTINF:-1 tvg-id="CKNOFM.ca@SD" tvg-logo="https://i.imgur.com/sF2g7KE.png" group-title="Music",CKNO-FM (616p)', 'https://videostream.jpbgdigital.com/NOWTV.m3u8')
 Comedy Central (Italy) (720p)
@@ -403,10 +405,6 @@ Rakuten TV Family Movies Italy (1080p)
 ('#EXTINF:-1 tvg-id="RakutenTVFamilyMovies.es@Italy" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Family;Movies",Rakuten TV Family Movies Italy (1080p)', 'https://3315fc3e7276420f895e19cf807dbee1.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6215/master.m3u8')
 RCN Novelas (1080p)
 ('#EXTINF:-1 tvg-id="RCNNovelas.co@SD" tvg-logo="https://i.imgur.com/9wxdWNQ.png" group-title="Entertainment",RCN Novelas (1080p)', 'https://cdnlive.klicgo.net/rcnnovelas/live/playlist.m3u8')
-Realitatea Plus (720p)
-('#EXTINF:-1 tvg-id="RealitateaPlus.ro@SD" tvg-logo="https://i.imgur.com/kqEPVPk.png" group-title="Undefined",Realitatea Plus (720p)', 'https://stream.realitatea.net/realitatea/plus_md/ts:playlist.m3u8')
-Realitatea Sportiva (720p)
-('#EXTINF:-1 tvg-id="RealitateaSportiva.ro@SD" tvg-logo="https://i.imgur.com/BaEyZto.png" group-title="Sports",Realitatea Sportiva (720p)', 'https://stream.realitatea.net/realitatea/sportiva_md/ts:playlist.m3u8')
 Realitatea Star (576i)
 ('#EXTINF:-1 tvg-id="RealitateaStar.ro@SD" tvg-logo="https://i.imgur.com/bNdpyAZ.png" group-title="Undefined",Realitatea Star (576i)', 'https://stream.realitatea.net/realitatea/star_md/ts:playlist.m3u8')
 Realitatea TV (406p)
@@ -1447,8 +1445,8 @@ Telecity Piemonte
 ('#EXTINF:-1 tvg-name="Telecity Piemonte" tvg-logo="https://i.imgur.com/CrlzHjv.jpeg" tvg-country="IT" group-title="Italy",Telecity Piemonte', 'https://64b16f23efbee.streamlock.net/telecitypiemonte/telecitypiemonte/playlist.m3u8')
 Telecity Valle D'Aosta
 ('#EXTINF:-1 tvg-name="Telecity Valle D\'Aosta" tvg-logo="https://i.imgur.com/T9EsAOX.jpeg" tvg-country="IT" group-title="Italy",Telecity Valle D\'Aosta', 'https://64b16f23efbee.streamlock.net/telecityvda/telecityvda/playlist.m3u8')
-Teleiblea
-('#EXTINF:-1 tvg-name="Teleiblea" tvg-logo="https://i.imgur.com/n1THygZ.png" tvg-country="IT" group-title="Italy",Teleiblea', 'https://64b16f23efbee.streamlock.net/teleiblea/teleiblea/playlist.m3u8')
+Telegenova
+('#EXTINF:-1 tvg-name="Telegenova" tvg-logo="https://i.imgur.com/D6HC0So.png" tvg-country="IT" group-title="Italy",Telegenova', 'https://64b16f23efbee.streamlock.net/telegenova/telegenova/playlist.m3u8')
 Teleleonessa
 ('#EXTINF:-1 tvg-name="Teleleonessa" tvg-logo="https://i.imgur.com/jq3etlV.png" tvg-country="IT" group-title="Italy",Teleleonessa', 'http://wms.shared.streamshow.it:1935/teleleonessa/teleleonessa/live.m3u8')
 TeleMajg
@@ -1523,6 +1521,8 @@ Itage TV
 ('#EXTINF:-1 tvg-name="7 Región de Murcia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/La_7_logo.svg/120px-La_7_logo.svg.png" tvg-id="La7.es" tvg-chno="17" tvg-country="ES" group-title="Spain",7 Región de Murcia Ⓢ', 'https://rtv-murcia-live.globalmest.com/principal/smil:principal.smil/playlist.m3u8')
 NTN
 ('#EXTINF:-1 tvg-name="NTN" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/NTNUA_logo_%282013%29.svg/500px-NTNUA_logo_%282013%29.svg.png" tvg-id="NTN.ua" tvg-chno="17" tvg-country="UA" group-title="Ukraine",NTN', 'https://cdn15.live-tv.cloud/ua_infinitas_tv/ntn-abr/playlist.m3u8')
+Mega
+('#EXTINF:-1 tvg-name="Mega" tvg-logo="https://i.imgur.com/F1v69tn.png" tvg-id="Mega.ua" tvg-chno="18" tvg-country="UA" group-title="Ukraine",Mega', 'https://cdn15.live-tv.cloud/ua_infinitas_tv/mega-abr/playlist.m3u8')
 Піксель TV
 ('#EXTINF:-1 tvg-name="Піксель TV" tvg-logo="https://i.imgur.com/ECro8Ah.png" tvg-id="PixelTV.ua" tvg-chno="25" tvg-country="UA" group-title="Ukraine",Піксель TV', 'https://cdn15.live-tv.cloud/ua_infinitas_tv/pixel-abr/playlist.m3u8')
 Global News
