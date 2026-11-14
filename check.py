@@ -1,5 +1,6 @@
-import requests, re, concurrent.futures
+import requests, re
 
+# نقراو السيرفرات - نستعملو غير السيرفرات الصغيرة الشغالة، ماشي الكبيرة اللي فيها 7000
 urls=[]
 for fname in ['servers-all.txt','servers-backup.txt']:
     try:
@@ -8,101 +9,88 @@ for fname in ['servers-all.txt','servers-backup.txt']:
                 l=l.strip()
                 if l.startswith('http'): urls.append(l)
     except: pass
+print(f"سيرفرات: {len(urls)}")
 
-arabic={}; french={}; italian={}; spanish={}; german={}; english={}; portuguese={}; dutch={}
+# هاذي هي اللغات و التصنيف تاعها
+def get_lang(info, url):
+    low = (info+" "+url).lower()
+    if any(w in low for w in ['ara','arab','alger','dz','maroc','tunis','egypt','saudi','mbc','jazeera','bein','ssc','qatar','iraq','jordan','lebanon','syria','kuwait','yemen','oman','bahrain','libya','sudan','palestine','maghreb','mashreq','entv','echourouk','ennahar','samira','el heddaf']): return "AR"
+    if any(w in low for w in ['fra','france','tf1','france 2','france 3','m6','bfm','lci','arte','canal+','cnews','tv5']): return "FR"
+    if any(w in low for w in ['ita','italy','italia','rai','canale 5','italia 1','rete 4','la7','mediaset']): return "IT"
+    if any(w in low for w in ['spa','spain','espa','antena 3','telecinco','cuatro','la sexta','movistar']): return "ES"
+    if any(w in low for w in ['ger','germany','deutschland','ard','zdf','rtl','pro7','sat.1','vox']): return "DE"
+    if any(w in low for w in ['uk','bbc','itv','channel 4','sky sports','sky uk','sky news','bt sport','tnt sports']): return "UK"
+    if any(w in low for w in ['por','portugal','rtp','sic','tvi','sport tv','benfica']): return "PT"
+    if any(w in low for w in ['nld','netherlands','holland','npo','rtl 4','ziggo','espn nl']): return "NL"
+    return "OTHER"
 
-def is_arabic(info,url):
-    low=(info+" "+url).lower()
-    return any(w in low for w in ['ara','arab','alger','dz','maroc','ma,','tunis','tn','egypt','eg','saudi','sa','mbc','jazeera','maghreb','mashreq','bein','ssc','qatar','kuwait','iraq','jordan','lebanon','syria','yemen','oman','bahrain','libya','sudan','mauritania','palestine'])
-def is_french(info,url):
-    low=(info+" "+url).lower()
-    return any(w in low for w in ['fra','french','france','fr,','tf1','france 2','france 3','france 5','france 24','m6','c8','bfm','lci','arte','canal+','rmc','tnt','paris','lequipe','cnews','tv5','gulli','w9'])
-def is_italian(info,url):
-    low=(info+" "+url).lower()
-    return any(w in low for w in ['ita','italy','italia','it,','rai 1','rai 2','rai 3','canale 5','italia 1','rete 4','la7','mediaset','sky italia','tv8','nove'])
-def is_spanish(info,url):
-    low=(info+" "+url).lower()
-    return any(w in low for w in ['spa','spain','espa','es,','la 1','la 2','antena 3','telecinco','cuatro','la sexta','tve','movistar','dazn es','real madrid tv','barca tv','gol tv','canal sur'])
-def is_german(info,url):
-    low=(info+" "+url).lower()
-    return any(w in low for w in ['ger','germany','deutschland','de,','ard','zdf','rtl','pro7','pro 7','sat.1','sat1','vox','kabel eins','sky de','dazn de','sport1','ntv','n-tv'])
-def is_english(info,url):
-    low=(info+" "+url).lower()
-    return any(w in low for w in ['uk','england','british','bbc','itv','channel 4','channel 5','sky sports','sky uk','sky news','dazn uk','bt sport','tnt sports uk','eurosport uk'])
-def is_portuguese(info,url):
-    low=(info+" "+url).lower()
-    return any(w in low for w in ['por','portugal','pt,','rtp','sic','tvi','sport tv','benfica tv','porto canal','cnn portugal'])
-def is_dutch(info,url):
-    low=(info+" "+url).lower()
-    return any(w in low for w in ['nld','netherlands','holland','nl,','npo 1','npo 2','npo 3','rtl 4','rtl 5','rtl 7','ziggo','sbs 6','veronica','espn nl'])
+def get_cat(info, url):
+    low = (info+" "+url).lower()
+    if any(w in low for w in ['sport','bein','ssc','espn','dazn','canal+ sport','lequipe','sky sport','eurosport']): return "Sports"
+    if any(w in low for w in ['news','jazeera','france 24','bfm','lci','cnews','bbc news','sky news','cnn','al arabiya','sky news arabia']): return "News"
+    if any(w in low for w in ['movie','cinema','film','cine','tcm','action','warner','hbo','netflix']): return "Movies"
+    if any(w in low for w in ['kids','cartoon','disney','nick','gulli','tiji','canal j']): return "Kids"
+    if any(w in low for w in ['music','mtv','mcm','nrj hits','trace','melody']): return "Music"
+    if any(w in low for w in ['doc','discovery','national geo','planete','histoire','ushuaia']): return "Documentary"
+    return "General"
+
+groups = {}  # مثلا groups['AR - Sports'] = [...]
+all_channels = []
 
 for surl in urls:
     try:
-        r=requests.get(surl,timeout=30,headers={'User-Agent':'Mozilla/5.0'})
-        parts=re.split(r'(?=#EXTINF)',r.text)
+        r = requests.get(surl, timeout=40, headers={'User-Agent':'Mozilla/5.0'})
+        print(f"{surl[:60]} -> {len(r.text)}")
+        parts = re.split(r'(?=#EXTINF)', r.text)
         for p in parts:
             if '#EXTINF' not in p: continue
-            lines=p.strip().splitlines()
-            if len(lines)<2: continue
-            info=lines[0]; stream=lines[1].strip()
+            lines = p.strip().splitlines()
+            if len(lines) < 2: continue
+            info = lines[0]; stream = lines[1].strip()
             if not stream.startswith('http'): continue
-            m=re.search(r',(.+)$',info); name=m.group(1).strip() if m else stream
-            if is_arabic(info,stream) and name not in arabic: arabic[name]=(info,stream)
-            if is_french(info,stream) and name not in french: french[name]=(info,stream)
-            if is_italian(info,stream) and name not in italian: italian[name]=(info,stream)
-            if is_spanish(info,stream) and name not in spanish: spanish[name]=(info,stream)
-            if is_german(info,stream) and name not in german: german[name]=(info,stream)
-            if is_english(info,stream) and name not in english: english[name]=(info,stream)
-            if is_portuguese(info,stream) and name not in portuguese: portuguese[name]=(info,stream)
-            if is_dutch(info,stream) and name not in dutch: dutch[name]=(info,stream)
-    except Exception as e: print(f"فشل {surl}: {e}")
+            if '.m3u' in stream: continue  # نحذفو القوائم داخل القوائم
+            m = re.search(r',(.+)$', info); name = m.group(1).strip() if m else stream
+            if len(name) < 2: continue
+            lang = get_lang(info, stream)
+            cat = get_cat(info, stream)
+            # هنا نبدلو group-title باش Televizo يصنف حسب اللغة
+            # مثلا: group-title="AR - Sports"
+            lang_name = {"AR":"Arabic","FR":"France","IT":"Italie","ES":"Espagne","DE":"Allemagne","UK":"Angleterre","PT":"Portugal","NL":"Hollande","OTHER":"Other"}[lang]
+            new_group = f"{lang_name} - {cat}"
+            # نعاودو نبنو سطر EXTINF جديد نظيف
+            logo = ""
+            lm = re.search(r'tvg-logo="([^"]+)"', info)
+            if lm: logo = lm.group(1)
+            new_info = f'#EXTINF:-1 tvg-logo="{logo}" group-title="{new_group}",{name}'
+            key = stream
+            if key not in [c[1] for c in all_channels]:
+                all_channels.append((new_info, stream, lang, cat))
+                if new_group not in groups: groups[new_group] = []
+                groups[new_group].append((new_info, stream))
+    except Exception as e:
+        print(f"فشل {surl}: {e}")
 
-def is_working(item):
-    name,(info,stream)=item
-    try:
-        r=requests.head(stream,timeout=8,allow_redirects=True,headers={'User-Agent':'Mozilla/5.0'})
-        if r.status_code<400: return item
-        r2=requests.get(stream,timeout=8,stream=True,headers={'User-Agent':'Mozilla/5.0','Range':'bytes=0-1000'})
-        if r2.status_code<400: return item
-    except: pass
-    return None
+print(f"الكل: {len(all_channels)} قناة")
+for k,v in groups.items(): print(f"{k}: {len(v)}")
 
-def check_all(d):
-    out=[]
-    with concurrent.futures.ThreadPoolExecutor(max_workers=30) as ex:
-        for res in ex.map(is_working,list(d.items())):
-            if res: out.append(res)
-    return out
-
-aw=check_all(arabic); fw=check_all(french); iw=check_all(italian); sw=check_all(spanish); gw=check_all(german); ew=check_all(english); pw=check_all(portuguese); dw=check_all(dutch)
-
-def write_m3u(fname,lst):
+def write_m3u(fname, lst):
     with open(fname,'w',encoding='utf-8') as f:
         f.write('#EXTM3U\n')
         for info,stream in lst: f.write(f"{info}\n{stream}\n")
 
-maghreb=[]; mashreq=[]
-for name,(info,stream) in aw:
-    low=(name+" "+info).lower()
-    if any(k in low for k in ['alger','dz','maroc','ma,','tunis','tn','libya','mauritania']): maghreb.append((info,stream))
-    else: mashreq.append((info,stream))
+# ta.m3u = الكل مصنف
+write_m3u('ta.m3u', [(i,s) for i,s,l,c in all_channels])
 
-write_m3u('arabic-working.m3u',aw); write_m3u('arabic-maghreb.m3u',maghreb); write_m3u('arabic-mashreq.m3u',mashreq)
-write_m3u('France.m3u',fw)
-write_m3u('Italie.m3u',iw)
-write_m3u('Espagne.m3u',sw)
-write_m3u('Allemagne.m3u',gw)
-write_m3u('Angleterre.m3u',ew)
-write_m3u('Portugal.m3u',pw)
-write_m3u('Hollande.m3u',dw)
+# ملفات حسب اللغة - كل واحد مصنف داخلو
+for lang_code, lang_name in [("AR","arabic-working"),("FR","France"),("IT","Italie"),("ES","Espagne"),("DE","Allemagne"),("UK","Angleterre"),("PT","Portugal"),("NL","Hollande")]:
+    lst = [(i,s) for i,s,l,c in all_channels if l==lang_code]
+    write_m3u(f'{lang_name}.m3u', lst)
+    print(f"{lang_name}.m3u = {len(lst)}")
 
-# الملف الجامع الكل - ta.m3u
-all_channels = aw + fw + iw + sw + gw + ew + pw + dw
-# نحذفو المكرر
-seen=set(); unique=[]
-for info,stream in all_channels:
-    if stream not in seen:
-        seen.add(stream)
-        unique.append((info,stream))
-write_m3u('ta.m3u',unique)
-print(f"تم: ta.m3u = {len(unique)} قناة كل الدول")
+# ملفات حسب المغرب و المشرق للعربي
+maghreb = [(i,s) for i,s,l,c in all_channels if l=="AR" and any(k in (i+s).lower() for k in ['alger','maroc','tunis','libya','mauritania'])]
+mashreq = [(i,s) for i,s,l,c in all_channels if l=="AR" and (i,s) not in maghreb]
+write_m3u('arabic-maghreb.m3u', maghreb)
+write_m3u('arabic-mashreq.m3u', mashreq)
+print(f"مغرب {len(maghreb)} مشرق {len(mashreq)}")
+print("كمل")
