@@ -1,1 +1,87 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://i.imgur.com/sZUIhGc.png" group-title="Portugal - Music",2TV (1080p)
+https://lnk5511.bstrm.net/live/687e3ff1679c8d4d68fab6c5/hd/manifest.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/csv6YsL.png" group-title="Portugal - Sports",Arena Sport 1 Premium (Serbia) (360p)
+http://telekomsrbije.com:2095/play/lhpjmkfVyhON1JAiZCx7vmRdlEHaaMaQAQw3LRAakpnghBMtR57sXXgLEXZF8gVD
+#EXTINF:-1 tvg-logo="https://i.imgur.com/csv6YsL.png" group-title="Portugal - Sports",Arena Sport 1 Premium (Slovenia)
+http://telekomsrbije.com:2095/play/lhpjmkfVyhON1JAiZCx7vhWLdkJ_3C0RZgs4W19uhl8S3kU0l__4SxERjFMDgcT6
+#EXTINF:-1 tvg-logo="https://tvarenasport.mk/wp-content/themes/tvarenasport-mk/assets/channels/arena-m1.png" group-title="Portugal - Sports",Arena Sport Premium M1
+http://telekomsrbije.com:2095/play/lhpjmkfVyhON1JAiZCx7vgvje3t-Jiqa5d94ZBmKAqQgIFxl-Ch6B37eGpkVDb28
+#EXTINF:-1 tvg-logo="https://tvarenasport.mk/wp-content/themes/tvarenasport-mk/assets/channels/arena-m2.png" group-title="Portugal - Sports",Arena Sport Premium M2
+http://telekomsrbije.com:2095/play/lhpjmkfVyhON1JAiZCx7vgvje3t-Jiqa5d94ZBmKAqR25sVNOuyj97sUY8aJBFf4
+#EXTINF:-1 tvg-logo="https://tvarenasport.mk/wp-content/themes/tvarenasport-mk/assets/channels/arena-m3.png" group-title="Portugal - Sports",Arena Sport Premium M3
+http://telekomsrbije.com:2095/play/lhpjmkfVyhON1JAiZCx7vgvje3t-Jiqa5d94ZBmKAqSVr5S9_a_TNo_sg7gE1yvH
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="Portugal - Movies",AXN (Portugal) (1080p)
+http://188.115.15.121:8000/play/a02z
+#EXTINF:-1 tvg-logo="https://i.imgur.com/47IKxmt.png" group-title="Portugal - General",AXN White (United States) Portugal (576p)
+http://188.115.15.121:8000/play/a01u
+#EXTINF:-1 tvg-logo="https://sales.planbkino.tv//b/c/471.png" group-title="Portugal - Kids",Cartoon Classics (Russia)
+http://88.218.242.237:8001/Cartoon_Classics
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mediacorp_Channel_5_2023.svg/960px-Mediacorp_Channel_5_2023.svg.png" group-title="Portugal - General",Channel 5 (Singapore) (720p)
+https://cdn.qd.je/163189/ch5
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mediacorp_Channel_8_2023.svg/960px-Mediacorp_Channel_8_2023.svg.png" group-title="Portugal - General",Channel 8 (Singapore) (720p)
+https://cdn.qd.je/163189/ch8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/vrSFUwv.png" group-title="Portugal - Music",Claro Musica TV (1080p)
+http://45.171.64.30:6060/play/a010
+#EXTINF:-1 tvg-logo="https://i.imgur.com/olQJgm7.png" group-title="Portugal - Sports",Eurosport 1 Bulgaria
+http://213.91.179.28:8000/play/a05y
+#EXTINF:-1 tvg-logo="https://i.imgur.com/f56dHgR.png" group-title="Portugal - Sports",Eurosport 2 Bulgaria
+http://213.91.179.28:8000/play/a04b
+#EXTINF:-1 tvg-logo="https://i.imgur.com/YdyFJrl.png" group-title="Portugal - Music",First Music Channel (1080p)
+http://rtmp.one.by:1300
+#EXTINF:-1 tvg-logo="https://i.imgur.com/rEo7nR1.png" group-title="Portugal - Music",First Music Channel Russia (1080p)
+http://rtmp.one.by:2300
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Hitradio_%C3%963.svg/960px-Hitradio_%C3%963.svg.png" group-title="Portugal - Music",Hitradio O3 (720p)
+https://studiocam-oe3.mdn.ors.at/orf/studiocam_oe3/q6a/manifest.mpd
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/vi/3/3f/HTV_THETHAO_2014.png" group-title="Portugal - Sports",HTV Sports (1080i)
+https://vmttv.dpdns.org/tv360?id=htv-the-thao
+#EXTINF:-1 tvg-logo="https://i.imgur.com/HWb5Iat.png" group-title="Portugal - Music",Jalwa TV
+http://119.156.228.231:9983/stream/channelid/1893273325?profile=pass&ticket=B3DB50D5930411D593B973B8404789C46D3559B8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/JqaW7Ei.png" group-title="Portugal - Music",MegaBox (720p) [Not 24/7]
+https://hdbox.chunklistv.com/live?stream=megabox
+#EXTINF:-1 tvg-logo="https://i.imgur.com/2xDVwOh.png" group-title="Portugal - Music",NRJ Hits
+https://test.946985.filegear-sg.me/proxy/a23981548880f405
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/69/Prima_Sport_%28Czech_Republic%29.svg/revision/latest?cb=20260728085614" group-title="Portugal - Sports",Prima Sport Czechia
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/prima_sport/live_mq?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/4f/PRO_TV_Interna%C8%9Bional_%282017%29.svg/revision/latest/scale-to-width-down/1000?cb=20220821114700" group-title="Portugal - General",PRO TV International
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-protv-international/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://i.imgur.com/VcHy0fu.png" group-title="Portugal - General",RecordTV Interior SP
+http://200.77.176.130:8000/udp/224.0.0.4:49152
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7c/Sport1_CEE_%282020-present%29.svg" group-title="Portugal - Sports",Sport 1 (Slovakia)
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-sport1-sk/live_fullhd
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/tvfanon6528/images/f/ff/Sport_2_%282020-.n.v.%29.png" group-title="Portugal - Sports",Sport 2 (Slovakia)
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-sport2-sk/live_fullhd
+#EXTINF:-1 tvg-logo="https://www.beltelecom.by/sites/default/files/styles/200200/public/tv-channels/2025-10/sporttv.png" group-title="Portugal - Sports",Sport TV (1080p)
+http://178.124.179.122:8080/SportTV/mpegts
+#EXTINF:-1 tvg-logo="https://i.imgur.com/NVxHxJn.png" group-title="Portugal - Music",TeleHit (1080p)
+http://186.148.196.100:8000/play/a01s
+#EXTINF:-1 tvg-logo="https://i.ibb.co/G5bNH48/Traditional-TV-HD.png" group-title="Portugal - Music",Traditional TV (1080p)
+http://83.103.149.75:8085/udp/239.30.0.9:4000
+#EXTINF:-1 tvg-logo="https://i.imgur.com/WIACJSy.png" group-title="Portugal - Music",V Classic TV (1080p)
+http://186.148.196.100:8000/play/a02z
+#EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/s144078_ld_h15_aa.png?lock=720x540" group-title="Portugal - Music",Vijay Takkar APAC (1080p)
+https://tglmp01.akamaized.net/out/v1/c1071012b73f4f189b202e1529e8f802/manifest.mpd
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/df/Voyo_2026.svg/revision/latest/scale-to-width-down/1000?cb=20261006171646" group-title="Portugal - Sports",Voyo Events (576i) [Not 24/7]
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-protv-plus5/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://i.imgur.com/7tFiG6S.jpg" group-title="Portugal - Music",Pervyy Muzykal'nyy BY Ⓢ
+http://rtmp.one.by:1200
+#EXTINF:-1 tvg-logo="https://portal.rbc1.com.br/public/portal/img/layout/logorbc.png" group-title="Portugal - General",RBC Ⓨ
+https://www.youtube.com/watch?v=oUdd3CsxYaE
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/ct-sport-cz.png" group-title="Portugal - Sports",ČT sport Plus
+https://sktv.mxnticek.eu/new/stream.php?ch=%C4%8CT%20sport%20Plus
+#EXTINF:-1 tvg-logo="https://i.imgur.com/gebWmAB.png" group-title="Portugal - Sports",ERT Sports 1
+https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTSports1/default/index.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/gebWmAB.png" group-title="Portugal - Sports",ERT Sports 2
+https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTSports2/default/index.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/gebWmAB.png" group-title="Portugal - Sports",ERT Sports 3
+https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTSports3/default/index.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/gebWmAB.png" group-title="Portugal - Sports",ERT Sports 4
+https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTSports4/default/index.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Fkkp7x7.png" group-title="Portugal - Sports",TVB Finance (Sports & Information Channel)
+https://tvp22.sky4k.top/index2.php
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/31/Classichits2023.jpg" group-title="Portugal - General",Classic Hits
+https://live-bauerie.sharp-stream.com/CLASSIC
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Euronews_2022.svg/500px-Euronews_2022.svg.png" group-title="Portugal - Sports",Euronews em Português Ⓨ
+https://www.youtube.com/euronewspt/live
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/slovakia/rtvs-sport-sk.png" group-title="Portugal - Sports",Šport
+https://sktv.mxnticek.eu/new/stream.php?ch=%C5%A0port

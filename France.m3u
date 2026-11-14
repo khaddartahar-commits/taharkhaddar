@@ -1,1 +1,83 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png" group-title="France - News",BBC News Africa (1080p)
+https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png" group-title="France - News",BBC News UK HD (1080p)
+http://45.153.96.44:8001
+#EXTINF:-1 tvg-logo="https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png" group-title="France - News",BBC News Pashto (720p)
+https://vs-cmaf-pushb-ww.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_afghan_tv/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png" group-title="France - Movies",Canal+ Action Europe Czechia
+http://46.149.191.219:9106/play/a01g
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png" group-title="France - Movies",Canal+ Action Europe Magyar
+http://193.33.39.108:9016/play/a02n
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/ab/CANAL%2B_SPORT_2.svg/revision/latest?cb=20241028202739" group-title="France - Sports",Canal+ Sport 2 SK
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport2/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/4c/CANAL%2B_SPORT_3.svg/revision/latest?cb=20241028202810" group-title="France - Sports",Canal+ Sport 3 SK
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport3/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/82/CANAL%2B_SPORT_4.svg/revision/latest?cb=20241028202820" group-title="France - Sports",Canal+ Sport 4 SK
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport4/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/39/CANAL%2B_SPORT_5.svg/revision/latest?cb=20241028202829" group-title="France - Sports",Canal+ Sport 5 SK
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport5/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3b/Canal%2B_Sport_6.svg/revision/latest?cb=20251106141229" group-title="France - Sports",Canal+ Sport 6 SK
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport6/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/03/Canal%2B_Sport_7.svg/revision/latest?cb=20251106141245" group-title="France - Sports",Canal+ Sport 7 SK
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport7/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/64/Canal%2B_Sport_8.svg/revision/latest?cb=20251106141257" group-title="France - Sports",Canal+ Sport 8 SK
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport8/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/25/Canal%2B_Sport_2023.svg/revision/latest?cb=20230901182304" group-title="France - Sports",Canal+ Sport SK
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-sk-canal-plus-sport/live_fullhd?offsetSeconds=0
+#EXTINF:-1 tvg-logo="https://i.imgur.com/OK8mdJV.png" group-title="France - Sports",CCTV-5+ (1080p)
+https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9MXM6jD.png" group-title="France - Kids",FunBox
+http://186.148.196.100:8000/play/a00d
+#EXTINF:-1 tvg-logo="https://www.tvchinese.net/uploads/tv/jsgg.jpg" group-title="France - News",Jiangsu Public & News Channel (576p)
+http://183.207.248.71/gitv/live1/G_JSGG/G_JSGG
+#EXTINF:-1 tvg-logo="" group-title="France - Music",M6 Music
+https://test.946985.filegear-sg.me/proxy/803c517b325bfafc
+#EXTINF:-1 tvg-logo="https://i.imgur.com/AJx5Fy2.png" group-title="France - News",TV5Monde Info (1080p)
+http://91.235.255.32:8001/1:0:1:2CA:14B4:13E:820000:0:0:0
+#EXTINF:-1 tvg-logo="https://i.imgur.com/XxfET68.png" group-title="France - News",Universal Cinema (1080p)
+http://45.167.1.138:8000/play/a06m
+#EXTINF:-1 tvg-logo="https://i.imgur.com/aObcudw.png" group-title="France - News",ABC News Albania Ⓣ
+https://www.twitch.tv/abcnewsal
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/6/6a/Logo_LCP-AN_-_Public_S%C3%A9nat_%282019%29.svg/60px-Logo_LCP-AN_-_Public_S%C3%A9nat_%282019%29.svg.png" group-title="France - General",LCP
+https://lcp.fr/le-live-lcp-tnt-5433
+#EXTINF:-1 tvg-logo="https://i.imgur.com/bJOdFT1.png" group-title="France - General",Public Sénat
+https://www.publicsenat.fr/direct
+#EXTINF:-1 tvg-logo="https://i.imgur.com/UMRGAHx.png" group-title="France - News",CNews Ⓓ
+https://www.dailymotion.com/video/x3b68jn
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Franceinfo.svg/500px-Franceinfo.svg.png" group-title="France - General",franceinfo: Ⓨ
+https://www.youtube.com/c/franceinfo/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/61MSiq9.png" group-title="France - News",France 24 Ⓨ
+https://www.youtube.com/c/FRANCE24/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/3Lr5iAj.png" group-title="France - News",Euronews Français Ⓨ
+https://www.youtube.com/euronewsfr/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/xocvePC.png" group-title="France - News",Africanews Ⓨ
+https://www.youtube.com/c/Africanewsfr/live
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/L%27%C3%89quipe_wordmark.svg/500px-L%27%C3%89quipe_wordmark.svg.png" group-title="France - Sports",L'Équipe ⒹⒼ
+https://www.dailymotion.com/video/x2lefik
+#EXTINF:-1 tvg-logo="https://i.imgur.com/d9Ncl8m.png" group-title="France - General",France Inter Ⓨ
+https://www.youtube.com/c/FranceInter/live
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/L%27%C3%89quipe_wordmark.svg/500px-L%27%C3%89quipe_wordmark.svg.png" group-title="France - Sports",L'Équipe Ⓨ
+https://www.youtube.com/@lequipe/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/OtCwYsh.jpg" group-title="France - General",Tv Uno
+http://ftp.tiscali.it/francescovernata/TVUNO/monoscopioTvUNOint-1.wmv
+#EXTINF:-1 tvg-logo="https://i.imgur.com/jaSq18B.png" group-title="France - News",TVC News Ⓨ
+https://www.youtube.com/tvcnewsnigeria/live
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/85/RTR_Planeta_Europe.png" group-title="France - General",РТР-Планета Ⓢ
+https://player.smotrim.ru/iframe/stream/live_id/63251
+#EXTINF:-1 tvg-logo="https://i.imgur.com/MCDFlCk.png" group-title="France - General",KGS TV Ⓨ
+https://www.youtube.com/channel/UCiaAZAG_vm6cx3znkIqYErQ/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/KCPHba2.png" group-title="France - General",SRF 1
+http://51.91.73.99:25461/sweden/PM66f7Y43H/25849
+#EXTINF:-1 tvg-logo="https://i.imgur.com/61MSiq9.png" group-title="France - News",France 24 Ⓨ
+https://www.youtube.com/c/france24english/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/61MSiq9.png" group-title="France - News",France 24 Ⓨ
+https://www.youtube.com/france24english/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/BrW7gk8.png" group-title="France - News",ABC News (AU) Ⓨ
+https://www.youtube.com/@abcnewsaustralia/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/PBTdU4G.png" group-title="France - General",Grande Fratello Vip Regia 1 Ⓢ Ⓖ
+https://live3.msf.cdn.mediaset.net/content/dash_d0_clr_vos/live/channel(b7)/manifest.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/FKfwbHD.png" group-title="France - General",Grande Fratello Vip Regia 2 Ⓢ Ⓖ
+https://live3.msf.cdn.mediaset.net/content/dash_d0_clr_vos/live/channel(b8)/manifest.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/fFZeBnc.png" group-title="France - General",Grande Fratello Vip Regia un'ora fa Ⓢ Ⓖ
+https://live3.msf.cdn.mediaset.net/content/dash_d0_clr_vos/live/channel(b9)/manifest.mpd

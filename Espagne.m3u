@@ -1,1 +1,19 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/d2/AXN_Movies_logo.svg/revision/latest/scale-to-width-down/512" group-title="Espagne - Movies",AXN Movies (Spain)
+https://cdn.stmify.com/zapitv/stream/AXN_MOVIES/axn_white.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/nUYuCAP.png" group-title="Espagne - Kids",Boing (Spain)
+http://digisat.ddns.net:4022/udp/239.0.5.177:8208
+#EXTINF:-1 tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20National.png" group-title="Espagne - General",DD National (576p)
+http://163.61.226.31:9981/stream/channelid/1991369999?profile=pass
+#EXTINF:-1 tvg-logo="https://i.imgur.com/aKV5voq.png" group-title="Espagne - General",La Sexta (1080p)
+https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/la6.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Udrt2eK.png" group-title="Espagne - General",Mega (Spain) (1080p)
+https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/mega.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Vx1F4o5.png" group-title="Espagne - General",Nova (Spain) (1080p)
+https://cdn.jsdelivr.net/gh/Ignac16/voxel-tv@main/src/constants/channels/nova.mpd
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/SundanceTV_2014.svg/960px-SundanceTV_2014.svg.png" group-title="Espagne - Movies",Sundance TV (Spain)
+https://cdn.stmify.com/zapitv/stream/SUNDANCE_TV/sundance_hd.mpd
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/spain/ib3-es.png" group-title="Espagne - General",IB3 Global Ⓨ
+https://www.youtube.com/c/ib3/live
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Euronews_2022.svg/500px-Euronews_2022.svg.png" group-title="Espagne - News",Euronews Español Ⓨ
+https://www.youtube.com/euronewses/live

@@ -1,1 +1,55 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/BBC_Two_logo_2021.svg/960px-BBC_Two_logo_2021.svg.png" group-title="Italie - General",BBC Two Wales (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_wales_digital/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/G7TaQ1L.png" group-title="Italie - General",Canal 8 Mar del Plata (720p) [Not 24/7]
+https://canal8mdq.unpocodeawita.workers.dev
+#EXTINF:-1 tvg-logo="https://i.imgur.com/UxrAiAe.png" group-title="Italie - Kids",Disney Channel (Bulgaria) (576i)
+http://87.120.179.187:8000/play/a010
+#EXTINF:-1 tvg-logo="https://i.imgur.com/sEY21rg.png" group-title="Italie - General",Rai 4 (576p)
+https://mediapolisevent.rai.it/relinker/relinkerServlet.htm?cont=746966
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Rai_Scuola_-_Logo_2017.svg/960px-Rai_Scuola_-_Logo_2017.svg.png" group-title="Italie - General",Rai Scuola (576p) [Geo-blocked]
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Telefe_Salta_%282018%29.png/960px-Telefe_Salta_%282018%29.png" group-title="Italie - General",Telefe Salta
+https://canal11saltatv.unpocodeawita.workers.dev
+#EXTINF:-1 tvg-logo="https://i.imgur.com/CAx7yRm.png" group-title="Italie - General",Rai 1 Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/zA0PTcs.png" group-title="Italie - General",Rai 2 Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9kuQCIi.png" group-title="Italie - General",Rai 3 Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/XFkZRfv.png" group-title="Italie - General",Rai 4 Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746966&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Leu2zTO.png" group-title="Italie - General",Rai 5 Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=395276&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/RKpO8CE.png" group-title="Italie - Movies",Rai Movie Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747002&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/RKI4nFy.png" group-title="Italie - General",Rai Premium Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746992&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/lu1DPVb.png" group-title="Italie - General",Rai Gulp Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/DRSa3ys.png" group-title="Italie - General",Rai YoYo Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/K8y5q8x.png" group-title="Italie - General",Rai Storia Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/tmtJW6s.png" group-title="Italie - General",Rai Scuola Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/xsGljsb.png" group-title="Italie - Sports",Rai Sport Ⓖ
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/nVBet0h.png" group-title="Italie - General",Rai Radio 2 Visual Radio
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=5674080&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/2AvxGJF.png" group-title="Italie - General",Radio TV Serie A
+https://legaseriea-live-prd.cdn.netrw.it/out/v1/s-prd/ch-01-prd-s-v2/hls-ch-01-prd-s-hd/index%2Em3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/dak9AtV.png" group-title="Italie - News",News24 City
+https://dc3.telesveva.com:4433/news24.mp4
+#EXTINF:-1 tvg-logo="https://i.imgur.com/SCDETZC.jpeg" group-title="Italie - General",Telesveva
+https://dc3.telesveva.com:4433/cmaf/livetv/index.mpd
+#EXTINF:-1 tvg-logo="https://i.imgur.com/EcQvDfq.png" group-title="Italie - General",Radio Colonna Tv Ⓨ
+https://www.youtube.com/radiocolonna/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/d47CdYU.png" group-title="Italie - General",TRM h24 Ⓨ
+https://www.youtube.com/user/trmh24/live
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Euronews_2022.svg/500px-Euronews_2022.svg.png" group-title="Italie - News",Euronews Italian Ⓨ
+https://www.youtube.com/user/euronewsit/live
+#EXTINF:-1 tvg-logo="https://i.imgur.com/wGfpUj8.png" group-title="Italie - General",Teleroma 56 Ⓣ
+https://www.twitch.tv/teleroma_56
+#EXTINF:-1 tvg-logo="https://i.imgur.com/eRNgqnA.png" group-title="Italie - General",TeleRadioStereo Ⓣ
+https://www.twitch.tv/teleradiostereo
