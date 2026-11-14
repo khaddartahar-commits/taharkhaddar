@@ -75,7 +75,6 @@ def check_all(d):
     return out
 
 aw=check_all(arabic); fw=check_all(french); iw=check_all(italian); sw=check_all(spanish); gw=check_all(german); ew=check_all(english); pw=check_all(portuguese); dw=check_all(dutch)
-print(f"عربي {len(aw)} فرنسي {len(fw)} إيطالي {len(iw)} إسباني {len(sw)} ألماني {len(gw)} إنجليزي {len(ew)} برتغالي {len(pw)} هولندي {len(dw)}")
 
 def write_m3u(fname,lst):
     with open(fname,'w',encoding='utf-8') as f:
@@ -89,11 +88,21 @@ for name,(info,stream) in aw:
     else: mashreq.append((info,stream))
 
 write_m3u('arabic-working.m3u',aw); write_m3u('arabic-maghreb.m3u',maghreb); write_m3u('arabic-mashreq.m3u',mashreq)
-write_m3u('France.m3u',fw); write_m3u('french-working.m3u',fw)
-write_m3u('Italie.m3u',iw); write_m3u('italie.m3u',iw)
-write_m3u('Espagne.m3u',sw); write_m3u('espagne.m3u',sw)
-write_m3u('Allemagne.m3u',gw); write_m3u('allemagne.m3u',gw)
-write_m3u('Angleterre.m3u',ew); write_m3u('angleterre.m3u',ew)
-write_m3u('Portugal.m3u',pw); write_m3u('portugal.m3u',pw)
-write_m3u('Hollande.m3u',dw); write_m3u('hollande.m3u',dw)
-print("تم كلش")
+write_m3u('France.m3u',fw)
+write_m3u('Italie.m3u',iw)
+write_m3u('Espagne.m3u',sw)
+write_m3u('Allemagne.m3u',gw)
+write_m3u('Angleterre.m3u',ew)
+write_m3u('Portugal.m3u',pw)
+write_m3u('Hollande.m3u',dw)
+
+# الملف الجامع الكل - ta.m3u
+all_channels = aw + fw + iw + sw + gw + ew + pw + dw
+# نحذفو المكرر
+seen=set(); unique=[]
+for info,stream in all_channels:
+    if stream not in seen:
+        seen.add(stream)
+        unique.append((info,stream))
+write_m3u('ta.m3u',unique)
+print(f"تم: ta.m3u = {len(unique)} قناة كل الدول")
