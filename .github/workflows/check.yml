@@ -15,21 +15,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: تثبيت المكتبة
         run: pip install requests
-
       - name: تشغيل الروبوت
         run: python check.py
-
-      - name: حفظ القنوات في GitHub
+      - name: حفظ في GitHub
         run: |
           git config user.name "tahar-bot"
           git config user.email "tahar-bot@github.com"
-          git add arabic.m3u
-          git diff --cached --quiet || git commit -m "تحديث تلقائي: قنوات عربية - $(date)"
+          git add arabic.m3u channels.m3u movies.m3u series.m3u cartoon.m3u
+          git diff --cached --quiet || git commit -m "تحديث: ملفات منفصلة + رابط واحد - $(date)"
           git push
