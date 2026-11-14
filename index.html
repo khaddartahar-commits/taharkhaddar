@@ -11,9 +11,11 @@ button.active{background:#22c55e;color:#000;font-weight:bold}
 .card{background:#1e1e1e;padding:12px;margin:8px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}
 a{color:#22c55e;text-decoration:none;font-weight:bold}
 input{width:90%;padding:10px;border-radius:10px;border:0;margin:10px 0}
-.smart{background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0;text-align:center}
+.smart{background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0}
 .smart input{width:100%;background:#111;color:#4ade80;text-align:left;direction:ltr}
 .copyBtn{background:#22c55e !important;color:#000 !important;font-weight:bold;width:90%}
+.qualityBox{background:#1e1e1e;padding:14px;border-radius:12px;margin:10px 0}
+video{width:100%;border-radius:12px;display:none;background:#000;margin-top:10px}
 </style>
 </head>
 <body>
@@ -28,14 +30,26 @@ input{width:90%;padding:10px;border-radius:10px;border:0;margin:10px 0}
 <p><small>الصقو في: TiviMate / IPTV Smarters / IRIS -> Add Playlist -> M3U URL</small></p>
 </div>
 
+<div class="qualityBox">
+<b>🎞️ اختر الجودة:</b><br><br>
+<button onclick="setQuality('auto',this)" class="active">🔄 تلقائي - يخير وحدو حسب الإنترنت</button>
+<button onclick="setQuality('low',this)">💚 توفير - 360p</button>
+<button onclick="setQuality('mid',this)">متوسط - 480p</button>
+<button onclick="setQuality('high',this)">عالي - 720p HD</button>
+<button onclick="setQuality('full',this)">🔥 فائق - 1080p Full HD</button>
+<p><small id="qInfo">الوضع الحالي: تلقائي 🔄 - اذا الإنترنت ضعيف ينقص الجودة وحدو، واذا قوي يطلع لـ Full HD</small></p>
+<video id="player" controls playsinline></video>
+</div>
+
 <input id="search" placeholder="🔍 ابحث عن قناة..." oninput="render()">
 <div id="filters"></div>
 <div id="list"></div>
 
 <script>
 let all=[], groups=new Set(), cur='الكل';
+let quality='auto';
+let currentUrl='';
 
-// === كل الروابط اللي تخدم مع مليون مشاهد - نفس الملف ===
 const m3uLinks = [
   "https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/arabic.m3u",
   "https://fastly.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/arabic.m3u",
@@ -44,7 +58,6 @@ const m3uLinks = [
   "https://rawcdn.githack.com/khaddartahar-commits/taharkhaddar/main/arabic.m3u",
   "https://khaddartahar-commits.github.io/taharkhaddar/arabic.m3u",
   "https://raw.githubusercontent.com/khaddartahar-commits/taharkhaddar/main/arabic.m3u",
-  // احتياط: اذا arabic.m3u ما كاش، نجربو all.m3u
   "https://cdn.jsdelivr.net/gh/khaddartahar-commits/taharkhaddar@main/all.m3u",
   "https://raw.githubusercontent.com/khaddartahar-commits/taharkhaddar/main/all.m3u"
 ];
@@ -62,7 +75,6 @@ async function loadSmart(){
       }
     }catch(e){}
   }
-  document.getElementById("status").innerText = "نستعملو الرابط الأساسي:";
   document.getElementById("m3uLink").value = m3uLinks[0];
 }
 
@@ -88,8 +100,49 @@ function setG(g,btn){cur=g;document.querySelectorAll('#filters button').forEach(
 function render(){
   let q=document.getElementById('search').value.toLowerCase();
   let list=all.filter(c=>(cur=='الكل'||c.group==cur)&&c.name.toLowerCase().includes(q));
-  document.getElementById('list').innerHTML=list.map(c=>`<div class="card"><span>${c.name}<br><small>✅ ${c.group}</small></span><a href="${c.url}" target="_blank">شاهد</a></div>`).join('');
+  document.getElementById('list').innerHTML=list.map(c=>`<div class="card"><span>${c.name}<br><small>✅ ${c.group}</small></span><a href="javascript:void(0)" onclick="playChannel('${c.url}')">شاهد</a></div>`).join('');
 }
+
+function setQuality(q,btn){
+  quality=q;
+  document.querySelectorAll('.qualityBox button').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  let txt = q==='auto' ? 'الوضع الحالي: تلقائي 🔄 - اذا الإنترنت ضعيف ينقص الجودة وحدو، واذا قوي يطلع لـ Full HD' :
+            q==='low' ? 'الوضع الحالي: توفير 💚 - 360p - حوالي 0.5GB في الساعة' :
+            q==='mid' ? 'الوضع الحالي: متوسط - 480p - حوالي 1GB في الساعة' :
+            q==='high' ? 'الوضع الحالي: عالي - 720p HD - حوالي 1.8GB في الساعة' :
+            'الوضع الحالي: فائق 🔥 - 1080p Full HD - حوالي 2.5GB في الساعة - للي عندو إنترنت قوية';
+  document.getElementById('qInfo').innerText = txt;
+  if(currentUrl) playChannel(currentUrl);
+}
+
+function getQualityUrl(url){
+  // اذا القناة فيها اكثر من جودة، نحاولو نبدلو الجودة في الرابط
+  // اذا ما فيهاش، نرجعو نفس الرابط، والمتصفح هو اللي يخير
+  if(quality==='auto') return url;
+  // لبعض السيرفرات اللي فيهم /720/ او /1080/ او _hd
+  let qMap = {low:'360', mid:'480', high:'720', full:'1080'};
+  let q = qMap[quality];
+  if(url.includes('/720/') || url.includes('/1080/') || url.includes('/480/') || url.includes('/360/')){
+    return url.replace(/\/\d{3,4}\//, '/'+q+'/');
+  }
+  return url;
+}
+
+function playChannel(url){
+  currentUrl=url;
+  let v=document.getElementById('player');
+  v.style.display='block';
+  v.src = getQualityUrl(url);
+  v.play();
+  v.scrollIntoView({behavior:'smooth'});
+}
+
+document.addEventListener('visibilitychange', ()=>{
+  let v=document.getElementById('player');
+  if(document.hidden) v.pause();
+});
+
 function copyLink(){
   const i=document.getElementById("m3uLink");
   i.select(); i.setSelectionRange(0,99999);
