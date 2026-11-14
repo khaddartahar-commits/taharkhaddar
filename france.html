@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>France TV - القنوات الفرنسية الشغالة</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style>
+*{box-sizing:border-box}
+body{background:#0f0f0f;color:#fff;font-family:Arial,sans-serif;margin:0;padding:0}
+header{background:#002654;padding:15px;text-align:center;position:sticky;top:0;z-index:10}
+header h1{margin:0;font-size:22px}
+header h1 span{color:#ED2939}
+header p{margin:5px 0 0;color:#ccc;font-size:13px}
+#search{width:90%;max-width:500px;padding:12px;border-radius:20px;border:none;margin:15px auto;display:block;font-size:16px;text-align:center}
+#player-wrap{background:#000;padding:10px;position:sticky;top:82px;z-index:9}
+video{width:100%;max-height:360px;background:#000;border-radius:10px}
+#now{ text-align:center;padding:8px;font-weight:bold;color:#FFD700}
+#cats{display:flex;gap:8px;overflow-x:auto;padding:10px;white-space:nowrap}
+#cats button{background:#222;color:#fff;border:1px solid #444;padding:8px 14px;border-radius:20px;cursor:pointer}
+#cats button.active{background:#ED2939;border-color:#ED2939}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:15px}
+.card{background:#1e1e1e;border-radius:10px;padding:10px;text-align:center;cursor:pointer;border:1px solid #333}
+.card:hover{border-color:#ED2939}
+.card img{width:70px;height:70px;object-fit:contain;background:#fff;border-radius:8px}
+.card b{display:block;margin-top:8px;font-size:13px;min-height:32px}
+.card span{font-size:11px;color:#0f0}
+#count{text-align:center;color:#aaa;padding:5px}
+a.back{display:inline-block;color:#fff;text-decoration:none;background:#333;padding:8px 15px;border-radius:20px;margin:10px}
+</style>
+</head>
+<body>
+<header>
+<h1>🇫🇷 France <span>TV</span> - فرنسا</h1>
+<p id="status">جاري تحميل القنوات الفرنسية الشغالة...</p>
+</header>
+
+<div id="player-wrap">
+<video id="video" controls playsinline></video>
+<div id="now">اختر قناة من الأسفل ▶</div>
+</div>
+
+<input id="search" placeholder="🔍 ابحث عن قناة فرنسية... TF1, France 2, M6, BFM...">
+<div id="cats"></div>
+<div id="count"></div>
+<div id="grid"></div>
+<center><a class="back" href="index.html">⬅ العودة للرئيسية</a></center>
+
+<script>
+let all = [];
+let currentCat = 'الكل';
+
+function parseM3U(text){
+  const lines = text.split('\n');
+  let list = [];
+  let info = '';
+  for(let l of lines){
+    l=l.trim();
+    if(l.startsWith('#EXTINF')){
+      info=l;
+    } else if(l.startsWith('http')){
+      let name = (info.split(',')[1]||'Channel').trim();
+      let logo = (info.match(/tvg-logo="([^"]+)"/)||[])[1]||'';
+      let group = (info.match(/group-title="([^"]+)"/)||[])[1]||'France';
+      list.push({name, logo, group, url:l});
+      info='';
+    }
+  }
+  return list;
+}
+
+async function load(){
+  try{
+    const r = await fetch('french-working.m3u');
+    const t = await r.text();
+    all = parseM3U(t);
+    document.getElementById('status').textContent = `✅ ${all.length} قناة فرنسية شغالة`;
+    renderCats();
+    render();
+  }catch(e){
+    document.getElementById('status').textContent = '❌ مازال french-working.m3u ما تخدمش، دير Run workflow';
+  }
+}
+
+function renderCats(){
+  const cats = ['الكل', ...new Set(all.map(c=>c.group))];
+  document.getElementById('cats').innerHTML = cats.map(c=>`<button class="${c===currentCat?'active':''}" onclick="setCat('${c.replace(/'/g,"")}')">${c}</button>`).join('');
+}
+function setCat(c){ currentCat=c; renderCats(); render(); }
+
+function render(){
+  const q = document.getElementById('search').value.toLowerCase();
+  let filt = all.filter(c=> (currentCat==='الكل'||c.group===currentCat) && c.name.toLowerCase().includes(q));
+  document.getElementById('count').textContent = filt.length + ' قناة';
+  document.getElementById('grid').innerHTML = filt.map((c,i)=>`
+    <div class="card" onclick="play(${all.indexOf(c)})">
+      <img src="${c.logo||'https://via.placeholder.com/70?text=FR'}" onerror="this.src='https://via.placeholder.com/70?text=FR'">
+      <b>${c.name}</b>
+      <span>● شغالة • ${c.group}</span>
+    </div>`).join('');
+}
+
+function play(idx){
+  const c = all[idx];
+  const v = document.getElementById('video');
+  document.getElementById('now').textContent = '▶ تشغيل: ' + c.name;
+  if(Hls.isSupported() && c.url.includes('.m3u8')){
+    const hls = new Hls(); hls.loadSource(c.url); hls.attachMedia(v); hls.on(Hls.Events.MANIFEST_PARSED,()=>v.play());
+  } else { v.src=c.url; v.play(); }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+document.getElementById('search').addEventListener('input', render);
+load();
+</script>
+</body>
+</html>
