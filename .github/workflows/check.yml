@@ -2,7 +2,7 @@ name: فحص القنوات كل ساعة
 
 on:
   schedule:
-    - cron: '0 * * * *'
+        - cron: '0 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -12,20 +12,20 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+            - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-python@v5
+            - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: تثبيت المكتبة
+            - name: تثبيت المكتبة
         run: pip install requests
-      - name: تشغيل الروبوت
+            - name: تشغيل الروبوت
         run: python check.py
-      - name: حفظ في GitHub
+            - name: حفظ في GitHub
         run: |
           git config user.name "tahar-bot"
           git config user.email "tahar-bot@github.com"
-          git add arabic.m3u channels.m3u movies.m3u series.m3u cartoon.m3u
-          git diff --cached --quiet || git commit -m "تحديث: ملفات منفصلة + رابط واحد - $(date)"
+          git add arabic.m3u channels.m3u
+          git diff --cached --quiet || git commit -m "تحديث قنوات - $(date)"
           git push
