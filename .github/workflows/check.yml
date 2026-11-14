@@ -1,21 +1,25 @@
-name: Fix All
+name: Check All
 
 on:
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
-  fix:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python fix.py
+      - run: pip install requests
+      - run: python check.py
       - run: |
           git config user.name "bot"
           git config user.email "bot@bot.com"
-          git add *.m3u
-          git commit -m "إصلاح كل الأكواد" || echo "ماكاش جديد"
-          git push
+          git add arabic-working.m3u arabic-maghreb.m3u arabic-mashreq.m3u France.m3u Italie.m3u Espagne.m3u Allemagne.m3u Angleterre.m3u Portugal.m3u Hollande.m3u ta.m3u
+          git commit -m "تحديث" || echo "ماكاش جديد"
+          git pull --rebase || true
+          git push || echo "دفع فشل"
