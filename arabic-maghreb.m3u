@@ -1,0 +1,122 @@
+#EXTM3U x-tvg-url="https://iptv-org.github.io/epg.xml"
+
+#EXTINF:-1 group-title="AR - الجزائر",التلفزيون الجزائري 1
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/entv/smil:entv.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",Canal Algérie
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/canalalgerie/smil:canalalgerie.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",النهار TV
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/ennahar/smil:ennahar.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",الشروق TV
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/echorouk/smil:echorouk.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",البلاد TV
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/elbilad/smil:elbilad.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",سميرة TV
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/samira/smil:samira.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",الهداف TV
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/elheddaf/smil:elheddaf.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",دزاير TV
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/dzair/smil:dzair.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",الشروق News
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/echorouknews/smil:echorouknews.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",الجزائرية 3
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/a3/smil:a3.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",الجزائرية 4 - تمازيغت
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/a4/smil:a4.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",الجزائرية 5 - القرآن
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/a5/smil:a5.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",الجزائرية 6 - الشباب
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/a6/smil:a6.smil/playlist.m3u8
+#EXTINF:-1 group-title="AR - الجزائر",الجزائرية 7 - المعرفة
+https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/a7/smil:a7.smil/playlist.m3u8
+
+#EXTINF:-1 group-title="AR - المغرب",الأولى - Al Aoula
+https://stream-lb.livemediama.com/alaoula-tnt/hls/master.m3u8
+#EXTINF:-1 group-title="AR - المغرب",2M
+https://stream-lb.livemediama.com/2m-tnt/hls/master.m3u8
+#EXTINF:-1 group-title="AR - المغرب",الرياضية - Arryadia
+https://stream-lb.livemediama.com/arryadia-tnt/hls/master.m3u8
+#EXTINF:-1 group-title="AR - المغرب",المغربية - Al Maghribia
+https://stream-lb.livemediama.com/almaghribia/hls/master.m3u8
+#EXTINF:-1 group-title="AR - المغرب",تمازيغت - Tamazight
+https://stream-lb.livemediama.com/tamazight-tnt/hls/master.m3u8
+#EXTINF:-1 group-title="AR - المغرب",السادسة - Assadissa
+https://stream-lb.livemediama.com/assadissa/hls/master.m3u8
+#EXTINF:-1 group-title="AR - المغرب",Medi1 TV
+https://stream.medi1tv.com/medi1tv/medihls.m3u8
+#EXTINF:-1 group-title="AR - المغرب",Medi1 TV Afrique
+https://stream.medi1tv.com/medi1tv-afrique/medihls.m3u8
+#EXTINF:-1 group-title="AR - المغرب",Al Aoula Inter
+https://stream-lb.livemediama.com/alaoula-inter/hls/master.m3u8
+#EXTINF:-1 group-title="AR - المغرب",2M Monde
+https://stream-lb.livemediama.com/2m-monde/hls/master.m3u8
+
+#EXTINF:-1 group-title="AR - تونس",الوطنية 1
+https://live.watania1.tn/hls/watania1.m3u8
+#EXTINF:-1 group-title="AR - تونس",الوطنية 2
+https://live.watania2.tn/hls/watania2.m3u8
+#EXTINF:-1 group-title="AR - تونس",حنبعل TV
+https://live.hannibaltv.tn/hls/hannibal.m3u8
+#EXTINF:-1 group-title="AR - تونس",نسمة TV
+https://live.nessma.tv/hls/nessma.m3u8
+#EXTINF:-1 group-title="AR - تونس",التاسعة TV
+https://live.attessia.tv/hls/attessia.m3u8
+#EXTINF:-1 group-title="AR - تونس",الحوار التونسي
+https://live.elhiwar.tv/hls/elhiwar.m3u8
+#EXTINF:-1 group-title="AR - تونس",تلفزة TV
+https://live.televisa.tv/hls/televisa.m3u8
+#EXTINF:-1 group-title="AR - تونس",قرطاج+
+https://live.carthageplus.tv/hls/carthage.m3u8
+
+#EXTINF:-1 group-title="AR - ليبيا",ليبيا الوطنية
+https://live.libya.tv/hls/libya.m3u8
+#EXTINF:-1 group-title="AR - ليبيا",ليبيا الأحرار
+https://live.libyaalahrar.tv/hls/alahrar.m3u8
+#EXTINF:-1 group-title="AR - ليبيا",218 TV
+https://live.218tv.net/hls/218.m3u8
+#EXTINF:-1 group-title="AR - ليبيا",ليبيا الرياضية
+https://live.libyasport.tv/hls/libsport.m3u8
+#EXTINF:-1 group-title="AR - ليبيا",بانوراما ليبيا
+https://live.panorama.ly/hls/panorama.m3u8
+
+#EXTINF:-1 group-title="AR - مصر",CBC
+https://live.cbcegypt.tv/hls/cbc.m3u8
+#EXTINF:-1 group-title="AR - مصر",CBC دراما
+https://live.cbcegypt.tv/hls/cbcdrama.m3u8
+#EXTINF:-1 group-title="AR - مصر",ON TV
+https://live.ontv.tv/hls/on.m3u8
+#EXTINF:-1 group-title="AR - مصر",ON دراما
+https://live.ontv.tv/hls/ondrama.m3u8
+#EXTINF:-1 group-title="AR - مصر",DMC
+https://live.dmctv.tv/hls/dmc.m3u8
+#EXTINF:-1 group-title="AR - مصر",DMC دراما
+https://live.dmctv.tv/hls/dmcdrama.m3u8
+#EXTINF:-1 group-title="AR - مصر",MBC مصر
+https://shls-mbcmasr-prod-dub.shahid.net/out/v1/451b666db8a54b7d8232c4b7f2d5e5d3c/index.m3u8
+#EXTINF:-1 group-title="AR - مصر",MBC مصر 2
+https://shls-mbcmasr2-prod-dub.shahid.net/out/v1/451b666db8a54b7d8232c4b7f2d5e5d3d/index.m3u8
+#EXTINF:-1 group-title="AR - مصر",الحياة TV
+https://live.alhayat.tv/hls/alhayat.m3u8
+#EXTINF:-1 group-title="AR - مصر",الحياة دراما
+https://live.alhayat.tv/hls/alhayatdrama.m3u8
+#EXTINF:-1 group-title="AR - مصر",النهار TV مصر
+https://live.alnahar.tv/hls/alnahar.m3u8
+#EXTINF:-1 group-title="AR - مصر",صدى البلد
+https://live.sadaelbalad.tv/hls/sada.m3u8
+#EXTINF:-1 group-title="AR - مصر",القاهرة الإخبارية
+https://live.alqahera.tv/hls/alqahera.m3u8
+#EXTINF:-1 group-title="AR - مصر",النيل TV
+https://live.niletv.tv/hls/nile.m3u8
+#EXTINF:-1 group-title="AR - مصر",نايل دراما
+https://live.niletv.tv/hls/niledrama.m3u8
+#EXTINF:-1 group-title="AR - مصر",نايل سينما
+https://live.niletv.tv/hls/nilecinema.m3u8
+
+#EXTINF:-1 group-title="AR - موريتانيا",موريتانيا TV
+https://live.mauritaniatv.mr/hls/mauritania.m3u8
+#EXTINF:-1 group-title="AR - موريتانيا",الساحل TV
+https://live.essahel.tv/hls/essahel.m3u8
+
+#EXTINF:-1 group-title="AR - السودان",السودان TV
+https://live.sudantv.sd/hls/sudan.m3u8
+#EXTINF:-1 group-title="AR - السودان",النيل الأزرق
+https://live.bluenile.tv/hls/bluenile.m3u8
