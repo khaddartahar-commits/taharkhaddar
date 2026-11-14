@@ -9,7 +9,7 @@ for fname in ['servers-all.txt','servers-backup.txt']:
                 if l.startswith('http'): urls.append(l)
     except: pass
 
-arabic={}; french={}; italian={}; spanish={}
+arabic={}; french={}; italian={}; spanish={}; german={}; english={}
 
 def is_arabic(info,url):
     low=(info+" "+url).lower()
@@ -23,6 +23,12 @@ def is_italian(info,url):
 def is_spanish(info,url):
     low=(info+" "+url).lower()
     return any(w in low for w in ['spa','spain','espa','es,','la 1','la 2','antena 3','telecinco','cuatro','la sexta','tve','movistar','dazn es','real madrid tv','barca tv','gol tv','canal sur'])
+def is_german(info,url):
+    low=(info+" "+url).lower()
+    return any(w in low for w in ['ger','germany','deutschland','de,','ard','zdf','rtl','pro7','pro 7','sat.1','sat1','vox','kabel eins','sky de','dazn de','sport1','ntv','n-tv'])
+def is_english(info,url):
+    low=(info+" "+url).lower()
+    return any(w in low for w in ['uk','england','british','bbc','itv','channel 4','channel 5','sky sports','sky uk','sky news','dazn uk','bt sport','tnt sports uk','eurosport uk'])
 
 for surl in urls:
     try:
@@ -39,6 +45,8 @@ for surl in urls:
             if is_french(info,stream) and name not in french: french[name]=(info,stream)
             if is_italian(info,stream) and name not in italian: italian[name]=(info,stream)
             if is_spanish(info,stream) and name not in spanish: spanish[name]=(info,stream)
+            if is_german(info,stream) and name not in german: german[name]=(info,stream)
+            if is_english(info,stream) and name not in english: english[name]=(info,stream)
     except Exception as e: print(f"فشل {surl}: {e}")
 
 def is_working(item):
@@ -58,8 +66,8 @@ def check_all(d):
             if res: out.append(res)
     return out
 
-aw=check_all(arabic); fw=check_all(french); iw=check_all(italian); sw=check_all(spanish)
-print(f"عربي {len(aw)} فرنسي {len(fw)} إيطالي {len(iw)} إسباني {len(sw)}")
+aw=check_all(arabic); fw=check_all(french); iw=check_all(italian); sw=check_all(spanish); gw=check_all(german); ew=check_all(english)
+print(f"عربي {len(aw)} فرنسي {len(fw)} إيطالي {len(iw)} إسباني {len(sw)} ألماني {len(gw)} إنجليزي {len(ew)}")
 
 def write_m3u(fname,lst):
     with open(fname,'w',encoding='utf-8') as f:
@@ -76,4 +84,6 @@ write_m3u('arabic-working.m3u',aw); write_m3u('arabic-maghreb.m3u',maghreb); wri
 write_m3u('France.m3u',fw); write_m3u('french-working.m3u',fw)
 write_m3u('Italie.m3u',iw); write_m3u('italie.m3u',iw)
 write_m3u('Espagne.m3u',sw); write_m3u('espagne.m3u',sw)
+write_m3u('Allemagne.m3u',gw); write_m3u('allemagne.m3u',gw)
+write_m3u('Angleterre.m3u',ew); write_m3u('angleterre.m3u',ew)
 print("تم كلش")
