@@ -1,26 +1,38 @@
-import requests, concurrent.futures, os
+import requests
 
-# الملفات اللي نفحصوهم - غير العربي
-FILES = ["arabic-maghreb.m3u", "arabic-mashreq.m3u"]
+# كل الروابط - يجيب منهم كلش
+SOURCES_MAGHREB = [
+    "https://iptv-org.github.io/iptv/countries/dz.m3u",
+    "https://iptv-org.github.io/iptv/countries/ma.m3u",
+    "https://iptv-org.github.io/iptv/countries/tn.m3u",
+    "https://iptv-org.github.io/iptv/countries/ly.m3u",
+    "https://iptv-org.github.io/iptv/countries/eg.m3u",
+    "https://iptv-org.github.io/iptv/countries/mr.m3u",
+]
+SOURCES_MASHREQ = [
+    "https://iptv-org.github.io/iptv/countries/sa.m3u",
+    "https://iptv-org.github.io/iptv/countries/ae.m3u",
+    "https://iptv-org.github.io/iptv/countries/qa.m3u",
+    "https://iptv-org.github.io/iptv/countries/kw.m3u",
+    "https://iptv-org.github.io/iptv/countries/iq.m3u",
+    "https://iptv-org.github.io/iptv/countries/jo.m3u",
+    "https://iptv-org.github.io/iptv/countries/lb.m3u",
+    "https://iptv-org.github.io/iptv/countries/sy.m3u",
+    "https://iptv-org.github.io/iptv/countries/ye.m3u",
+    "https://iptv-org.github.io/iptv/countries/ps.m3u",
+]
 
-def is_working(url):
+def fetch(url):
     try:
-        # نفحص غير الراس، ما نحملوش الفيديو - اقتصادي
-        r = requests.head(url, timeout=5, allow_redirects=True, headers={"User-Agent": "Mozilla/5.0"})
-        if r.status_code in [200, 301, 302, 403]:
-            return True
-        # كاش سيرفرات ما تقبلش HEAD، نجربو GET صغير
-        r = requests.get(url, timeout=5, stream=True, headers={"User-Agent": "Mozilla/5.0"})
-        return r.status_code in [200, 301, 302, 403]
-    except:
-        return False
+        r = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+        if r.status_code == 200 and "#EXTM3U" in r.text:
+            return r.text
+    except Exception as e:
+        print(f"❌ {url} - {e}")
+    return ""
 
-def parse_m3u(path):
-    if not os.path.exists(path):
-        print(f"ماكاش {path} - نتخطاوه")
-        return []
-    with open(path, encoding="utf-8", errors="ignore") as f:
-        lines = f.read().splitlines()
+def parse(text):
+    lines = text.splitlines()
     chans = []
     ext = ""
     for line in lines:
@@ -32,20 +44,28 @@ def parse_m3u(path):
             ext=""
     return chans
 
-for fname in FILES:
-    chans = parse_m3u(fname)
-    print(f"🔍 {fname}: {len(chans)} قناة - نفحصو...")
-    if not chans:
-        continue
-    # نفحصو 30 قناة في نفس الوقت - سريع
-    with concurrent.futures.ThreadPoolExecutor(max_workers=30) as ex:
-        results = list(ex.map(lambda c: is_working(c[1]), chans))
-    working = [c for c, ok in zip(chans, results) if ok]
-    print(f"✅ {fname}: {len(working)} / {len(chans)} شغالة")
-    with open(fname, "w", encoding="utf-8") as f:
+def build(sources, out_file):
+    all_chans = []
+    seen_url = set()
+    for s in sources:
+        print(f"📥 {s}...")
+        t = fetch(s)
+        if not t: continue
+        for ext, url in parse(t):
+            # نحذف غير المكرر بنفس الرابط - الميت نخليوه
+            if url not in seen_url:
+                seen_url.add(url)
+                all_chans.append((ext, url))
+    print(f"📦 {out_file} - لقينا {len(all_chans)} قناة - كلش، شغالة و ميتة")
+    if len(all_chans) < 5:
+        print("⚠️ قليل بزاف، ما نحفظوش")
+        return
+    with open(out_file, "w", encoding="utf-8") as f:
         f.write("#EXTM3U\n")
-        for ext, url in working:
+        for ext, url in all_chans:
             f.write(ext + "\n" + url + "\n")
-    print(f"💾 حفظنا {fname}")
+    print(f"✅ حفظنا {out_file} - {len(all_chans)} قناة")
 
-print("🎉 كملنا الفحص")
+build(SOURCES_MAGHREB, "arabic-maghreb.m3u")
+build(SOURCES_MASHREQ, "arabic-mashreq.m3u")
+print("🎉 كملنا - جبنا كلش")
