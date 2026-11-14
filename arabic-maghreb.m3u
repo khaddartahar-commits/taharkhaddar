@@ -275,6 +275,8 @@ http://88.212.7.14/live/test_fishing_hunting/playlist.m3u8
 https://5f22d76e220e1.streamlock.net/tltmolise/tltmolise/playlist.m3u8
 #EXTINF:-1 tvg-id="TN8.ni@SD" tvg-logo="https://i.imgur.com/m0Zdxiz.png" group-title="General",TN8 (1080p)
 https://streamingcws30.com/tn8/videotn8/playlist.m3u8
+#EXTINF:-1 tvg-id="TN.ar@SD" tvg-logo="https://i.imgur.com/vFwPhPS.png" group-title="News",TN (1080p)
+http://158.172.155.130:8000/play/a0dp/index.m3u8
 #EXTINF:-1 tvg-id="TNAWrestlingChannel.pl@SD" tvg-logo="https://provider-static.plex.tv/epg/cms/production/5d4f68c3-82af-45e7-b2c4-39aff69f3ce0/TNAWrestling_Plex_LogoforDarkBG_1500x1000_-_Alex_TushinghamRDX.png" group-title="Undefined",TNA Wrestling Channel (720p)
 https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883039
 #EXTINF:-1 tvg-id="TNE.cl@SD" tvg-logo="https://i.imgur.com/8QbvXva.png" group-title="Religious",TNE (720p) [Not 24/7]
@@ -543,8 +545,6 @@ https://www.youtube.com/watch?v=ABVQXgr2LW4
 https://origin.dpsgo.com/ssai/event/BBp0VeP6QtOOlH8nu3bWTg/master.m3u8
 #EXTINF:-1 tvg-name="FZTV-4 Children 少儿频道" tvg-logo="https://i.imgur.com/J4WtNTX.png" tvg-id="FZTVkids.cn" tvg-chno="20" tvg-country="CN" group-title="China",FZTV-4 Children 少儿频道
 http://live.zohi.tv/video/s10001-fztv-4/index.m3u8
-#EXTINF:-1 tvg-name="TN Live" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/nova-cz.png" tvg-chno="14" tvg-country="CZ" group-title="Czech Republic",TN Live
-https://sktv.mxnticek.eu/new/stream.php?ch=Nova%20TN%20Live
 #EXTINF:-1 tvg-name="CGTN Français" tvg-logo="https://i.imgur.com/fMsJYzl.png" tvg-id="CGTNFrench.cn" tvg-chno="34" tvg-country="FR" group-title="France",CGTN Français
 https://news.cgtn.com/resource/live/french/cgtn-f.m3u8
 #EXTINF:-1 tvg-name="ERT News" tvg-logo="https://i.imgur.com/saIGLvr.png" tvg-id="ERTNews.gr" tvg-chno="4" tvg-country="GR" group-title="Greece",ERT News
