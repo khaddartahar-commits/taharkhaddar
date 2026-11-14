@@ -1,6 +1,6 @@
 import requests, re
 
-print("🚀 بدأ الفرز - 3 ملفات + إنترنت")
+print("🚀 بدأ الفرز - رابط واحد + ثبات لمليون متصل")
 
 headers = {'User-Agent': 'Mozilla/5.0'}
 
@@ -122,7 +122,7 @@ for code in arabsat_countries:
 
 print(f"✅ 3. Arabsat مشي عربية: {len(arabsat)}")
 
-# ================= الحفظ =================
+# ================= الحفظ - رابط واحد فيه كلش =================
 def save(filename, store):
     with open(filename,'w',encoding='utf-8') as f:
         f.write("#EXTM3U\n")
@@ -134,7 +134,16 @@ save('nilesat.m3u', nilesat)
 save('arabsat.m3u', arabsat)
 save('channels.m3u', arabic)
 
+# رابط واحد فيه كلش - ثابت لمليون متصل
+all_channels = {}
+all_channels.update(arabic)
+all_channels.update(nilesat)
+all_channels.update(arabsat)
+save('all.m3u', all_channels)
+
+print(f"⚡ تحضير رابط ثابت لمليون متصل - {len(all_channels)} قناة")
 print("🎉 كملنا:")
 print(f"arabic.m3u = {len(arabic)}")
 print(f"nilesat.m3u = {len(nilesat)}")
 print(f"arabsat.m3u = {len(arabsat)}")
+print(f"all.m3u = {len(all_channels)} - رابط واحد فيه كلش")
